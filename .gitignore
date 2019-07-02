@@ -16,3 +16,6 @@ yarn-error.log
 !.vscode/extensions.json
 .history
 
+# builds
+dist/
+lib/

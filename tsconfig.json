@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+      "allowJs": false,
+      "allowSyntheticDefaultImports": true,
+      "forceConsistentCasingInFileNames": true,
+      "module": "ES6",
+      "moduleResolution": "node",
+      "declaration": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "jsx": "react",
+      "lib": [
+        "es6"
+      ],
+      "newLine": "lf",
+      "noImplicitAny": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noLib": false,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "removeComments": true,
+      "sourceMap": true,
+      "strictNullChecks": true,
+      "target": "ES6"
+    },
+    "exclude": [
+      "node_modules",
+      "**/*.spec.ts"
+    ]
+}
