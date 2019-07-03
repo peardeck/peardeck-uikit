@@ -7,9 +7,9 @@ import styled from "styled-components";
 // }
 
 export const Button = styled.button`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
+  font-size: 2em;
+  text-align: left;
+  color: orange;
 `;
 
-Button.displayName = 'Button';
+Button.displayName = "Button";

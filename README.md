@@ -22,3 +22,4 @@ example:
 
 [Storybook](https://storybook.js.org)
 [Styled Components](https://www.styled-components.com)
+[Jest](https://jestjs.io/docs)

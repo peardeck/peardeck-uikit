@@ -12,6 +12,9 @@
   "files": [
     "lib"
   ],
+  "jest": {
+    "preset": "ts-jest"
+  },
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com"
   },
@@ -20,7 +23,8 @@
     "build:watch": "tsc --watch",
     "clean": "rimraf lib",
     "start": "yarn run build:watch",
-    "test": "jest"
+    "test": "jest",
+    "test:snapshot": "jest --updateSnapshot"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
@@ -32,13 +36,16 @@
     "@storybook/react": "^5.1.9",
     "@types/jest": "^24.0.15",
     "@types/react": "^16.8.22",
+    "@types/react-test-renderer": "^16.8.2",
     "@types/storybook__addon-knobs": "^5.0.2",
     "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^4.1.16",
     "jest": "^24.8.0",
+    "jest-styled-components": "^6.3.3",
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6",
     "rimraf": "^2.6.3",
     "styled-components": "^4.3.2",
     "ts-jest": "^24.0.2",
