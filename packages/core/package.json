@@ -13,7 +13,8 @@
     "lib"
   ],
   "jest": {
-    "preset": "ts-jest"
+    "preset": "ts-jest",
+    "setupFilesAfterEnv": ["<rootDir>/setupJest.ts"]
   },
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com"
