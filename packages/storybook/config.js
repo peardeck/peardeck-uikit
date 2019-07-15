@@ -25,8 +25,7 @@ addParameters({
 
 function loadStories() {
   require("@pearkit/core/lib/stories");
-  // require('../stories/index.js');
-  // You can require as many stories as you need.
+  require("@pearkit/icons/lib/stories");
 }
 
 configure(loadStories, module);

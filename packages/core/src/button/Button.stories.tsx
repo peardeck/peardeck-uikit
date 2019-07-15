@@ -4,7 +4,7 @@ import { Button } from "./Button";
 import { text, boolean, withKnobs } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 
-storiesOf("Button", module)
+storiesOf("core/Button", module)
   .addDecorator(withKnobs)
   .add(
     "with text",
