@@ -1,7 +1,9 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconLink = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 64 64" width="1em" height="1em" {...props}>
+const SvgIconLink = ({ title, size, ...props }: SvgIconProps) => (
+  <svg viewBox="0 0 64 64" width={size} height={size} {...props}>
+    <title>{title}</title>
     <path d="M25.6 36.5c-.9-.9-.9-2.4 0-3.3.9-.9 2.4-.9 3.3 0 2.8 2.8 7.4 2.8 10.3 0l10.9-10.9c2.8-2.8 2.8-7.4 0-10.3-2.8-2.8-7.4-2.8-10.3 0L28.9 23c-.9.9-2.4.9-3.3 0-.9-.9-.9-2.4 0-3.3l11-11C41.3 4 48.8 4 53.5 8.7s4.7 12.2 0 16.9l-11 10.9c-4.6 4.7-12.2 4.7-16.9 0z" />
     <path d="M34.1 41c-3.3 0-6.6-1.3-9.1-3.8-.6-.6-1-1.5-1-2.4s.3-1.7 1-2.4c1.3-1.3 3.4-1.3 4.7 0 2.4 2.4 6.4 2.4 8.8 0l10.9-10.9c2.4-2.4 2.4-6.4 0-8.8-2.4-2.4-6.4-2.4-8.8 0l-11 11a3.32 3.32 0 0 1-4.7 0c-.6-.6-1-1.5-1-2.4 0-.9.3-1.7 1-2.4L35.9 8c2.4-2.4 5.7-3.8 9.1-3.8 3.5 0 6.7 1.3 9.1 3.8 2.4 2.4 3.8 5.7 3.8 9.1s-1.3 6.7-3.8 9.1l-10.9 11c-2.5 2.5-5.8 3.8-9.1 3.8zm-6.8-7.5c-.3 0-.7.1-.9.4-.3.3-.4.6-.4.9s.1.7.4.9c4.3 4.3 11.2 4.3 15.5 0l10.9-10.9c2.1-2.1 3.2-4.8 3.2-7.7s-1.1-5.7-3.2-7.7-4.9-3.2-7.8-3.2-5.7 1.1-7.7 3.2l-11 11c-.3.3-.4.6-.4.9 0 .4.1.7.4.9.5.5 1.4.5 1.9 0l10.9-10.9c3.2-3.2 8.5-3.2 11.7 0 3.2 3.2 3.2 8.5 0 11.7L39.9 33.9c-1.6 1.6-3.6 2.4-5.8 2.4-2.2 0-4.3-.9-5.8-2.4-.3-.2-.7-.4-1-.4z" />
     <g>
@@ -11,4 +13,5 @@ const SvgIconLink = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgIconLink.defaultProps = defaultProps;
 export default SvgIconLink;

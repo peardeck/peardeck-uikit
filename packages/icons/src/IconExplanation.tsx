@@ -1,9 +1,12 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconExplanation = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 64 64" width="1em" height="1em" {...props}>
+const SvgIconExplanation = ({ title, size, ...props }: SvgIconProps) => (
+  <svg viewBox="0 0 64 64" width={size} height={size} {...props}>
+    <title>{title}</title>
     <path d="M58 14V8H0v42h6v6h58V14h-6zM6 44V14h46v30H6z" />
   </svg>
 );
 
+SvgIconExplanation.defaultProps = defaultProps;
 export default SvgIconExplanation;

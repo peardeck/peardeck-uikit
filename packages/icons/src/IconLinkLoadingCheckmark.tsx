@@ -1,9 +1,16 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconLinkLoadingCheckmark = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 60.53 43.46" width="1em" height="1em" {...props}>
+const SvgIconLinkLoadingCheckmark = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps) => (
+  <svg viewBox="0 0 60.53 43.46" width={size} height={size} {...props}>
+    <title>{title}</title>
     <path d="M7 19.4l17.06 17.06L53.52 7" />
   </svg>
 );
 
+SvgIconLinkLoadingCheckmark.defaultProps = defaultProps;
 export default SvgIconLinkLoadingCheckmark;

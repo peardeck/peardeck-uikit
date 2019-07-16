@@ -1,7 +1,9 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconMicrosoft = (props: SVGProps<SVGSVGElement>) => (
-  <svg width="1em" height="1em" viewBox="0 0 21 21" {...props}>
+const SvgIconMicrosoft = ({ title, size, ...props }: SvgIconProps) => (
+  <svg width={size} height={size} viewBox="0 0 21 21" {...props}>
+    <title>{title}</title>
     <path fill="#f25022" d="M1 1h9v9H1z" />
     <path fill="#00a4ef" d="M1 11h9v9H1z" />
     <path fill="#7fba00" d="M11 1h9v9h-9z" />
@@ -9,4 +11,5 @@ const SvgIconMicrosoft = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgIconMicrosoft.defaultProps = defaultProps;
 export default SvgIconMicrosoft;

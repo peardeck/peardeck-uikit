@@ -18,7 +18,7 @@
   "scripts": {
     "build": "yarn run clean && yarn run generate:components && yarn run generate:index && yarn run compile",
     "generate:components": "svgr --ext tsx -d ./src ./svgs",
-    "generate:index": "ts-node --skip-project scripts/generateIndex.ts",
+    "generate:index": "ts-node --skip-project ./scripts/generate-index.ts",
     "compile": "tsc",
     "build:watch": "tsc --watch",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\"",
@@ -36,6 +36,7 @@
   "devDependencies": {
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@svgr/babel-plugin-svg-dynamic-title": "^4.3.1",
     "@svgr/cli": "^4.3.1",
     "@types/jest": "^24.0.15",
     "@types/react": "^16.8.22",

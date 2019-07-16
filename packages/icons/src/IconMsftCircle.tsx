@@ -1,7 +1,9 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconMsftCircle = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 60 60" width="1em" height="1em" {...props}>
+const SvgIconMsftCircle = ({ title, size, ...props }: SvgIconProps) => (
+  <svg viewBox="0 0 60 60" width={size} height={size} {...props}>
+    <title>{title}</title>
     <circle
       className="icon-msft-circle_svg__ms-team__loading-spinner__path--no-spin"
       cx={30}
@@ -11,4 +13,5 @@ const SvgIconMsftCircle = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgIconMsftCircle.defaultProps = defaultProps;
 export default SvgIconMsftCircle;

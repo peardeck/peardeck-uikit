@@ -1,13 +1,15 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconLinkLoadingSpinner = (props: SVGProps<SVGSVGElement>) => (
+const SvgIconLinkLoadingSpinner = ({ title, size, ...props }: SvgIconProps) => (
   <svg
     className="icon-link-loading-spinner_svg__link-loading__spinner"
     viewBox="0 0 66 66"
-    width="1em"
-    height="1em"
+    width={size}
+    height={size}
     {...props}
   >
+    <title>{title}</title>
     <circle
       className="icon-link-loading-spinner_svg__link-loading__spinner__path"
       fill="none"
@@ -20,4 +22,5 @@ const SvgIconLinkLoadingSpinner = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgIconLinkLoadingSpinner.defaultProps = defaultProps;
 export default SvgIconLinkLoadingSpinner;

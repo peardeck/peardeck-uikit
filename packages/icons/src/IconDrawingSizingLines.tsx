@@ -1,7 +1,9 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconDrawingSizingLines = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 19.83 63" width="1em" height="1em" {...props}>
+const SvgIconDrawingSizingLines = ({ title, size, ...props }: SvgIconProps) => (
+  <svg viewBox="0 0 19.83 63" width={size} height={size} {...props}>
+    <title>{title}</title>
     <defs>
       <style>{".icon-drawing-sizing-lines_svg__b{fill:#616263}"}</style>
     </defs>
@@ -14,4 +16,5 @@ const SvgIconDrawingSizingLines = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgIconDrawingSizingLines.defaultProps = defaultProps;
 export default SvgIconDrawingSizingLines;

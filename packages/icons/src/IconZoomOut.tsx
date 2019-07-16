@@ -1,7 +1,9 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconZoomOut = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 64 64" width="1em" height="1em" {...props}>
+const SvgIconZoomOut = ({ title, size, ...props }: SvgIconProps) => (
+  <svg viewBox="0 0 64 64" width={size} height={size} {...props}>
+    <title>{title}</title>
     <path
       fill="none"
       d="M24 8C15.2 8 8 15.2 8 24s7.2 16 16 16 16-7.2 16-16S32.8 8 24 8zm11 20H13v-8h22v8z"
@@ -11,4 +13,5 @@ const SvgIconZoomOut = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgIconZoomOut.defaultProps = defaultProps;
 export default SvgIconZoomOut;

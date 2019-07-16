@@ -1,7 +1,9 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgAccountStatusCrown = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 59.42 41.19" width="1em" height="1em" {...props}>
+const SvgAccountStatusCrown = ({ title, size, ...props }: SvgIconProps) => (
+  <svg viewBox="0 0 59.42 41.19" width={size} height={size} {...props}>
+    <title>{title}</title>
     <path
       d="M4.83 28.96c3.59 3.17 9.65 6.9 18.67 9.64 8.78 2.67 15.45 2.91 20.17 2.33l.62-3.15c-4.7.52-11.26.23-19.82-2.37-9.02-2.71-14.76-6.38-18.35-9.54z"
       fill="#364342"
@@ -47,4 +49,5 @@ const SvgAccountStatusCrown = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgAccountStatusCrown.defaultProps = defaultProps;
 export default SvgAccountStatusCrown;

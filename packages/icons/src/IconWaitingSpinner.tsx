@@ -1,13 +1,15 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconWaitingSpinner = (props: SVGProps<SVGSVGElement>) => (
+const SvgIconWaitingSpinner = ({ title, size, ...props }: SvgIconProps) => (
   <svg
     className="icon-waiting-spinner_svg__spinner"
-    width="1em"
-    height="1em"
+    width={size}
+    height={size}
     viewBox="0 0 66 66"
     {...props}
   >
+    <title>{title}</title>
     <circle
       className="icon-waiting-spinner_svg__spinner-path"
       fill="none"
@@ -20,4 +22,5 @@ const SvgIconWaitingSpinner = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgIconWaitingSpinner.defaultProps = defaultProps;
 export default SvgIconWaitingSpinner;

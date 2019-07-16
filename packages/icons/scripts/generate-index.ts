@@ -1,11 +1,13 @@
-import { join as pathJoin, resolve, basename } from "path";
 import { createWriteStream, readdir } from "fs";
+import { basename, join as pathJoin, resolve } from "path";
 import { promisify } from "util";
-import console = require("console");
 
 const readdirAsync = promisify(readdir);
 
-const EXCLUDE = ["index.ts", "stories.tsx"];
+/**
+ * Any .tsx files to explicitly exclude (non-".tsx" files are never included)
+ */
+const EXCLUDE = ["stories.tsx"];
 
 /**
  * Generates an "index.ts" file that acts as an entry-point by
@@ -28,7 +30,7 @@ const generateIndex = async (rootPath: string) => {
     );
 
     const componentNames = files
-      .filter(name => !EXCLUDE.includes(name)) // Only React .tsx components.
+      .filter(name => name.endsWith('.tsx') && !EXCLUDE.includes(name)) // Only React .tsx components.
       .map(name => basename(name, ".tsx")) // Extract conponent name from filename
       .sort();
 
@@ -38,7 +40,9 @@ const generateIndex = async (rootPath: string) => {
       );
     });
   } catch (err) {
+    // console.error('Error gerr.message);
     console.error(err.message);
+    console.trace(__filename);
   } finally {
     if (writeStream) {
       writeStream.end();

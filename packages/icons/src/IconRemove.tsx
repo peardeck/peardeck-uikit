@@ -1,7 +1,9 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconRemove = (props: SVGProps<SVGSVGElement>) => (
-  <svg width="1em" height="1em" {...props}>
+const SvgIconRemove = ({ title, size, ...props }: SvgIconProps) => (
+  <svg width={size} height={size} {...props}>
+    <title>{title}</title>
     <path
       fill="#A8494A"
       d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0z"
@@ -17,4 +19,5 @@ const SvgIconRemove = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgIconRemove.defaultProps = defaultProps;
 export default SvgIconRemove;

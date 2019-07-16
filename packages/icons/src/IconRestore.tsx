@@ -1,10 +1,13 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconRestore = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 64 64" width="1em" height="1em" {...props}>
+const SvgIconRestore = ({ title, size, ...props }: SvgIconProps) => (
+  <svg viewBox="0 0 64 64" width={size} height={size} {...props}>
+    <title>{title}</title>
     <path d="M53.605 10.544h-11.32V9.91C42.285 4.428 37.842 0 32.341 0c-5.5 0-9.944 4.428-9.944 9.911v.633H11.29C8.327 10.544 6 12.969 6 15.815v5.589c0 2.53 1.798 4.744 4.232 5.166l1.692 32.369c.106 2.847 2.54 5.061 5.29 5.061h30.572c2.857 0 5.184-2.214 5.29-5.061l1.692-32.369C57.202 26.043 59 23.934 59 21.404v-5.589c0-2.846-2.433-5.271-5.395-5.271zM32.34 6.326c1.905 0 3.491 1.582 3.597 3.48H28.85c0-1.898 1.587-3.48 3.491-3.48zM52.653 16.87v3.163H12.242V16.87h40.41zm-5.924 40.91H18.166l-1.587-31H48.42l-1.692 31z" />
     <path d="M35.041 45.127v7.584c0 1.297-1.14 2.289-2.63 2.289-1.492 0-2.632-.992-2.632-2.29v-7.276c-.675 1.067-2.348 1.204-3.903.306-1.585-.914-2.3-2.473-1.652-3.597l5.004-8.666c.105-.273.261-.544.463-.802l.41-.71c.447-.774 1.396-1.09 2.462-.913.999-.12 1.913.18 2.336.914l.496.858c.11.159.204.322.281.487l5.1 8.832c.648 1.124-.067 2.683-1.652 3.597-1.585.915-3.292.756-3.941-.368l-.142-.245z" />
   </svg>
 );
 
+SvgIconRestore.defaultProps = defaultProps;
 export default SvgIconRestore;

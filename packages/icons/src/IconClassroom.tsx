@@ -1,7 +1,9 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconClassroom = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 48 48" width="1em" height="1em" {...props}>
+const SvgIconClassroom = ({ title, size, ...props }: SvgIconProps) => (
+  <svg viewBox="0 0 48 48" width={size} height={size} {...props}>
+    <title>{title}</title>
     <g fill="none" fillRule="evenodd">
       <path stroke="#FFC112" strokeWidth={8} fill="#FFC112" d="M0 0h48v48H0z" />
       <path fill="#21A465" d="M4 4h40v40H4z" />
@@ -18,4 +20,5 @@ const SvgIconClassroom = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgIconClassroom.defaultProps = defaultProps;
 export default SvgIconClassroom;

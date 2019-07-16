@@ -1,7 +1,9 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconUnarchive = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 62 52.02" width="1em" height="1em" {...props}>
+const SvgIconUnarchive = ({ title, size, ...props }: SvgIconProps) => (
+  <svg viewBox="0 0 62 52.02" width={size} height={size} {...props}>
+    <title>{title}</title>
     <defs>
       <style>{".icon-unarchive_svg__a{fill:none}"}</style>
     </defs>
@@ -18,4 +20,5 @@ const SvgIconUnarchive = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgIconUnarchive.defaultProps = defaultProps;
 export default SvgIconUnarchive;

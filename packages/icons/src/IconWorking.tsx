@@ -1,13 +1,15 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconWorking = (props: SVGProps<SVGSVGElement>) => (
+const SvgIconWorking = ({ title, size, ...props }: SvgIconProps) => (
   <svg
     data-name="Layer 1"
     viewBox="0 0 56 14"
-    width="1em"
-    height="1em"
+    width={size}
+    height={size}
     {...props}
   >
+    <title>{title}</title>
     <circle
       className="icon-working_svg__working-spinner-dot-03"
       cx={49}
@@ -29,4 +31,5 @@ const SvgIconWorking = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgIconWorking.defaultProps = defaultProps;
 export default SvgIconWorking;

@@ -1,7 +1,9 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconPrinter = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 250 244.6" width="1em" height="1em" {...props}>
+const SvgIconPrinter = ({ title, size, ...props }: SvgIconProps) => (
+  <svg viewBox="0 0 250 244.6" width={size} height={size} {...props}>
+    <title>{title}</title>
     <path
       className="icon-printer_svg__a"
       d="M78.5 172.1h93a11 11 0 0 0 0-22h-93a11 11 0 0 0 0 22zM78.5 205.1h93a11 11 0 0 0 0-22h-93a11 11 0 0 0 0 22z"
@@ -13,4 +15,5 @@ const SvgIconPrinter = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgIconPrinter.defaultProps = defaultProps;
 export default SvgIconPrinter;

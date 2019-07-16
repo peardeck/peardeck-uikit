@@ -1,9 +1,12 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconClearStar = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 63 60.3" width="1em" height="1em" {...props}>
+const SvgIconClearStar = ({ title, size, ...props }: SvgIconProps) => (
+  <svg viewBox="0 0 63 60.3" width={size} height={size} {...props}>
+    <title>{title}</title>
     <path d="M52.4 11.2c-1.1-1.6-3.3-2-4.9-.8L41 14.9l-5.8-12C34.8 2 34 1.3 33.1.8 32 .2 30.7.2 29.5.5c-1.2.4-2.1 1.2-2.7 2.3L20 16.5 4.9 18.6c-1 .1-1.9.6-2.7 1.3-.9.9-1.4 2.1-1.4 3.3 0 1.2.5 2.4 1.4 3.3l9.3 9.1-6.9 4.9c-1.6 1.1-2 3.3-.8 4.9.7 1 1.8 1.5 2.9 1.5.7 0 1.4-.2 2-.6l42.9-30.2c1.5-1.2 1.9-3.3.8-4.9zM10.6 24.9l11.7-1.6c1.5-.2 2.8-1.2 3.5-2.5L31 10.2l4.2 8.7-17.9 12.7-6.7-6.7zM58.1 20.9h-.3l-9.2-.6c-1.9-.1-3.6 1.3-3.7 3.3-.1 1.9 1.3 3.6 3.3 3.7l3.8.2-8 7.8c-1.1 1-1.6 2.5-1.4 3.9v.2L44.3 51 34 45.5c-1.4-.7-3-.7-4.3 0l-9.4 4.9.9-2.7c.6-1.8-.3-3.8-2.2-4.4-1.8-.6-3.8.3-4.4 2.2l-2.9 8.4c-.1.2-.1.4-.1.5-.2 1 0 2 .4 2.9 1.2 2.3 4 3.2 6.3 2l13.6-7 13.5 7.2c.7.3 1.4.5 2.2.5.2 0 .5 0 .7-.1 1.2-.2 2.3-.9 3-1.9.7-1 1-2.2.8-3.5l-2.5-15 11-10.7c.7-.7 1.2-1.6 1.4-2.6.3-2.5-1.4-4.9-3.9-5.3z" />
   </svg>
 );
 
+SvgIconClearStar.defaultProps = defaultProps;
 export default SvgIconClearStar;

@@ -1,7 +1,9 @@
-import React, { SVGProps } from "react";
+import React from "react";
+import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconListView = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 64 64" width="1em" height="1em" {...props}>
+const SvgIconListView = ({ title, size, ...props }: SvgIconProps) => (
+  <svg viewBox="0 0 64 64" width={size} height={size} {...props}>
+    <title>{title}</title>
     <path d="M63 7.1c0 1.8-1.5 3.3-3.3 3.3H22.8c-1.8 0-3.3-1.5-3.3-3.3 0-1.8 1.5-3.3 3.3-3.3h36.9c1.8 0 3.3 1.5 3.3 3.3z" />
     <circle cx={6.5} cy={7.1} r={5.5} />
     <path d="M63 32c0 1.8-1.5 3.3-3.3 3.3H22.8c-1.8 0-3.3-1.5-3.3-3.3 0-1.8 1.5-3.3 3.3-3.3h36.9c1.8 0 3.3 1.5 3.3 3.3z" />
@@ -11,4 +13,5 @@ const SvgIconListView = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+SvgIconListView.defaultProps = defaultProps;
 export default SvgIconListView;
