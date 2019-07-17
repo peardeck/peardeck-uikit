@@ -1,2 +1,3 @@
-import "./button/Button.stories";
-import "./collapsible/Collapsible.stories";
+import "./Button/Button.stories";
+import "./Collapsible/Collapsible.stories";
+import "./LoadingIndicator/LoadingIndicator.stories";

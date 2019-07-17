@@ -6,7 +6,9 @@ const StyledCollapsibleHeader = styled.button`
   color: #547272;
   display: flex;
   align-items: center;
-  border: none;
+  border: 0;
+  background-color: transparent;
+  appearance: none;
   width: 100%;
   text-align: left;
   margin: 0;
@@ -14,7 +16,7 @@ const StyledCollapsibleHeader = styled.button`
   cursor: pointer;
 
   :focus {
-    outline:0;
+    outline: 0;
   }
 `;
 
@@ -37,6 +39,9 @@ const StyledCollapsibleHeaderIcon = styled.div`
 `;
 
 export interface CollapsibleHeaderProps {
+  /**
+   * The main text to display in the header of the collapsible.
+   */
   title: string,
   subTitle?: string
   collapsed: boolean

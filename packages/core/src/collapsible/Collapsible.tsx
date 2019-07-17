@@ -3,7 +3,19 @@ import styled from "styled-components";
 import { CollapsibleHeader, CollapsibleHeaderProps } from './CollapsibleHeader';
 
 interface CollapsibleProps extends CollapsibleHeaderProps {
+  /**
+   * Called when the collapsed state should be changed.
+   *
+   * Signature:
+   * ```
+   * onCollapsedChanged(shouldBeCollapsed: boolean)
+   * ```
+   */
   onCollapsedChange: Function
+
+  /**
+   * The content to render in the collapsible content section.
+   */
   children: React.ReactNode
 }
 
@@ -36,7 +48,11 @@ export const Collapsible = ({ children, collapsed, onCollapsedChange, ...props }
 );
 
 interface UncontrolledCollapsibleProps {
+  /**
+   * Test!
+   */
   title: string,
+  /* Subtitle info goes here? */
   subTitle?: string
   children: React.ReactNode
 }
