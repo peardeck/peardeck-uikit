@@ -6,14 +6,16 @@
   "license": "MIT",
   "main": "lib/index.js",
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
     "lib"
   ],
   "jest": {
-    "preset": "ts-jest",
+    "preset": "ts-jest/presets/js-with-babel",
+    "roots": [
+      "<rootDir>/src"
+    ],
     "setupFilesAfterEnv": [
       "<rootDir>/setupJest.ts"
     ]
@@ -26,7 +28,7 @@
     "build:watch": "tsc --watch",
     "clean": "rimraf lib",
     "start": "yarn run build:watch",
-    "test": "jest",
+    "test": "jest --verbose",
     "test:snapshot": "jest --updateSnapshot"
   },
   "peerDependencies": {
@@ -35,6 +37,8 @@
     "styled-components": "^4.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
     "@pearkit/icons": "^1.0.0",
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/react": "^5.1.9",
@@ -44,6 +48,7 @@
     "@types/storybook__addon-knobs": "^5.0.2",
     "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^4.1.16",
+    "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
     "jest-styled-components": "^6.3.3",
     "prettier": "^1.18.2",

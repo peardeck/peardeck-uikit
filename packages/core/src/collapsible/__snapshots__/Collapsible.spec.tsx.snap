@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Collapsible collapsed it matches the snapshot: collapsed 1`] = `
+.c1 {
+  color: #547272;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.c1:focus {
+  outline: 0;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.c4 {
+  font-size: 1.25em;
+}
+
+.c5 {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  opacity: 0.7;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c0 {
+  border: 1px solid #eee;
+}
+
+.c6 {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  overflow: hidden;
+  max-height: 0;
+}
+
+<div
+  className="c0"
+  title="Welcome"
+>
+  <button
+    className="c1"
+    onClick={[Function]}
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        The Title
+      </div>
+      <div
+        className="c4"
+      >
+        A subtitle goes here
+      </div>
+    </div>
+    <div
+      className="c5"
+    >
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        height="1em"
+        tabIndex={-1}
+        viewBox="0 0 63.34 36.59"
+        width="1em"
+      >
+        <title />
+        <path
+          d="M31.77 0a8.86 8.86 0 0 0-6.38 2.62l-9.42 9.3L1.81 26.08a5.87 5.87 0 0 0-.14 8.3l.18.18a6.85 6.85 0 0 0 9.3 0l7.28-6.87 7.24-6.67 6.13-6.07 5.87 6.07 7.25 6.88 7.31 6.85a6.85 6.85 0 0 0 9.3 0 5.89 5.89 0 0 0 .14-8.31l-.15-.15-14-14.12-9.3-9.3A9.06 9.06 0 0 0 31.77 0z"
+        />
+      </svg>
+    </div>
+  </button>
+  <div
+    className="c6"
+  >
+    Here is some content for you
+  </div>
+</div>
+`;
+
+exports[`Collapsible expanded it matches the snapshot: expanded 1`] = `
+.c1 {
+  color: #547272;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.c1:focus {
+  outline: 0;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.c4 {
+  font-size: 1.25em;
+}
+
+.c5 {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  opacity: 0.7;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c0 {
+  border: 1px solid #eee;
+}
+
+.c6 {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  overflow: hidden;
+  max-height: 600px;
+}
+
+<div
+  className="c0"
+  title="Welcome"
+>
+  <button
+    className="c1"
+    onClick={[Function]}
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        The Title
+      </div>
+      <div
+        className="c4"
+      >
+        A subtitle goes here
+      </div>
+    </div>
+    <div
+      className="c5"
+    >
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        height="1em"
+        tabIndex={-1}
+        viewBox="0 0 63.34 36.59"
+        width="1em"
+      >
+        <title />
+        <path
+          d="M31.77 0a8.86 8.86 0 0 0-6.38 2.62l-9.42 9.3L1.81 26.08a5.87 5.87 0 0 0-.14 8.3l.18.18a6.85 6.85 0 0 0 9.3 0l7.28-6.87 7.24-6.67 6.13-6.07 5.87 6.07 7.25 6.88 7.31 6.85a6.85 6.85 0 0 0 9.3 0 5.89 5.89 0 0 0 .14-8.31l-.15-.15-14-14.12-9.3-9.3A9.06 9.06 0 0 0 31.77 0z"
+        />
+      </svg>
+    </div>
+  </button>
+  <div
+    className="c6"
+  >
+    Here is some content for you
+  </div>
+</div>
+`;
