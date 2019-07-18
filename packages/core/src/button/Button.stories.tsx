@@ -1,8 +1,21 @@
-import React from "react";
+import React, { ElementType } from "react";
 import { storiesOf } from "@storybook/react";
-import { Button } from "./Button";
-import { text, boolean, withKnobs } from "@storybook/addon-knobs";
-import { action } from "@storybook/addon-actions";
+import { Button, ButtonSize } from "./Button";
+import { select, text, boolean, withKnobs } from "@storybook/addon-knobs";
+import { actions } from "@storybook/addon-actions";
+import { IconAlphabetical, IconAccount, IconCalendar, IconCheckmark, IconClassroom } from '@pearkit/icons';
+
+const disabledKnob = (initial = false) => boolean("Disabled", initial);
+const sizeKnob = (initial: ButtonSize = 'medium') => select('Size', ['small', 'medium', 'large'], initial) as ButtonSize;
+const labelKnob = (initial: string | null = null) => text("Label", initial);
+const buttonActions = actions(
+  'onClick',
+  'onFocus',
+  'onBlur',
+);
+
+const ICONS: { [key: string]: ElementType } = { IconAlphabetical, IconAccount, IconCalendar, IconCheckmark, IconClassroom };
+const ICONS_KEYS = Object.keys(ICONS);
 
 storiesOf("core/Button", module)
   .addDecorator(withKnobs)
@@ -10,10 +23,11 @@ storiesOf("core/Button", module)
     "with text",
     () => (
       <Button
-        disabled={boolean("Disabled", false)}
-        onClick={action("button-click")}
+        {...buttonActions}
+        disabled={disabledKnob()}
+        size={sizeKnob()}
       >
-        {text("Label", "Hello Button")}
+        {labelKnob('Hello!')}
       </Button>
     ),
     {
@@ -30,10 +44,28 @@ storiesOf("core/Button", module)
       `,
     }
   )
+  .add("with icon", () => {
+    const iconKey = select('Icon', ICONS_KEYS, ICONS_KEYS[0]);
+    const IconComponent = ICONS[iconKey];
+
+    return (
+      <Button
+        {...buttonActions}
+        disabled={disabledKnob()}
+        size={sizeKnob()}
+      >
+        <IconComponent /> {labelKnob('This button has an icon!')}
+      </Button>
+    );
+  })
   .add("with emoji", () => (
-    <Button>
+    <Button
+      {...buttonActions}
+      disabled={disabledKnob()}
+      size={sizeKnob()}
+    >
       <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
+        {labelKnob('😀 😎 👍 💯')}
       </span>
     </Button>
   ));

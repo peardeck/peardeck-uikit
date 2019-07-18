@@ -11,7 +11,11 @@ exports[`Collapsible collapsed it matches the snapshot: collapsed 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: none;
+  border: 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 100%;
   text-align: left;
   margin: 0;
@@ -117,7 +121,11 @@ exports[`Collapsible expanded it matches the snapshot: expanded 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: none;
+  border: 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 100%;
   text-align: left;
   margin: 0;
