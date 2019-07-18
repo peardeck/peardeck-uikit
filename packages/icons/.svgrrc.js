@@ -21,14 +21,14 @@ module.exports = {
 
   jsx: {
     babelConfig: {
-      plugins: ["@svgr/babel-plugin-svg-dynamic-title"]
-    }
+      plugins: ["@svgr/babel-plugin-svg-dynamic-title"],
+    },
   },
 
   // This way we can supply a single `size` prop that gets converted to both height and width.
   svgProps: {
-    height: '{size}',
-    width: '{size}',
+    height: "{size}",
+    width: "{size}",
   },
 
   icon: true,

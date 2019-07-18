@@ -1,27 +1,27 @@
 import styled from "styled-components";
 
-export type ButtonSize = 'small' | 'medium' | 'large';
+export type ButtonSize = "small" | "medium" | "large";
 
 const size = ({ size }: { size?: ButtonSize }) => {
   switch (size) {
-    case 'small':
+    case "small":
       return {
-        fontSize: '0.75em',
-        padding: '0.25em 0.5em',
-      }
-    case 'large':
+        fontSize: "0.75em",
+        padding: "0.25em 0.5em",
+      };
+    case "large":
       return {
-        fontSize: '1.5em',
-        padding: '0.75em 1.25em',
-      }
-    case 'medium':
+        fontSize: "1.5em",
+        padding: "0.75em 1.25em",
+      };
+    case "medium":
     default:
       return {
-        fontSize: '1em',
-        padding: '0.5em 1em',
+        fontSize: "1em",
+        padding: "0.5em 1em",
       };
   }
-}
+};
 
 export const Button = styled.button`
   font-family: inherit;
@@ -29,12 +29,12 @@ export const Button = styled.button`
   line-height: 1.5;
   text-align: center;
   cursor: pointer;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #354242;
-  border: 1px solid #DCE2E9;
+  border: 1px solid #dce2e9;
   border-radius: 1.5em;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .27);
-  transition: all .2s ease;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.27);
+  transition: all 0.2s ease;
   ${size}
 
   > * {
@@ -42,16 +42,17 @@ export const Button = styled.button`
   }
 
   :hover {
-    background-color: rgba(237, 240, 244, .42);
+    background-color: rgba(237, 240, 244, 0.42);
   }
 
   :disabled {
-    opacity: .3;
+    opacity: 0.3;
   }
 `;
 
 Button.defaultProps = {
-  size: 'medium',
+  size: "medium",
+  theme: {},
 };
 
 Button.displayName = "Button";

@@ -7,7 +7,7 @@ describe("Collapsible", () => {
     expect(Collapsible).toBeDefined();
   });
 
-  describe('collapsed', () => {
+  describe("collapsed", () => {
     test("it matches the snapshot", () => {
       const component = create(
         <Collapsible
@@ -16,13 +16,14 @@ describe("Collapsible", () => {
           subTitle="To the collapsed test"
           title="Welcome"
         >
-            Here is some content for you
-        </Collapsible>);
-      expect(component.toJSON()).toMatchSnapshot('collapsed');
+          Here is some content for you
+        </Collapsible>
+      );
+      expect(component.toJSON()).toMatchSnapshot("collapsed");
     });
   });
 
-  describe('expanded', () => {
+  describe("expanded", () => {
     test("it matches the snapshot", () => {
       const component = create(
         <Collapsible
@@ -31,10 +32,10 @@ describe("Collapsible", () => {
           subTitle="To the expanded test"
           title="Welcome"
         >
-            Here is some content for you
-        </Collapsible>);
-      expect(component.toJSON()).toMatchSnapshot('expanded');
-      });
+          Here is some content for you
+        </Collapsible>
+      );
+      expect(component.toJSON()).toMatchSnapshot("expanded");
+    });
   });
-
 });

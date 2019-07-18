@@ -30,7 +30,7 @@ const generateIndex = async (rootPath: string) => {
     );
 
     const componentNames = files
-      .filter(name => name.endsWith('.tsx') && !EXCLUDE.includes(name)) // Only React .tsx components.
+      .filter(name => name.endsWith(".tsx") && !EXCLUDE.includes(name)) // Only React .tsx components.
       .map(name => basename(name, ".tsx")) // Extract conponent name from filename
       .sort();
 

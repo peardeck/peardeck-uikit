@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-import { IconCollapseArrow } from '@pearkit/icons';
+import { IconCollapseArrow } from "@pearkit/icons";
 
 const StyledCollapsibleHeader = styled.button`
   color: #547272;
@@ -31,9 +31,10 @@ const StyledCollapsibleHeaderTitle = styled.div`
 
 const StyledCollapsibleHeaderSubTitle = styled.div`
   font-size: 1.25em;
-`
+`;
 const StyledCollapsibleHeaderIcon = styled.div`
-  transform: ${({ collapsed }: { collapsed: boolean }) => collapsed ? "rotate(180deg)" : "rotate(0deg)"};
+  transform: ${({ collapsed }: { collapsed: boolean }) =>
+    collapsed ? "rotate(180deg)" : "rotate(0deg)"};
   opacity: 0.7;
   transition: all 0.3s;
 `;
@@ -42,17 +43,30 @@ export interface CollapsibleHeaderProps {
   /**
    * The main text to display in the header of the collapsible.
    */
-  title: string,
-  subTitle?: string
-  collapsed: boolean
-  onCollapsedChange: Function
+  title: string;
+  subTitle?: string;
+  collapsed: boolean;
+  onCollapsedChange: Function;
 }
 
-export const CollapsibleHeader = ({ onCollapsedChange, title, subTitle, collapsed, ...props }: CollapsibleHeaderProps) => (
-  <StyledCollapsibleHeader {...props} onClick={() => onCollapsedChange(!collapsed)}>
+export const CollapsibleHeader = ({
+  onCollapsedChange,
+  title,
+  subTitle,
+  collapsed,
+  ...props
+}: CollapsibleHeaderProps) => (
+  <StyledCollapsibleHeader
+    {...props}
+    onClick={() => onCollapsedChange(!collapsed)}
+  >
     <StyledCollapsibleHeaderContent>
       <StyledCollapsibleHeaderTitle>{title}</StyledCollapsibleHeaderTitle>
-      {subTitle && (<StyledCollapsibleHeaderSubTitle>{subTitle}</StyledCollapsibleHeaderSubTitle>)}
+      {subTitle && (
+        <StyledCollapsibleHeaderSubTitle>
+          {subTitle}
+        </StyledCollapsibleHeaderSubTitle>
+      )}
     </StyledCollapsibleHeaderContent>
     <StyledCollapsibleHeaderIcon collapsed={collapsed}>
       <IconCollapseArrow />

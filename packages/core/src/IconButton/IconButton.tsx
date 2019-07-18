@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const IconButton = styled.button`
   font-size: 1.5em;
   border: 0;
-  background-color: #3087B7;
+  background-color: #3087b7;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -18,9 +18,7 @@ export const IconButton = styled.button`
   }
 
   :hover {
-    background-color: #6EABCD
-
-    > svg {
+    background-color: #6eabcd > svg {
       transform: scale(1.1);
     }
   }

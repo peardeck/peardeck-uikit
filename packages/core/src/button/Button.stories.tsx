@@ -3,18 +3,27 @@ import { storiesOf } from "@storybook/react";
 import { Button, ButtonSize } from "./Button";
 import { select, text, boolean, withKnobs } from "@storybook/addon-knobs";
 import { actions } from "@storybook/addon-actions";
-import { IconAlphabetical, IconAccount, IconCalendar, IconCheckmark, IconClassroom } from '@pearkit/icons';
+import {
+  IconAlphabetical,
+  IconAccount,
+  IconCalendar,
+  IconCheckmark,
+  IconClassroom,
+} from "@pearkit/icons";
 
 const disabledKnob = (initial = false) => boolean("Disabled", initial);
-const sizeKnob = (initial: ButtonSize = 'medium') => select('Size', ['small', 'medium', 'large'], initial) as ButtonSize;
+const sizeKnob = (initial: ButtonSize = "medium") =>
+  select("Size", ["small", "medium", "large"], initial) as ButtonSize;
 const labelKnob = (initial: string | null = null) => text("Label", initial);
-const buttonActions = actions(
-  'onClick',
-  'onFocus',
-  'onBlur',
-);
+const buttonActions = actions("onClick", "onFocus", "onBlur");
 
-const ICONS: { [key: string]: ElementType } = { IconAlphabetical, IconAccount, IconCalendar, IconCheckmark, IconClassroom };
+const ICONS: { [key: string]: ElementType } = {
+  IconAlphabetical,
+  IconAccount,
+  IconCalendar,
+  IconCheckmark,
+  IconClassroom,
+};
 const ICONS_KEYS = Object.keys(ICONS);
 
 storiesOf("core/Button", module)
@@ -22,12 +31,8 @@ storiesOf("core/Button", module)
   .add(
     "with text",
     () => (
-      <Button
-        {...buttonActions}
-        disabled={disabledKnob()}
-        size={sizeKnob()}
-      >
-        {labelKnob('Hello!')}
+      <Button {...buttonActions} disabled={disabledKnob()} size={sizeKnob()}>
+        {labelKnob("Hello!")}
       </Button>
     ),
     {
@@ -45,27 +50,19 @@ storiesOf("core/Button", module)
     }
   )
   .add("with icon", () => {
-    const iconKey = select('Icon', ICONS_KEYS, ICONS_KEYS[0]);
+    const iconKey = select("Icon", ICONS_KEYS, ICONS_KEYS[0]);
     const IconComponent = ICONS[iconKey];
 
     return (
-      <Button
-        {...buttonActions}
-        disabled={disabledKnob()}
-        size={sizeKnob()}
-      >
-        <IconComponent /> {labelKnob('This button has an icon!')}
+      <Button {...buttonActions} disabled={disabledKnob()} size={sizeKnob()}>
+        <IconComponent /> {labelKnob("This button has an icon!")}
       </Button>
     );
   })
   .add("with emoji", () => (
-    <Button
-      {...buttonActions}
-      disabled={disabledKnob()}
-      size={sizeKnob()}
-    >
+    <Button {...buttonActions} disabled={disabledKnob()} size={sizeKnob()}>
       <span role="img" aria-label="so cool">
-        {labelKnob('😀 😎 👍 💯')}
+        {labelKnob("😀 😎 👍 💯")}
       </span>
     </Button>
   ));

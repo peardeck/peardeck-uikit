@@ -15,7 +15,7 @@ const IconGridItem = styled.figure`
   width: 15em;
   text-align: center;
   padding: 1em;
-  border: 1px solid #eee
+  border: 1px solid #eee;
 `;
 
 const IconDescription = styled.figcaption`
@@ -30,21 +30,16 @@ storiesOf("icons", module).add("All", () => (
       return (
         <IconGridItem key={iconName}>
           <Icon />
-          <IconDescription><code>{iconName}</code></IconDescription>
+          <IconDescription>
+            <code>{iconName}</code>
+          </IconDescription>
         </IconGridItem>
       );
     })}
   </IconGrid>
 ));
 
-const ICON_SIZES = [
-  '1em',
-  '1.5em',
-  '2em',
-  '2.5em',
-  '3em',
-  '3.5em',
-]
+const ICON_SIZES = ["1em", "1.5em", "2em", "2.5em", "3em", "3.5em"];
 
 const IconSet = styled.div`
   display: flex;
@@ -66,8 +61,7 @@ const IconSetItem = styled.figure`
   }
 `;
 
-const stories =
-storiesOf("icons/Components", module)
+const stories = storiesOf("icons/Components", module);
 
 ICON_NAMES.forEach(iconName => {
   const Icon = (icons as any)[iconName];
