@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { Button } from "../Button/Button";
 
 const StyledCallToAction = styled.div`
