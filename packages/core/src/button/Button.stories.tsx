@@ -1,6 +1,5 @@
 import React, { ElementType } from "react";
 import { storiesOf } from "@storybook/react";
-import { Button, ButtonSize } from "./Button";
 import { select, text, boolean, withKnobs } from "@storybook/addon-knobs";
 import { actions } from "@storybook/addon-actions";
 import {
@@ -10,6 +9,7 @@ import {
   IconCheckmark,
   IconClassroom,
 } from "@pearkit/icons";
+import { Button, ButtonSize } from "./Button";
 
 const disabledKnob = (initial = false) => boolean("Disabled", initial);
 const sizeKnob = (initial: ButtonSize = "medium") =>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Collapsible } from "./Collapsible";
 import { create } from "react-test-renderer";
+import { Collapsible } from "./Collapsible";
 
 describe("Collapsible", () => {
   test("is a named export", () => {

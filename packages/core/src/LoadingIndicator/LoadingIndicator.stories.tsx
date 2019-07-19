@@ -4,7 +4,7 @@ import { LoadingIndicator } from "./LoadingIndicator";
 
 storiesOf("core/LoadingIndicator", module).add(
   "Default",
-  () => <LoadingIndicator />,
+  (): JSX.Element => <LoadingIndicator />,
   {
     notes: `
         # Loading Indicator

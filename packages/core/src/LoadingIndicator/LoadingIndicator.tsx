@@ -24,7 +24,7 @@ const StyledLoadingIndicator = styled.div`
   display: inline-block;
 `;
 
-export const LoadingIndicator = () => (
+export const LoadingIndicator = (): JSX.Element => (
   <StyledLoadingIndicator>
     <RotatingLoader />
     <div>Loading...</div>

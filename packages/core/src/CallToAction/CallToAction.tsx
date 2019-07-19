@@ -55,7 +55,7 @@ export const CallToAction = ({
   title,
   image,
   buttonContent,
-}: CallToActionPropTypes) => (
+}: CallToActionPropTypes): JSX.Element => (
   <StyledCallToAction>
     <StyledCallToActionContentContainer>
       <StyledCallToActionContentHeader>{title}</StyledCallToActionContentHeader>

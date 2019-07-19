@@ -33,7 +33,7 @@ const StyledCollapsibleHeaderSubTitle = styled.div`
   font-size: 1.25em;
 `;
 const StyledCollapsibleHeaderIcon = styled.div`
-  transform: ${({ collapsed }: { collapsed: boolean }) =>
+  transform: ${({ collapsed }: { collapsed: boolean }): string =>
     collapsed ? "rotate(180deg)" : "rotate(0deg)"};
   opacity: 0.7;
   transition: all 0.3s;
@@ -55,10 +55,10 @@ export const CollapsibleHeader = ({
   subTitle,
   collapsed,
   ...props
-}: CollapsibleHeaderProps) => (
+}: CollapsibleHeaderProps): JSX.Element => (
   <StyledCollapsibleHeader
     {...props}
-    onClick={() => onCollapsedChange(!collapsed)}
+    onClick={(): void => onCollapsedChange(!collapsed)}
   >
     <StyledCollapsibleHeaderContent>
       <StyledCollapsibleHeaderTitle>{title}</StyledCollapsibleHeaderTitle>

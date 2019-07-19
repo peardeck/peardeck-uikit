@@ -30,7 +30,7 @@ interface StyledCollapsibleContentProps {
 const StyledCollapsibleContent = styled.div<StyledCollapsibleContentProps>`
   transition: all 0.5s;
   overflow: hidden;
-  max-height: ${({ collapsed }: { collapsed: boolean }) =>
+  max-height: ${({ collapsed }: { collapsed: boolean }): string =>
     collapsed ? "0" : "600px"};
 `;
 
@@ -39,7 +39,7 @@ export const Collapsible = ({
   collapsed,
   onCollapsedChange,
   ...props
-}: CollapsibleProps) => (
+}: CollapsibleProps): JSX.Element => (
   <StyledCollapsible {...props}>
     <CollapsibleHeader
       title="The Title"
@@ -65,7 +65,7 @@ interface UncontrolledCollapsibleProps {
 
 export const UncontrolledCollapsible = (
   props: UncontrolledCollapsibleProps
-) => {
+): JSX.Element => {
   const [collapsed, onCollapsedChange] = useState(false);
   return (
     <Collapsible

@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 export type ButtonSize = "small" | "medium" | "large";
 
-const size = ({ size }: { size?: ButtonSize }) => {
-  switch (size) {
+const size = (props: {
+  size?: ButtonSize;
+}): { fontSize: string; padding: string } => {
+  switch (props.size) {
     case "small":
       return {
         fontSize: "0.75em",

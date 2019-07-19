@@ -1,6 +1,6 @@
 import React from "react";
-import { LoadingIndicator } from "./LoadingIndicator";
 import { create } from "react-test-renderer";
+import { LoadingIndicator } from "./LoadingIndicator";
 
 describe("LoadingIndicator", () => {
   test("is a named export", () => {
