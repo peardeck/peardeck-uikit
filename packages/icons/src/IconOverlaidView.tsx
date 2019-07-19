@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconOverlaidView = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconOverlaidView = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 64 64" width={size} height={size} {...props}>
     <title>{title}</title>
     <path d="M28.1 38.7l-19.9-12c-4.3-2.6-4.3-8.8 0-11.4L29 2.7c2.1-1.3 4.8-1.3 6.9 0l19.9 12c4.3 2.6 4.3 8.8 0 11.4L35 38.7c-2.1 1.3-4.8 1.3-6.9 0zM11.3 20.9l20.3 11.8 21.1-12.3L32.4 8.6 11.3 20.9z" />

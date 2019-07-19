@@ -28,6 +28,8 @@
     "build:watch": "tsc --watch",
     "clean": "rimraf lib",
     "start": "yarn run build:watch",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "lint:fix": "yarn run lint --fix",
     "test": "jest --verbose",
     "test:snapshot": "jest --updateSnapshot"
   },
@@ -42,6 +44,7 @@
   "devDependencies": {
     "@babel/core": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
+    "@pearkit/eslint-config": "^1.0.0",
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/react": "^5.1.9",
     "@types/jest": "^24.0.15",
@@ -51,11 +54,8 @@
     "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^4.1.16",
     "@typescript-eslint/eslint-plugin": "^1.12.0",
-    "@typescript-eslint/parser": "^1.12.0",
     "babel-jest": "^24.8.0",
     "eslint": "^6.0.1",
-    "eslint-config-airbnb": "^17.1.1",
-    "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jest": "^22.11.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",

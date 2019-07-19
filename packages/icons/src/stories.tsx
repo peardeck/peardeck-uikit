@@ -1,9 +1,9 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import * as icons from "./";
 import styled from "styled-components";
+import * as allIcons from "./index";
 
-const ICON_NAMES = Object.keys(icons);
+const ICONS = Object.entries(allIcons);
 
 const IconGrid = styled.div`
   display: flex;
@@ -25,17 +25,14 @@ const IconDescription = styled.figcaption`
 
 storiesOf("icons", module).add("All", () => (
   <IconGrid>
-    {ICON_NAMES.map(iconName => {
-      const Icon = (icons as any)[iconName];
-      return (
-        <IconGridItem key={iconName}>
-          <Icon />
-          <IconDescription>
-            <code>{iconName}</code>
-          </IconDescription>
-        </IconGridItem>
-      );
-    })}
+    {ICONS.map(([iconName, Icon]) => (
+      <IconGridItem key={iconName}>
+        <Icon />
+        <IconDescription>
+          <code>{iconName}</code>
+        </IconDescription>
+      </IconGridItem>
+    ))}
   </IconGrid>
 ));
 
@@ -63,12 +60,11 @@ const IconSetItem = styled.figure`
 
 const stories = storiesOf("icons/Components", module);
 
-ICON_NAMES.forEach(iconName => {
-  const Icon = (icons as any)[iconName];
+ICONS.forEach(([iconName, Icon]) => {
   stories.add(iconName, () => (
     <IconSet>
       {ICON_SIZES.map(size => (
-        <IconSetItem>
+        <IconSetItem key="size">
           <Icon size={size} />
           <IconDescription>{size}</IconDescription>
         </IconSetItem>

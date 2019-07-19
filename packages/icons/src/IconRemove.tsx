@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconRemove = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconRemove = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg width={size} height={size} {...props}>
     <title>{title}</title>
     <path

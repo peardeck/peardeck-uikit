@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconFreeResponseText = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconFreeResponseText = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 64 64" width={size} height={size} {...props}>
     <title>{title}</title>
     <path d="M13.1 32.2c0 1.4 1.2 2.4 2.8 2.4 1.3 0 2.1-.4 3.1-1.4v-2c-1-.9-1.8-1.3-3.1-1.3-1.6-.1-2.8.8-2.8 2.3zM32.4 25c-1.4 0-2.4.9-3.4 1.9v5.3c1 1 2 1.8 3.4 1.8 2.3 0 3.8-1.8 3.8-4.4 0-2.7-1.5-4.6-3.8-4.6z" />

@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconUnarchive = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconUnarchive = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 62 52.02" width={size} height={size} {...props}>
     <title>{title}</title>
     <defs>

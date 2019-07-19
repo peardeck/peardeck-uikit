@@ -16,7 +16,7 @@ const EXCLUDE = ["stories.tsx"];
  *
  * @param rootPath The path of the components.
  */
-const generateIndex = async (rootPath: string) => {
+const generateIndex = async (rootPath: string): Promise<void> => {
   let writeStream;
 
   console.log(`Creating index.ts in ${rootPath}`);
@@ -30,11 +30,17 @@ const generateIndex = async (rootPath: string) => {
     );
 
     const componentNames = files
-      .filter(name => name.endsWith(".tsx") && !EXCLUDE.includes(name)) // Only React .tsx components.
-      .map(name => basename(name, ".tsx")) // Extract conponent name from filename
+      .filter(
+        // Only React .tsx components.
+        (name): boolean => name.endsWith(".tsx") && !EXCLUDE.includes(name)
+      )
+      .map(
+        // Extract conponent name from filename
+        (name): string => basename(name, ".tsx")
+      )
       .sort();
 
-    componentNames.forEach(componentName => {
+    componentNames.forEach((componentName): void => {
       writeStream.write(
         `export { default as ${componentName} } from "./${componentName}";\n`
       );

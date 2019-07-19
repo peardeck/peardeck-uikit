@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconVocabularyList = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconVocabularyList = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 60.51 64.2" width={size} height={size} {...props}>
     <title>{title}</title>
     <path d="M7.56 0L0 28l44 11.89 7.57-28zM40.8 25.73L9.54 17.27l.93-3.45 31.25 8.46z" />

@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconEndSession = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconEndSession = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 64 64" width={size} height={size} {...props}>
     <title>{title}</title>
     <path d="M32 38c-3.3 0-6-2.7-6-6V6c0-3.3 2.7-6 6-6s6 2.7 6 6v26c0 3.3-2.7 6-6 6z" />

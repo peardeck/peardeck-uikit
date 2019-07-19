@@ -5,7 +5,7 @@ const SvgIconThoughtBubbleOutlined = ({
   title,
   size,
   ...props
-}: SvgIconProps) => (
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 63.09 59.2" width={size} height={size} {...props}>
     <title>{title}</title>
     <path

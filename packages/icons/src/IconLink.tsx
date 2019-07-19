@@ -1,7 +1,7 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconLink = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconLink = ({ title, size, ...props }: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 64 64" width={size} height={size} {...props}>
     <title>{title}</title>
     <path d="M25.6 36.5c-.9-.9-.9-2.4 0-3.3.9-.9 2.4-.9 3.3 0 2.8 2.8 7.4 2.8 10.3 0l10.9-10.9c2.8-2.8 2.8-7.4 0-10.3-2.8-2.8-7.4-2.8-10.3 0L28.9 23c-.9.9-2.4.9-3.3 0-.9-.9-.9-2.4 0-3.3l11-11C41.3 4 48.8 4 53.5 8.7s4.7 12.2 0 16.9l-11 10.9c-4.6 4.7-12.2 4.7-16.9 0z" />

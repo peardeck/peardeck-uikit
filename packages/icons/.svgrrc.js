@@ -11,7 +11,11 @@ module.exports = {
     import React from 'react';
     import { SvgIconProps, defaultProps } from './SvgIconProps';
 
-    const ${componentName} = ({ title, size, ...props }: SvgIconProps) => ${jsx};
+    const ${componentName} = ({
+      title,
+      size,
+      ...props
+    }: SvgIconProps): JSX.Element => ${jsx};
 
     ${componentName}.defaultProps = defaultProps;
 

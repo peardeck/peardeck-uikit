@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconShapeCat = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconShapeCat = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 61.63 60.3" width={size} height={size} {...props}>
     <title>{title}</title>
     <path d="M15.8 55.5a4.69 4.69 0 0 0 4.7 4.7h4.7V60a2.83 2.83 0 0 0-3.1-2.9v-9.4L15.8 54v1.5zM47.1 49.3h-6.3v4.9a4.66 4.66 0 0 0 2.6 4.2l1.4.7c1 .5 3 1 2.3-.4-1.2-2.4-2.2-4.1 0-9.4M44.4 4s.2-2.9 1.3-3.8a.52.52 0 0 1 .4-.2c1.6-.1 2.5 3.5 2.5 3.5z" />

@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconAskAgain = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconAskAgain = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 64 64" width={size} height={size} {...props}>
     <title>{title}</title>
     <path d="M0 20v35h43V20H0zm39 31H4V24h35v27z" />

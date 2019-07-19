@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconLinkLoadingSpinner = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconLinkLoadingSpinner = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg
     className="icon-link-loading-spinner_svg__link-loading__spinner"
     viewBox="0 0 66 66"

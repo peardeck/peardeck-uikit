@@ -1,4 +1,7 @@
 module.exports = {
+  globals: {
+    MyGlobal: true,
+  },
   extends: [
     "airbnb",
     "plugin:@typescript-eslint/recommended",
@@ -32,7 +35,7 @@ module.exports = {
   overrides: [
     {
       // Rules override for deveopment-specific files.
-      files: ["*.spec.tsx", "*.stories.tsx"],
+      files: ["*.spec.tsx", "*.stories.tsx", "stories.tsx"],
       rules: {
         // Allow importing devDependencies
         "import/no-extraneous-dependencies": "off",

@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconClassroom = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconClassroom = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 48 48" width={size} height={size} {...props}>
     <title>{title}</title>
     <g fill="none" fillRule="evenodd">

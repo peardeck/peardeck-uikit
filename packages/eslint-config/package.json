@@ -1,0 +1,27 @@
+{
+  "name": "@pearkit/eslint-config",
+  "version": "1.0.0",
+  "description": "A shared eslint configuration",
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Pear Deck",
+  "license": "MIT",
+  "main": "index.js",
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.12.0",
+    "eslint": "^6.0.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.11.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^1.12.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "prettier": "^1.18.2"
+  }
+}

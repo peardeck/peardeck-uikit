@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconCheckmarkStroke = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconCheckmarkStroke = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 79.8 79.8" width={size} height={size} {...props}>
     <title>{title}</title>
     <path

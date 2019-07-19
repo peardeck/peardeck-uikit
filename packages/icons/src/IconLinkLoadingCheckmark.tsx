@@ -5,7 +5,7 @@ const SvgIconLinkLoadingCheckmark = ({
   title,
   size,
   ...props
-}: SvgIconProps) => (
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 60.53 43.46" width={size} height={size} {...props}>
     <title>{title}</title>
     <path d="M7 19.4l17.06 17.06L53.52 7" />

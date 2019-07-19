@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconNewspaper = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconNewspaper = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 60.5 53.79" width={size} height={size} {...props}>
     <title>{title}</title>
     <path d="M55.44 0H16.06A5.06 5.06 0 0 0 11 5.05v40.73a3 3 0 0 1-1 2.25l-.14.12a3 3 0 0 1-1.82.63 3 3 0 0 1-3-3V12.46a2.5 2.5 0 0 0-5 0v33.81a8 8 0 0 0 12.32 6.23h43.1a5.07 5.07 0 0 0 5.06-5.06V5.05A5.06 5.06 0 0 0 55.44 0zm0 47.5H16L16.06 5l39.44.05z" />

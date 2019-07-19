@@ -5,7 +5,7 @@ const SvgIconExtensionQuestionCircular = ({
   title,
   size,
   ...props
-}: SvgIconProps) => (
+}: SvgIconProps): JSX.Element => (
   <svg
     data-name="Layer 1"
     viewBox="0 0 64 64"

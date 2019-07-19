@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconSpeechBubble = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconSpeechBubble = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg
     className="icon-speech-bubble_svg__speech-bubble"
     data-name="Layer 1"

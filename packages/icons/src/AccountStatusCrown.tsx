@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgAccountStatusCrown = ({ title, size, ...props }: SvgIconProps) => (
+const SvgAccountStatusCrown = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 59.42 41.19" width={size} height={size} {...props}>
     <title>{title}</title>
     <path

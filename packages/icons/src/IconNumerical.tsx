@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconNumerical = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconNumerical = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 64 64" width={size} height={size} {...props}>
     <title>{title}</title>
     <path d="M13.4 43.9c0 1.3-1.6 2.5-3 2.5s-3-1.2-3-2.5V24.6l-3 3.4c-.4.4-.7.6-1.2.6-1 0-1.9-.9-1.9-2.1 0-.6.3-1 .6-1.5l6.3-6.3c.4-.6 1.5-.9 2.2-.9 1.5 0 3.1 1.2 3.1 2.8v23.2h-.1z" />

@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconStudentAnswer = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconStudentAnswer = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg
     data-name="Layer 1"
     viewBox="0 0 61.78 54"

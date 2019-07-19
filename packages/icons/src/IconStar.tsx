@@ -1,7 +1,7 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconStar = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconStar = ({ title, size, ...props }: SvgIconProps): JSX.Element => (
   <svg
     className="icon-star_svg__icon--star"
     data-name="Layer 1"

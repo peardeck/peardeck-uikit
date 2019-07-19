@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconWaitingSpinner = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconWaitingSpinner = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg
     className="icon-waiting-spinner_svg__spinner"
     width={size}

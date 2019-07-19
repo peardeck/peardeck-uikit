@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconSortArrow = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconSortArrow = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg
     data-name="Layer 1"
     viewBox="0 0 62.04 35.83"

@@ -1,7 +1,11 @@
 import React from "react";
 import { SvgIconProps, defaultProps } from "./SvgIconProps";
 
-const SvgIconPrinter = ({ title, size, ...props }: SvgIconProps) => (
+const SvgIconPrinter = ({
+  title,
+  size,
+  ...props
+}: SvgIconProps): JSX.Element => (
   <svg viewBox="0 0 250 244.6" width={size} height={size} {...props}>
     <title>{title}</title>
     <path
