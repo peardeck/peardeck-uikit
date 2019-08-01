@@ -8,7 +8,7 @@ import {
   IconCalendar,
   IconCheckmark,
   IconClassroom,
-} from "@pearkit/icons";
+} from "@peardeck-uikit/icons";
 import { Button, ButtonSize } from "./Button";
 
 const disabledKnob = (initial = false) => boolean("Disabled", initial);

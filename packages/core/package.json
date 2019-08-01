@@ -1,5 +1,5 @@
 {
-  "name": "@pearkit/core",
+  "name": "@peardeck-uikit/core",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Pear Deck",
@@ -39,12 +39,12 @@
     "styled-components": "^4.0.0"
   },
   "dependencies": {
-    "@pearkit/icons": "^1.0.0"
+    "@peardeck-uikit/icons": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
-    "@pearkit/eslint-config": "^1.0.0",
+    "@peardeck-uikit/eslint-config": "^1.0.0",
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/react": "^5.1.9",
     "@types/jest": "^24.0.15",

@@ -24,8 +24,8 @@ addParameters({
 });
 
 function loadStories() {
-  require("@pearkit/core/lib/stories");
-  require("@pearkit/icons/lib/stories");
+  require("@peardeck-uikit/core/lib/stories");
+  require("@peardeck-uikit/icons/lib/stories");
 }
 
 configure(loadStories, module);

@@ -1,5 +1,5 @@
 {
-  "name": "@peardeck/pearkit",
+  "name": "@peardeck/peardeck-uikit",
   "description": "The Pear Deck UI kit",
   "version": "1.0.0",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "bootstrap": "lerna bootstrap",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx}\"",
-    "storybook": "lerna run start --scope @pearkit/storybook"
+    "storybook": "lerna run start --scope @peardeck-uikit/storybook"
   },
   "workspaces": [
     "packages/*"

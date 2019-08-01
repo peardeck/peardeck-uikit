@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { IconLoading } from "@pearkit/icons";
+import { IconLoading } from "@peardeck-uikit/icons";
 
 const rotate = keyframes`
   from {

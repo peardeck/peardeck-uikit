@@ -1,5 +1,5 @@
 {
-  "name": "@pearkit/storybook",
+  "name": "@peardeck-uikit/storybook",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "joekrill <joe@peardeck.com>",
@@ -23,8 +23,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
-    "@pearkit/core": "^1.0.0",
-    "@pearkit/icons": "^1.0.0",
+    "@peardeck-uikit/core": "^1.0.0",
+    "@peardeck-uikit/icons": "^1.0.0",
     "@storybook/addon-a11y": "^5.1.9",
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-info": "^5.1.9",

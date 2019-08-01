@@ -1,5 +1,5 @@
 {
-  "extends": ["@pearkit/eslint-config"],
+  "extends": ["@peardeck-uikit/eslint-config"],
   "overrides": [
     {
       "files": ["scripts/*"],
