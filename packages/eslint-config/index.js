@@ -16,6 +16,9 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
   rules: {
+    // IMPORTANT: When adding new rules here, please include a comment indicating
+    // the reason for the exception.
+
     // Default ident is 4, we use 2
     // note you must disable the base rule as it can report incorrect errors
     indent: "off",

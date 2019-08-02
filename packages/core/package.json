@@ -24,14 +24,14 @@
     "registry": "https://registry.yarnpkg.com"
   },
   "scripts": {
-    "build": "tsc",
-    "build:watch": "tsc --watch",
     "clean": "rimraf lib",
-    "start": "yarn run build:watch",
+    "build": "tsc",
+    "watch": "tsc --watch",
     "lint": "eslint ./src --ext .ts,.tsx",
     "lint:fix": "yarn run lint --fix",
     "test": "jest --verbose",
-    "test:snapshot": "jest --updateSnapshot"
+    "test:snapshot": "jest --updateSnapshot",
+    "precommit": "lint-staged"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
@@ -63,6 +63,7 @@
     "eslint-plugin-react": "^7.14.2",
     "jest": "^24.8.0",
     "jest-styled-components": "^6.3.3",
+    "lint-staged": "^9.2.1",
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -71,5 +72,12 @@
     "styled-components": "^4.3.2",
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.2"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
   }
 }
