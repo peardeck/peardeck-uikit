@@ -29,10 +29,14 @@ A React component library for Pear Deck. This aims to be a set of reusable compo
 ## Getting up and running:
 
 ```
+nvm install
+
 yarn
+
+yarn start
 ```
 
-TODO: finish this.
+This should build the components packages and launch Storybook in your browser.
 
 # Contributing
 
