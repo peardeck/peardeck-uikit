@@ -1,3 +1,4 @@
+import "./Box/Box.stories";
 import "./Button/Button.stories";
 import "./CallToAction/CallToAction.stories";
 import "./Collapsible/Collapsible.stories";

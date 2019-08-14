@@ -47,5 +47,8 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "dependencies": {
+    "@storybook/theming": "^5.1.11"
   }
 }

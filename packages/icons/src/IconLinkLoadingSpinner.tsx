@@ -17,8 +17,6 @@ const SvgIconLinkLoadingSpinner = ({
     <circle
       className="icon-link-loading-spinner_svg__link-loading__spinner__path"
       fill="none"
-      strokeWidth={6}
-      strokeLinecap="round"
       cx={33}
       cy={33}
       r={30}

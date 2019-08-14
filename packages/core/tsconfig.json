@@ -4,10 +4,9 @@
     "baseUrl": "./",
     "outDir": "./lib"
   },
-  "include": [
-    "./src"
-  ],
-  "exclude" : [
-    "./src/**/*.spec.@(ts|tsx)"
-  ]
+  "paths": {
+    "*": ["node_modules/*", "src/@typings/*"]
+  },
+  "include": ["./src"],
+  "exclude": ["./src/**/*.spec.@(ts|tsx)"]
 }

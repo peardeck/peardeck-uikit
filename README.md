@@ -101,3 +101,7 @@ The following projects were used for reference, inpsiration, and guidance. In ro
 * [VTEX Styleguide](https://github.com/vtex/styleguide)
 * [Garden React Components (Zendesk)](https://github.com/zendeskgarden/react-components)
 * [Amsterdam Styled Components](https://github.com/Amsterdam/amsterdam-styled-components)
+
+Related reading:
+
+* [How we built a component library that people actually enjoy using](https://medium.com/styled-components/how-to-build-a-great-component-library-a40d974a412d)

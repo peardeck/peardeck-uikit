@@ -1,60 +1,118 @@
 import styled from "styled-components";
+import {
+  border,
+  BorderProps,
+  color,
+  ColorProps,
+  layout,
+  LayoutProps,
+  shadow,
+  ShadowProps,
+  space,
+  SpaceProps,
+  typography,
+  TypographyProps,
+  variant,
+} from "styled-system";
+import { themeGet } from "@styled-system/theme-get";
+import { darken } from "polished";
+import theme, { ThemedComponentProps } from "../Theme/theme";
+
+export type ButtonVariant = "default" | "primary" | "secondary";
 
 export type ButtonSize = "small" | "medium" | "large";
 
-const size = (props: {
-  size?: ButtonSize;
-}): { fontSize: string; padding: string } => {
-  switch (props.size) {
-    case "small":
-      return {
-        fontSize: "0.75em",
-        padding: "0.25em 0.5em",
-      };
-    case "large":
-      return {
-        fontSize: "1.5em",
-        padding: "0.75em 1.25em",
-      };
-    case "medium":
-    default:
-      return {
-        fontSize: "1em",
-        padding: "0.5em 1em",
-      };
-  }
-};
+export type ButtonProps = BorderProps &
+  ColorProps &
+  LayoutProps &
+  ShadowProps &
+  SpaceProps &
+  ThemedComponentProps &
+  TypographyProps & {
+    disabled?: boolean;
+    buttonSize?: ButtonSize;
+    variant?: ButtonVariant;
+  };
 
-export const Button = styled.button`
-  font-family: inherit;
-  font-weight: 600;
-  line-height: 1.5;
-  text-align: center;
-  cursor: pointer;
-  background-color: #ffffff;
-  color: #354242;
-  border: 1px solid #dce2e9;
-  border-radius: 1.5em;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.27);
+// TODO: do not hardcode background hover color.
+
+export const Button: React.FunctionComponent<ButtonProps> = styled.button<
+  ButtonProps
+>`
+  cursor: ${({ disabled }): string => (disabled ? "not-allowed" : "pointer")};
   transition: all 0.2s ease;
-  ${size}
 
   > * {
     vertical-align: middle;
   }
 
-  :hover {
-    background-color: rgba(237, 240, 244, 0.42);
-  }
-
   :disabled {
     opacity: 0.3;
   }
+
+  /* By default calculate a darkened hover color -- but this can be overriden by the variant */
+  :hover {
+    background-color: ${(props): string =>
+      darken(0.1, themeGet(`colors.${props.variant}`, "#ffffff")(props))}}
+  }
+
+  ${variant({
+    prop: "variant",
+    variants: {
+      default: {
+        color: "text",
+        bg: "background",
+      },
+      primary: {
+        color: "white",
+        bg: "primary",
+      },
+      secondary: {
+        color: "white",
+        bg: "secondary",
+      },
+    },
+  })}
+
+  ${variant({
+    prop: "buttonSize",
+    variants: {
+      small: {
+        fontSize: 0,
+        px: 2,
+        py: 1,
+      },
+      medium: {
+        fontSize: 2,
+        px: 3,
+        py: 2,
+      },
+      large: {
+        fontSize: 4,
+        px: 4,
+        py: 3,
+      },
+    },
+  })}
+
+  ${layout}
+  ${border}
+  ${color}
+  ${shadow}
+  ${space}
+  ${typography}
 `;
 
 Button.defaultProps = {
-  size: "medium",
-  theme: {},
+  borderRadius: 3,
+  boxShadow: "medium",
+  buttonSize: "small",
+  fontFamily: "inherit",
+  fontWeight: "bold",
+  lineHeight: "default",
+  textAlign: "center",
+  theme,
+  variant: "default",
 };
 
 Button.displayName = "Button";

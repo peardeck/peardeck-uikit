@@ -9,12 +9,29 @@ import {
   IconCheckmark,
   IconClassroom,
 } from "@peardeck-uikit/icons";
-import { Button, ButtonSize } from "./Button";
+import { Button, ButtonSize, ButtonVariant } from "./Button";
 
 const disabledKnob = (initial = false) => boolean("Disabled", initial);
-const sizeKnob = (initial: ButtonSize = "medium") =>
+
+const buttonSizeKnob = (initial: ButtonSize = "medium") =>
   select("Size", ["small", "medium", "large"], initial) as ButtonSize;
+
+const sizeKnob = (initial = null) =>
+  select(
+    "Space size",
+    { "not specified": null, "0": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5 },
+    initial
+  );
+
+const variantKnob = (initial: ButtonVariant = "default") =>
+  select(
+    "Variant",
+    ["default", "primary", "secondary"],
+    initial
+  ) as ButtonVariant;
+
 const labelKnob = (initial: string | null = null) => text("Label", initial);
+
 const buttonActions = actions("onClick", "onFocus", "onBlur");
 
 const ICONS: { [key: string]: ElementType } = {
@@ -31,7 +48,14 @@ storiesOf("core/Button", module)
   .add(
     "with text",
     () => (
-      <Button {...buttonActions} disabled={disabledKnob()} size={sizeKnob()}>
+      <Button
+        {...buttonActions}
+        disabled={disabledKnob()}
+        buttonSize={buttonSizeKnob()}
+        m={sizeKnob() || undefined}
+        p={sizeKnob() || undefined}
+        variant={variantKnob()}
+      >
         {labelKnob("Hello!")}
       </Button>
     ),
@@ -54,13 +78,23 @@ storiesOf("core/Button", module)
     const IconComponent = ICONS[iconKey];
 
     return (
-      <Button {...buttonActions} disabled={disabledKnob()} size={sizeKnob()}>
+      <Button
+        {...buttonActions}
+        disabled={disabledKnob()}
+        buttonSize={buttonSizeKnob()}
+        variant={variantKnob()}
+      >
         <IconComponent /> {labelKnob("This button has an icon!")}
       </Button>
     );
   })
   .add("with emoji", () => (
-    <Button {...buttonActions} disabled={disabledKnob()} size={sizeKnob()}>
+    <Button
+      {...buttonActions}
+      disabled={disabledKnob()}
+      buttonSize={buttonSizeKnob()}
+      variant={variantKnob()}
+    >
       <span role="img" aria-label="so cool">
         {labelKnob("😀 😎 👍 💯")}
       </span>

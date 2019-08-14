@@ -1,5 +1,7 @@
+export { Box } from "./Box/Box";
 export { Button } from "./Button/Button";
 export { Collapsible } from "./Collapsible/Collapsible";
 export { IconButton } from "./IconButton/IconButton";
 export { LoadingIndicator } from "./LoadingIndicator/LoadingIndicator";
-export const VERSION = "1.0.0";
+export { ThemeProvider } from "./Theme/ThemeProvider";
+export { default as defaultTheme } from "./Theme/theme";
