@@ -23,3 +23,6 @@ package-lock.json
 # builds
 dist/
 lib/
+
+# test coverage reports
+coverage/

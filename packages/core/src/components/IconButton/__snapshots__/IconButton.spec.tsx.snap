@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton matches the snapshot 1`] = `
+.c0 {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.27);
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 100%;
+}
+
+.c0 > * {
+  vertical-align: middle;
+}
+
+.c0:disabled {
+  opacity: 0.3;
+}
+
+.c0:hover {
+  background-color: #e6e6e6;
+}
+
+.c0 > svg {
+  fill: white;
+}
+
+.c0:hover > svg {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+<button
+  className="c0"
+  fontFamily="inherit"
+  fontSize={2}
+  fontWeight="bold"
+  size="2.5em"
+/>
+`;

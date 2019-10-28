@@ -1,2 +1,3 @@
 # Compiled builds are stored here.
+dist/
 lib/

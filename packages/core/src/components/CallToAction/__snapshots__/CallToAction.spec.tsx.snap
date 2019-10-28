@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CallToAction matches the snapshot 1`] = `
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c3 {
+  padding-left: 4px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 8px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.27);
+  border-radius: 4px;
+}
+
+.c5 {
+  margin-left: 8px;
+  padding: 4px;
+  box-shadow: none;
+  border-radius: 4px;
+  border: 1px solid #777777;
+}
+
+.c4 {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #ffffff;
+  background-color: #29abe2;
+  font-size: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.27);
+  margin-top: 4px;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.c4 > * {
+  vertical-align: middle;
+}
+
+.c4:disabled {
+  opacity: 0.3;
+}
+
+.c4:hover {
+  background-color: #1a8dbe;
+}
+
+.c2 {
+  padding-left: 4px;
+  margin-bottom: 8px;
+  margin: 0;
+}
+
+<div
+  className="c0"
+  display="inline-flex"
+>
+  <div
+    className="c1"
+    display="inline-flex"
+  >
+    <h2
+      className="c2"
+    >
+      Call To Action!
+    </h2>
+    <div
+      className="c3"
+    />
+    <button
+      className="c4"
+      fontFamily="inherit"
+      fontWeight="bold"
+    >
+      Do the thing
+    </button>
+  </div>
+  <div
+    className="c5"
+  >
+    foo
+  </div>
+</div>
+`;
+
+exports[`CallToAction renders with out an image 1`] = `
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c3 {
+  padding-left: 4px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 8px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.27);
+  border-radius: 4px;
+}
+
+.c4 {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #ffffff;
+  background-color: #29abe2;
+  font-size: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.27);
+  margin-top: 4px;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.c4 > * {
+  vertical-align: middle;
+}
+
+.c4:disabled {
+  opacity: 0.3;
+}
+
+.c4:hover {
+  background-color: #1a8dbe;
+}
+
+.c2 {
+  padding-left: 4px;
+  margin-bottom: 8px;
+  margin: 0;
+}
+
+<div
+  className="c0"
+  display="inline-flex"
+>
+  <div
+    className="c1"
+    display="inline-flex"
+  >
+    <h2
+      className="c2"
+    >
+      Call To Action!
+    </h2>
+    <div
+      className="c3"
+    />
+    <button
+      className="c4"
+      fontFamily="inherit"
+      fontWeight="bold"
+    >
+      Do the thing
+    </button>
+  </div>
+</div>
+`;

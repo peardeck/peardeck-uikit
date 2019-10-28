@@ -2,21 +2,20 @@ import React from "react";
 import { addDecorator, addParameters, configure } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { withA11y } from "@storybook/addon-a11y";
-import { ThemeProvider } from "@peardeck-uikit/core";
+import { withKnobs } from "@storybook/addon-knobs";
+import { Box, ThemeProvider } from "@peardeck-uikit/core";
 import { create } from "@storybook/theming";
 
 addDecorator(withInfo);
 addDecorator(withA11y);
-addDecorator(story => <ThemeProvider>{story()}</ThemeProvider>);
+addDecorator(withKnobs);
+addDecorator(story => (
+  <ThemeProvider>
+    <Box m={2}>{story()}</Box>
+  </ThemeProvider>
+));
 addParameters({
   options: {
-    // isFullscreen: false,
-    // showAddonsPanel: true,
-    // showSearchBox: true,
-    // panelPosition: 'right',
-    // hierarchySeparator: /\./,
-    // hierarchyRootSeparator: /\|/,
-    // enableShortcuts: true,
     theme: create({
       base: "light",
       brandTitle: "Peardeck UI Kit",

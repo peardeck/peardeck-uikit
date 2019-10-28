@@ -17,7 +17,7 @@
       "<rootDir>/src"
     ],
     "setupFilesAfterEnv": [
-      "<rootDir>/setupJest.ts"
+      "<rootDir>/test/setupJest.ts"
     ]
   },
   "publishConfig": {
@@ -29,7 +29,8 @@
     "watch": "tsc --watch",
     "lint": "eslint ./src --ext .ts,.tsx",
     "lint:fix": "yarn run lint --fix",
-    "test": "jest --verbose",
+    "test": "jest --verbose --coverage",
+    "test:watch": "jest --watch --coverage",
     "test:snapshot": "jest --updateSnapshot",
     "precommit": "lint-staged"
   },
@@ -40,43 +41,43 @@
   },
   "dependencies": {
     "@peardeck-uikit/icons": "^1.0.0",
-    "@styled-system/theme-get": "^5.1.0",
-    "csstype": "^2.6.6",
+    "@styled-system/theme-get": "^5.1.2",
+    "csstype": "^2.6.7",
     "polished": "^3.4.1",
-    "styled-system": "^5.1.0"
+    "styled-system": "^5.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^7.5.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "@peardeck-uikit/eslint-config": "^1.0.0",
-    "@storybook/addon-knobs": "^5.1.9",
-    "@storybook/react": "^5.1.9",
+    "@storybook/addon-knobs": "^5.2.3",
+    "@storybook/react": "^5.2.3",
     "@types/jest": "^24.0.15",
-    "@types/react": "^16.8.22",
-    "@types/react-test-renderer": "^16.8.2",
-    "@types/storybook__addon-knobs": "^5.0.2",
+    "@types/react": "^16.9.5",
+    "@types/react-test-renderer": "^16.9.0",
+    "@types/storybook__addon-knobs": "^5.0.4",
     "@types/storybook__react": "^4.0.2",
-    "@types/styled-components": "^4.1.16",
-    "@types/styled-system": "^5.0.1",
-    "@typescript-eslint/eslint-plugin": "^1.12.0",
+    "@types/styled-components": "^4.1.19",
+    "@types/styled-system": "^5.1.2",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
     "babel-jest": "^24.8.0",
-    "eslint": "^6.0.1",
+    "eslint": "^6.5.1",
     "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jest": "^22.11.1",
+    "eslint-plugin-jest": "^22.17.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
     "jest": "^24.8.0",
     "jest-styled-components": "^6.3.3",
-    "lint-staged": "^9.2.1",
+    "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-test-renderer": "^16.8.6",
-    "rimraf": "^2.6.3",
-    "styled-components": "^4.3.2",
-    "ts-jest": "^24.0.2",
-    "typescript": "^3.5.2"
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-test-renderer": "^16.10.2",
+    "rimraf": "^3.0.0",
+    "styled-components": "^4.4.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [

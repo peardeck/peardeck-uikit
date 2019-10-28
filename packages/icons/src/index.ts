@@ -31,17 +31,25 @@ export { default as IconDocument } from "./IconDocument";
 export { default as IconDraggable } from "./IconDraggable";
 export { default as IconDrawingClear } from "./IconDrawingClear";
 export { default as IconDrawingColorBox } from "./IconDrawingColorBox";
-export { default as IconDrawingDrawerIndication } from "./IconDrawingDrawerIndication";
+export {
+  default as IconDrawingDrawerIndication,
+} from "./IconDrawingDrawerIndication";
 export { default as IconDrawingEraser } from "./IconDrawingEraser";
 export { default as IconDrawingHighlighter } from "./IconDrawingHighlighter";
 export { default as IconDrawingLine } from "./IconDrawingLine";
-export { default as IconDrawingNavigationLeft } from "./IconDrawingNavigationLeft";
-export { default as IconDrawingNavigationRight } from "./IconDrawingNavigationRight";
+export {
+  default as IconDrawingNavigationLeft,
+} from "./IconDrawingNavigationLeft";
+export {
+  default as IconDrawingNavigationRight,
+} from "./IconDrawingNavigationRight";
 export { default as IconDrawingPencil } from "./IconDrawingPencil";
 export { default as IconDrawingRedo } from "./IconDrawingRedo";
 export { default as IconDrawingResizer } from "./IconDrawingResizer";
 export { default as IconDrawingShapes } from "./IconDrawingShapes";
-export { default as IconDrawingSizerBackground } from "./IconDrawingSizerBackground";
+export {
+  default as IconDrawingSizerBackground,
+} from "./IconDrawingSizerBackground";
 export { default as IconDrawingSizingLines } from "./IconDrawingSizingLines";
 export { default as IconDrawingText } from "./IconDrawingText";
 export { default as IconDrawingTextSizer } from "./IconDrawingTextSizer";
@@ -59,12 +67,16 @@ export { default as IconExpandWindow } from "./IconExpandWindow";
 export { default as IconExplanation } from "./IconExplanation";
 export { default as IconExport } from "./IconExport";
 export { default as IconExtensionQuestion } from "./IconExtensionQuestion";
-export { default as IconExtensionQuestionCircular } from "./IconExtensionQuestionCircular";
+export {
+  default as IconExtensionQuestionCircular,
+} from "./IconExtensionQuestionCircular";
 export { default as IconExternalLink } from "./IconExternalLink";
 export { default as IconEye } from "./IconEye";
 export { default as IconFacebook } from "./IconFacebook";
 export { default as IconFacebookSmall } from "./IconFacebookSmall";
-export { default as IconFreeResponseExpression } from "./IconFreeResponseExpression";
+export {
+  default as IconFreeResponseExpression,
+} from "./IconFreeResponseExpression";
 export { default as IconFreeResponseNumber } from "./IconFreeResponseNumber";
 export { default as IconFreeResponseText } from "./IconFreeResponseText";
 export { default as IconFreehandDrawing } from "./IconFreehandDrawing";
@@ -81,7 +93,9 @@ export { default as IconImage } from "./IconImage";
 export { default as IconLeave } from "./IconLeave";
 export { default as IconLightBulb } from "./IconLightBulb";
 export { default as IconLink } from "./IconLink";
-export { default as IconLinkLoadingCheckmark } from "./IconLinkLoadingCheckmark";
+export {
+  default as IconLinkLoadingCheckmark,
+} from "./IconLinkLoadingCheckmark";
 export { default as IconLinkLoadingSpinner } from "./IconLinkLoadingSpinner";
 export { default as IconList } from "./IconList";
 export { default as IconListView } from "./IconListView";
@@ -107,7 +121,9 @@ export { default as IconMoveWindow } from "./IconMoveWindow";
 export { default as IconMsftCircle } from "./IconMsftCircle";
 export { default as IconMsftExternalLink } from "./IconMsftExternalLink";
 export { default as IconMultipleChoice } from "./IconMultipleChoice";
-export { default as IconNavigationBlockArrow } from "./IconNavigationBlockArrow";
+export {
+  default as IconNavigationBlockArrow,
+} from "./IconNavigationBlockArrow";
 export { default as IconNavigator } from "./IconNavigator";
 export { default as IconNavigatorActive } from "./IconNavigatorActive";
 export { default as IconNewspaper } from "./IconNewspaper";
@@ -126,7 +142,9 @@ export { default as IconPresent } from "./IconPresent";
 export { default as IconPrinter } from "./IconPrinter";
 export { default as IconProjector } from "./IconProjector";
 export { default as IconProjectorCircular } from "./IconProjectorCircular";
-export { default as IconProjectorFalseCircular } from "./IconProjectorFalseCircular";
+export {
+  default as IconProjectorFalseCircular,
+} from "./IconProjectorFalseCircular";
 export { default as IconQq } from "./IconQq";
 export { default as IconReadingGlasses } from "./IconReadingGlasses";
 export { default as IconRedo } from "./IconRedo";
@@ -164,10 +182,14 @@ export { default as IconStudentAnswer } from "./IconStudentAnswer";
 export { default as IconStudentLock } from "./IconStudentLock";
 export { default as IconStudentLockOpen } from "./IconStudentLockOpen";
 export { default as IconStudentResponse } from "./IconStudentResponse";
-export { default as IconStudentResponseClosed } from "./IconStudentResponseClosed";
+export {
+  default as IconStudentResponseClosed,
+} from "./IconStudentResponseClosed";
 export { default as IconTarget } from "./IconTarget";
 export { default as IconTextBlock } from "./IconTextBlock";
-export { default as IconThoughtBubbleOutlined } from "./IconThoughtBubbleOutlined";
+export {
+  default as IconThoughtBubbleOutlined,
+} from "./IconThoughtBubbleOutlined";
 export { default as IconThumb } from "./IconThumb";
 export { default as IconThumbDown } from "./IconThumbDown";
 export { default as IconTransparentTile } from "./IconTransparentTile";

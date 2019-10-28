@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text allows non-theme \`fontSize\` values 1`] = `
+.c0 {
+  font-size: 200px;
+}
+
+<span
+  className="c0"
+  fontSize="200px"
+/>
+`;
+
+exports[`Text handles \`fontSize\` values from theme 1`] = `
+.c0 {
+  font-size: 16px;
+}
+
+<span
+  className="c0"
+  fontSize={2}
+/>
+`;
+
+exports[`Text handles \`fontStyle\` values 1`] = `
+.c0 {
+  font-style: italic;
+}
+
+<span
+  className="c0"
+  fontStyle="italic"
+/>
+`;
+
+exports[`Text handles \`fontWeight\` values from theme 1`] = `
+.c0 {
+  font-weight: 400;
+}
+
+<span
+  className="c0"
+  fontWeight="normal"
+/>
+`;
+
+exports[`Text handles \`lineHeight\` values from theme 1`] = `
+.c0 {
+  line-height: 1;
+}
+
+<span
+  className="c0"
+/>
+`;
+
+exports[`Text renders a span by default 1`] = `
+<span
+  className=""
+/>
+`;
+
+exports[`Text respects fontFamily="monospace" 1`] = `
+.c0 {
+  font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+}
+
+<span
+  className="c0"
+  fontFamily="monospace"
+/>
+`;
