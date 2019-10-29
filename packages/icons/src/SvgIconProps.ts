@@ -1,9 +1,8 @@
-import { SVGProps } from "react";
-
-export interface SvgIconProps extends SVGProps<SVGSVGElement> {
-  title?: string;
-  size: string | number | undefined;
-}
+export type SvgIconProps = JSX.IntrinsicAttributes &
+  React.SVGProps<SVGSVGElement> & {
+    title?: string;
+    size?: string | number | undefined;
+  };
 
 export const defaultProps: SvgIconProps = {
   "aria-hidden": "true",

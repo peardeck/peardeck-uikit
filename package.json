@@ -11,9 +11,8 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx}\"",
     "build": "lerna run build",
     "clean": "lerna run clean",
-    "dev": "lerna run --parallel watch",
-    "storybook": "lerna run watch --scope @peardeck-uikit/storybook",
-    "start": "yarn run build && yarn run storybook"
+    "start": "lerna run --parallel watch",
+    "storybook": "yarn run build && lerna run watch --scope @peardeck-uikit/storybook"
   },
   "workspaces": [
     "packages/*"

@@ -17,7 +17,8 @@
   },
   "scripts": {
     "build": "yarn run clean && yarn run compile",
-    "build:components": "svgr --ext tsx -d ./src ./svgs",
+    "build:all": "yarn run clean && yarn run build:components && yarn run build:index && yarn run compile",
+    "build:components": "svgr --ext tsx -d ./src/transformed ./svgs",
     "build:index": "ts-node --skip-project ./scripts/build-index.ts",
     "compile": "tsc",
     "watch": "tsc --watch",

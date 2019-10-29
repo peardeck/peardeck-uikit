@@ -5,8 +5,8 @@
       "files": ["scripts/*"],
       "rules": {
         // Allow importing devDependencies
-        "no-console": "off",
-      },
-    },
-  ],
+        "no-console": "off"
+      }
+    }
+  ]
 }

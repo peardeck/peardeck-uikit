@@ -1,0 +1,10 @@
+multipass: true
+
+plugins:
+  - prefixIds: true
+  - removeAttrs:
+      attrs:
+        - data-.*
+  - removeScriptElement: true
+  - removeEmptyContainers: true
+  - reusePaths: true

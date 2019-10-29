@@ -9,7 +9,7 @@ module.exports = {
     const typeScriptTpl = template.smart({ plugins: ["typescript"] });
     return typeScriptTpl.ast`
     import React from 'react';
-    import { SvgIconProps, defaultProps } from './SvgIconProps';
+    import { SvgIconProps, defaultProps } from '../SvgIconProps';
 
     const ${componentName} = ({
       title,
