@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { CollapsibleHeader, CollapsibleHeaderProps } from "./CollapsibleHeader";
 
-interface CollapsibleProps extends CollapsibleHeaderProps {
+export interface CollapsibleProps extends CollapsibleHeaderProps {
   /**
    * Called when the collapsed state should be changed.
    *
@@ -34,6 +34,9 @@ const StyledCollapsibleContent = styled.div<StyledCollapsibleContentProps>`
     collapsed ? "0" : "600px"};
 `;
 
+/**
+ *  Provides a container with a clickable header that will collapse and expand child content.
+ */
 export const Collapsible = ({
   children,
   collapsed,

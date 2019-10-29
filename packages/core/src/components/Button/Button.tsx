@@ -36,6 +36,13 @@ export type ButtonProps = BorderProps &
 
 // TODO: fix icon color for darker backgrounds
 
+/**
+ * Button is used for actions, like in forms. Use \`Link\` components when
+ * navigating a page or changing the URL.
+ *
+ * In special cases where you'd like to use a <a> styled like a Button,
+ * use <Button as='a'> and provide an href.
+ */
 export const Button = styled.button<ButtonProps>`
   cursor: ${({ disabled }): string => (disabled ? "not-allowed" : "pointer")};
   transition: all 0.2s ease;

@@ -3,7 +3,7 @@ import { Flashcard } from "./Flashcard";
 
 export default {
   component: Flashcard,
-  title: "Flashcards/Flashcard",
+  title: "Flashcards|Flashcard",
 };
 
 export const Default = () => <Flashcard />;

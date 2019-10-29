@@ -17,6 +17,9 @@ export type TextProps = ThemedComponentProps &
   DisplayProps &
   SpaceProps;
 
+/**
+ * Text is component for setting font-size, typographic styles, margin, and color.
+ */
 export const Text = styled.span<TextProps>`
   ${color}
   ${display}

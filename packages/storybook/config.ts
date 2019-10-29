@@ -3,12 +3,12 @@ import { addDecorator, addParameters, configure } from "@storybook/react";
 import { withA11y } from "@storybook/addon-a11y";
 import { withKnobs } from "@storybook/addon-knobs";
 import { create } from "@storybook/theming";
-import withThemeProvider from "./withThemeProvider";
+// import withThemeProvider from "./withThemeProvider";
 
 // addDecorator(withInfo);
 addDecorator(withA11y);
 addDecorator(withKnobs);
-addDecorator(withThemeProvider);
+// addDecorator(withThemeProvider);
 addParameters({
   options: {
     theme: create({

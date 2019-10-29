@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { Text } from "../Text/Text";
 import { theme } from "../../theme/theme";
 
+/**
+ * The Heading component will render an html h1-6 tag without any default styling.
+ */
 export const Heading1 = styled(Text).attrs({ as: "h1" })``;
 
 Heading1.displayName = "Heading1";

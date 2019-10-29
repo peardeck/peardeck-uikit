@@ -1,13 +1,21 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
-import { UncontrolledCollapsible } from "./Collapsible";
+import { useState } from "@storybook/addons";
+import { Collapsible } from "./Collapsible";
 
-storiesOf("core/Collapsible", module).add(
-  "Default",
-  () => (
-    <UncontrolledCollapsible
+export default {
+  component: Collapsible,
+  title: "core|Collapsible",
+};
+
+export const Default = () => {
+  const [collapsed, onCollapsedChange] = useState(false);
+
+  return (
+    <Collapsible
       title="This is the title"
       subTitle="...and a subtitle goes here"
+      collapsed={collapsed}
+      onCollapsedChange={onCollapsedChange}
     >
       Content goes here!
       <div
@@ -20,13 +28,6 @@ storiesOf("core/Collapsible", module).add(
       >
         Make room!
       </div>
-    </UncontrolledCollapsible>
-  ),
-  {
-    notes: `
-        # Collapsible
-
-        Provides a container with a clickable header that will collapse and expand child content.
-      `,
-  }
-);
+    </Collapsible>
+  );
+};

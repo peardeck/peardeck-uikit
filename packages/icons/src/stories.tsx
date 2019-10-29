@@ -3,6 +3,10 @@ import { storiesOf } from "@storybook/react";
 import styled from "styled-components";
 import * as allIcons from "./index";
 
+export default {
+  title: "Icons",
+};
+
 const ICONS = Object.entries(allIcons);
 
 const IconGrid = styled.div`
@@ -23,7 +27,7 @@ const IconDescription = styled.figcaption`
   margin-top: 1em;
 `;
 
-storiesOf("icons", module).add("All", () => (
+storiesOf("Icons|", module).add("All", () => (
   <IconGrid>
     {ICONS.map(([iconName, Icon]) => (
       <IconGridItem key={iconName}>
@@ -58,7 +62,7 @@ const IconSetItem = styled.figure`
   }
 `;
 
-const stories = storiesOf("icons/Components", module);
+const stories = storiesOf("Icons|Components", module);
 
 ICONS.forEach(([iconName, Icon]) => {
   stories.add(iconName, () => (

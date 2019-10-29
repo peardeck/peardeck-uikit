@@ -14,6 +14,9 @@ export type DividerProps = ThemedComponentProps &
   SpaceProps &
   WidthProps;
 
+/**
+ * The Divider component is a horizontal dividing line.
+ */
 export const Divider = styled.hr<DividerProps>`
   border: 0;
   border-bottom-style: solid;

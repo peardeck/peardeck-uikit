@@ -1,5 +1,4 @@
 import React, { ElementType } from "react";
-import { storiesOf } from "@storybook/react";
 import { select, text, boolean } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 import {
@@ -10,7 +9,7 @@ import {
   IconClassroom,
 } from "@peardeck-uikit/icons";
 import { Button, ButtonSize, ButtonVariant } from "./Button";
-import { themeSpaceKnob } from "../../theme/knobs.stories";
+import { themeSpaceKnob } from "../../theme/knobs";
 
 const disabledKnob = (initial = false) => boolean("Disabled", initial);
 
@@ -33,55 +32,48 @@ const ICONS: { [key: string]: ElementType } = {
 };
 const ICONS_KEYS = Object.keys(ICONS);
 
-storiesOf("core/Button", module)
-  .add(
-    "with text",
-    () => (
-      <Button
-        onClick={action("onClick")}
-        disabled={disabledKnob()}
-        buttonSize={buttonSizeKnob()}
-        m={themeSpaceKnob("Margin")}
-        p={themeSpaceKnob("Padding")}
-        variant={buttonVariantKnbo()}
-      >
-        {text("Label", "Hello!")}
-      </Button>
-    ),
-    {
-      notes: `
-        # Button
+export default {
+  component: Button,
+  title: "core|Button",
+};
 
-        Button is used for actions, like in forms. Use \`Link\` components when navigating a page or changing the URL.
+export const Default = () => (
+  <Button
+    onClick={action("onClick")}
+    disabled={disabledKnob()}
+    buttonSize={buttonSizeKnob()}
+    m={themeSpaceKnob("Margin")}
+    p={themeSpaceKnob("Padding")}
+    variant={buttonVariantKnbo()}
+  >
+    {text("Label", "Hello!")}
+  </Button>
+);
 
-        In special cases where you'd like to use a <a> styled like a Button, use <Button as='a'> and provide an href.
-      `,
-    }
-  )
-  .add("with icon", () => {
-    const iconKey = select("Icon", ICONS_KEYS, ICONS_KEYS[0]);
-    const IconComponent = ICONS[iconKey];
+export const WithIcon = () => {
+  const iconKey = select("Icon", ICONS_KEYS, ICONS_KEYS[0]);
+  const IconComponent = ICONS[iconKey];
 
-    return (
-      <Button
-        onClick={action("onClick")}
-        disabled={disabledKnob()}
-        buttonSize={buttonSizeKnob()}
-        variant={buttonVariantKnbo()}
-      >
-        <IconComponent /> {text("Label", "This button has an icon!")}
-      </Button>
-    );
-  })
-  .add("with emoji", () => (
+  return (
     <Button
       onClick={action("onClick")}
       disabled={disabledKnob()}
       buttonSize={buttonSizeKnob()}
       variant={buttonVariantKnbo()}
     >
-      <span role="img" aria-label="so cool">
-        {text("Label", "😀 😎 👍 💯")}
-      </span>
+      <IconComponent /> {text("Label", "This button has an icon!")}
     </Button>
-  ));
+  );
+};
+export const WithEmoji = () => (
+  <Button
+    onClick={action("onClick")}
+    disabled={disabledKnob()}
+    buttonSize={buttonSizeKnob()}
+    variant={buttonVariantKnbo()}
+  >
+    <span role="img" aria-label="so cool">
+      {text("Label", "😀 😎 👍 💯")}
+    </span>
+  </Button>
+);
