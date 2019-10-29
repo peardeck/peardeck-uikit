@@ -1,11 +1,18 @@
 {
   "name": "@peardeck-uikit/eslint-config",
-  "version": "1.0.1-alpha.0",
+  "version": "0.0.1",
   "description": "A shared eslint configuration",
   "keywords": [
     "eslint",
     "eslintconfig"
   ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/peardeck/peardeck-uikit.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "author": "Pear Deck",
   "license": "MIT",
   "main": "index.js",
@@ -23,5 +30,6 @@
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.4.0",
     "prettier": "^1.18.2"
-  }
+  },
+  "gitHead": "1621354a1fb187f49c08f5195bce51c968230ac5"
 }

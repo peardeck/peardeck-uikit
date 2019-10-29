@@ -1,6 +1,6 @@
 {
   "name": "@peardeck-uikit/storybook",
-  "version": "1.0.1-alpha.0",
+  "version": "0.0.1",
   "description": "> TODO: description",
   "author": "joekrill <joe@peardeck.com>",
   "license": "MIT",
@@ -12,8 +12,12 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/peardeck/peardeck-uikit.git"
+  },
   "publishConfig": {
-    "registry": "https://registry.yarnpkg.com"
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "watch": "start-storybook -c .",
@@ -22,8 +26,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
-    "@peardeck-uikit/core": "^1.0.1-alpha.0",
-    "@peardeck-uikit/icons": "^1.0.1-alpha.0",
+    "@peardeck-uikit/core": "^0.0.1",
+    "@peardeck-uikit/icons": "^0.0.1",
     "@storybook/addon-a11y": "^5.2.3",
     "@storybook/addon-actions": "^5.2.3",
     "@storybook/addon-docs": "^5.2.5",
@@ -49,5 +53,6 @@
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "gitHead": "1621354a1fb187f49c08f5195bce51c968230ac5"
 }

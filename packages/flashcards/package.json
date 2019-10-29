@@ -1,6 +1,6 @@
 {
   "name": "@peardeck-uikit/flashcards",
-  "version": "1.0.1-alpha.0",
+  "version": "0.0.1",
   "description": "> TODO: description",
   "author": "Pear Deck",
   "license": "MIT",
@@ -20,8 +20,12 @@
       "<rootDir>/test/setupJest.ts"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/peardeck/peardeck-uikit.git"
+  },
   "publishConfig": {
-    "registry": "https://registry.yarnpkg.com"
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "clean": "rimraf dist",
@@ -40,14 +44,14 @@
     "styled-components": "^4.0.0"
   },
   "dependencies": {
-    "@peardeck-uikit/core": "^1.0.1-alpha.0",
-    "@peardeck-uikit/icons": "^1.0.1-alpha.0",
+    "@peardeck-uikit/core": "^0.0.1",
+    "@peardeck-uikit/icons": "^0.0.1",
     "styled-system": "^5.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
-    "@peardeck-uikit/eslint-config": "^1.0.1-alpha.0",
+    "@peardeck-uikit/eslint-config": "^0.0.1",
     "@storybook/addon-knobs": "^5.2.3",
     "@storybook/react": "^5.2.3",
     "@types/jest": "^24.0.15",
@@ -82,5 +86,6 @@
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "gitHead": "1621354a1fb187f49c08f5195bce51c968230ac5"
 }
