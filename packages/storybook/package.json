@@ -26,11 +26,13 @@
     "@peardeck-uikit/icons": "^1.0.0",
     "@storybook/addon-a11y": "^5.2.3",
     "@storybook/addon-actions": "^5.2.3",
+    "@storybook/addon-docs": "^5.2.5",
     "@storybook/addon-info": "^5.2.3",
     "@storybook/addon-knobs": "^5.2.3",
     "@storybook/addon-notes": "^5.2.3",
     "@storybook/addon-viewport": "^5.2.3",
     "@storybook/addons": "^5.2.3",
+    "@storybook/theming": "^5.2.3",
     "@storybook/react": "^5.2.3",
     "babel-loader": "^8.0.6",
     "lint-staged": "^9.4.2",
@@ -48,7 +50,5 @@
       "git add"
     ]
   },
-  "dependencies": {
-    "@storybook/theming": "^5.2.3"
-  }
+  "dependencies": {}
 }

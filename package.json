@@ -10,6 +10,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx}\"",
     "build": "lerna run build ",
+    "dev": "lerna run --parallel watch",
     "storybook": "lerna run watch --scope @peardeck-uikit/storybook",
     "start": "yarn run build && yarn run storybook"
   },
@@ -25,5 +26,8 @@
     "hooks": {
       "pre-commit": "yarn lerna run --concurrency 1 --stream precommit"
     }
+  },
+  "dependencies": {
+    "concurrently": "^5.0.0"
   }
 }
