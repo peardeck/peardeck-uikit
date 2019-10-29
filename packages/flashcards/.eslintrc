@@ -1,0 +1,3 @@
+{
+  "extends": ["@peardeck-uikit/eslint-config"]
+}

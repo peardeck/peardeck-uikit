@@ -1,32 +1,36 @@
 {
-  "name": "@peardeck-uikit/icons",
+  "name": "@peardeck-uikit/flashcards",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Pear Deck",
   "license": "MIT",
   "main": "lib/index.js",
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
     "lib"
   ],
+  "jest": {
+    "preset": "ts-jest/presets/js-with-babel",
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setupJest.ts"
+    ]
+  },
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com"
   },
   "scripts": {
-    "build": "yarn run clean && yarn run compile",
-    "build:components": "svgr --ext tsx -d ./src ./svgs",
-    "build:index": "ts-node --skip-project ./scripts/build-index.ts",
-    "compile": "tsc",
+    "clean": "rimraf lib",
+    "build": "tsc",
     "watch": "tsc --watch",
-    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx}\"",
     "lint": "eslint ./src --ext .ts,.tsx",
     "lint:fix": "yarn run lint --fix",
-    "clean": "rimraf lib",
-    "test": "jest",
+    "test": "jest --verbose --coverage",
+    "test:watch": "jest --watch --coverage",
     "test:snapshot": "jest --updateSnapshot",
     "precommit": "lint-staged"
   },
@@ -35,18 +39,25 @@
     "react-dom": "^15.0.0 || ^16.0.0",
     "styled-components": "^4.0.0"
   },
+  "dependencies": {
+    "@peardeck-uikit/core": "^1.0.0",
+    "@peardeck-uikit/icons": "^1.0.0",
+    "styled-system": "^5.1.2"
+  },
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "@peardeck-uikit/eslint-config": "^1.0.0",
     "@storybook/addon-knobs": "^5.2.3",
     "@storybook/react": "^5.2.3",
-    "@svgr/babel-plugin-svg-dynamic-title": "^4.3.3",
-    "@svgr/cli": "^4.3.3",
     "@types/jest": "^24.0.15",
     "@types/react": "^16.9.5",
     "@types/react-test-renderer": "^16.9.0",
     "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^4.1.19",
+    "@types/styled-system": "^5.1.2",
     "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "babel-jest": "^24.8.0",
     "eslint": "^6.5.1",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jest": "^23.0.2",
@@ -63,11 +74,10 @@
     "rimraf": "^3.0.0",
     "styled-components": "^4.4.0",
     "ts-jest": "^24.1.0",
-    "ts-node": "^8.4.1",
     "typescript": "^3.6.4"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.{js,ts,tsx}": [
       "eslint --fix",
       "prettier --write",
       "git add"

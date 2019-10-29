@@ -171,18 +171,8 @@ export const theme = {
   },
 };
 
-// TODO: https://www.styled-components.com/docs/api#create-a-declarations-file
-//
-// declare module 'styled-components' {
-//   export interface DefaultTheme {
-//     borderRadius: string
+export type Theme = typeof theme;
 
-//     colors: {
-//       main: string
-//       secondary: string
-//     }
-//   }
-// }
 export interface ThemedComponentProps {
-  theme?: typeof theme;
+  theme?: Theme;
 }
