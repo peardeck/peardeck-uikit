@@ -12,7 +12,8 @@
     "build": "lerna run build",
     "clean": "lerna run clean",
     "start": "lerna run --parallel watch",
-    "storybook": "yarn run build && lerna run watch --scope @peardeck-uikit/storybook"
+    "storybook": "yarn run build && lerna run watch --scope @peardeck-uikit/storybook",
+    "publish": "lerna publish --dist-tag test"
   },
   "workspaces": [
     "packages/*"
