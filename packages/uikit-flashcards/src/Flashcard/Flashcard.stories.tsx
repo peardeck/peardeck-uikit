@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { boolean, number } from "@storybook/addon-knobs";
-import { Button } from "@peardeck-uikit/core";
+import { Button } from "@peardeck/uikit-core";
 import { Flashcard } from "./Flashcard";
 
 export default {

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Box, Card } from "@peardeck-uikit/core";
+import { Box, Card } from "@peardeck/uikit-core";
 
 export interface FlashcardProps {
   flipped: boolean;

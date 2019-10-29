@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { IconCollapseArrow } from "@peardeck-uikit/icons";
+import { IconCollapseArrow } from "@peardeck/uikit-icons";
 
 const StyledCollapsibleHeader = styled.button`
   color: #547272;

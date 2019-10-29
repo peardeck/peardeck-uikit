@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeProvider } from "@peardeck-uikit/core";
+import { ThemeProvider } from "@peardeck/uikit-core";
 
 const withThemeProvider = (story: () => React.ReactNode): JSX.Element => (
   <ThemeProvider>{story()}</ThemeProvider>

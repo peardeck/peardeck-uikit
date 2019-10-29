@@ -1,5 +1,5 @@
 {
-  "name": "@peardeck-uikit/storybook",
+  "name": "@peardeck/uikit-storybook",
   "version": "0.0.2-alpha.0",
   "description": "> TODO: description",
   "author": "joekrill <joe@peardeck.com>",
@@ -26,8 +26,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
-    "@peardeck-uikit/core": "^0.0.2-alpha.0",
-    "@peardeck-uikit/icons": "^0.0.2-alpha.0",
+    "@peardeck/uikit-core": "^0.0.2-alpha.0",
+    "@peardeck/uikit-icons": "^0.0.2-alpha.0",
     "@storybook/addon-a11y": "^5.2.3",
     "@storybook/addon-actions": "^5.2.3",
     "@storybook/addon-docs": "^5.2.5",
@@ -54,5 +54,5 @@
       "git add"
     ]
   },
-  "gitHead": "1621354a1fb187f49c08f5195bce51c968230ac5"
+  "gitHead": "1cc3c9c46983ce508070ffa675ff3f1000adb695"
 }

@@ -1,19 +1,19 @@
-# @peardeck-uikit/eslint-config
+# @peardeck/eslint-config
 
-An eslint configuration for use in `@peardeck-uikit` modules (or elsewhere).
+An eslint configuration for use in `peardeck-uikit` modules (or elsewhere).
 
 This allows us to use a centralized configuration to keep our code consistent across individual packages and projects.
 
 ## Installation
 
-1. Add `@peardeck-uikit/eslint-config` and it's peer dependencies to the project to be linted as `devDependencies`.
+1. Add `@peardeck/eslint-config` and it's peer dependencies to the project to be linted as `devDependencies`.
 
-   For a new package in the `@peardeck-uikit` monorepo:
+   For a new package in the `peardeck-uikit` monorepo:
 
    ```
-   cd <@peardeck-uikit-root>
+   cd <peardeck-uikit-root>
    yarn run lerna add eslint@^6.0.1" --dev packages/my-new-package
-   yarn run lerna add @peardeck-uikit/eslint-config --dev packages/my-new-package
+   yarn run lerna add @peardeck/eslint-config --dev packages/my-new-package
    yarn run lerna add @typescript-eslint/eslint-plugin@1.12.0 --dev package/my-new-package
    yarn run lerna add eslint@6.0.1 --dev package/my-new-package
    yarn run lerna add eslint-plugin-import@2.18.0 --dev package/my-new-package
@@ -29,7 +29,7 @@ This allows us to use a centralized configuration to keep our code consistent ac
 
    ```.eslintrc
    {
-     "extends": ["@peardeck-uikit/eslint-config"]
+     "extends": ["@peardeck/eslint-config"]
    }
    ```
 
@@ -58,10 +58,10 @@ This allows us to use a centralized configuration to keep our code consistent ac
 
   ```
   # Check files only
-  yarn lerna run lint --scope @peardeck-uikit/my-new-package
+  yarn lerna run lint --scope @peardeck/my-new-package
 
   # Attempt to fix any errors found
-  yarn lerna run lint:fix --scope @peardeck-uikit/my-new-package
+  yarn lerna run lint:fix --scope @peardeck/my-new-package
 
   ```
 

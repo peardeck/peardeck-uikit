@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { IconLoading } from "@peardeck-uikit/icons";
+import { IconLoading } from "@peardeck/uikit-icons";
 import { rotate } from "../../animations/rotate";
 import { Box } from "../Box/Box";
 

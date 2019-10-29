@@ -1,4 +1,3 @@
-
 # Tools used by peardeck-uikit
 
 The project uses a variety of tools, and it's not always immediately clear what their purpose is.
@@ -11,13 +10,13 @@ Yarn is used for package management. The [workspaces](https://yarnpkg.com/lang/e
 
 Lerna works on top of Yarn Workspaces to provide some useful utility commands and additional functionality. For example:
 
-* Commands are run concurrently by default (while taking into account dependencies between packages)
+- Commands are run concurrently by default (while taking into account dependencies between packages)
 
-* [Filter support](https://www.npmjs.com/package/@lerna/filter-options) - Ability to run commands against packages filtered by glob patterns. For example: `lerna run --scope @peardeck-uikit/ui-* build` would run the build script only on packages that start with the string "ui-".
+- [Filter support](https://www.npmjs.com/package/@lerna/filter-options) - Ability to run commands against packages filtered by glob patterns. For example: `lerna run --scope @peardeck/uikit-* build` would run the build script only on packages that start with the string "ui-".
 
-* Useful commands for publishing packages to NPM (i.e. [`lerna publish`](https://github.com/lerna/lerna/tree/master/commands/publish#readme) and [`lerna changed`](https://github.com/lerna/lerna/tree/master/commands/changed#readme))
+- Useful commands for publishing packages to NPM (i.e. [`lerna publish`](https://github.com/lerna/lerna/tree/master/commands/publish#readme) and [`lerna changed`](https://github.com/lerna/lerna/tree/master/commands/changed#readme))
 
-* `lerna run <script>` runs `<script>` in every package that _defines_ it. If a package doesn't define that script in it's `package.json`'s `scripts` section, it is simply skipped. Yarn, on the other hand, _requires_ that every package define a script with that name. So `yarn workspaces run <script>` causes an error if the script is not defined in a package.
+- `lerna run <script>` runs `<script>` in every package that _defines_ it. If a package doesn't define that script in it's `package.json`'s `scripts` section, it is simply skipped. Yarn, on the other hand, _requires_ that every package define a script with that name. So `yarn workspaces run <script>` causes an error if the script is not defined in a package.
 
 [Lerna Documentation and command reference](https://github.com/lerna/lerna#readme)
 

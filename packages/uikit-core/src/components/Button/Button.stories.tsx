@@ -7,7 +7,7 @@ import {
   IconCalendar,
   IconCheckmark,
   IconClassroom,
-} from "@peardeck-uikit/icons";
+} from "@peardeck/uikit-icons";
 import { Button, ButtonSize, ButtonVariant } from "./Button";
 import { themeSpaceKnob } from "../../theme/knobs";
 

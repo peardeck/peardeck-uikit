@@ -12,7 +12,7 @@
     "build": "lerna run build",
     "clean": "lerna run clean",
     "start": "lerna run --parallel watch",
-    "storybook": "yarn run build && lerna run watch --scope @peardeck-uikit/storybook",
+    "storybook": "yarn run build && lerna run watch --scope @peardeck/uikit-storybook",
     "publish": "lerna publish --dist-tag test"
   },
   "workspaces": [
@@ -27,8 +27,5 @@
     "hooks": {
       "pre-commit": "yarn lerna run --concurrency 1 --stream precommit"
     }
-  },
-  "dependencies": {
-    "concurrently": "^5.0.0"
   }
 }
