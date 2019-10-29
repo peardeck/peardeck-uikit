@@ -22,7 +22,7 @@ configure(() => {
   const req = require.context(
     "../",
     true,
-    /.*\/lib\/(.*\.)?stories\.(js|mdx|tsx)$/
+    /.*\/dist\/(.*\.)?stories\.(js|mdx|tsx)$/
   );
 
   return req

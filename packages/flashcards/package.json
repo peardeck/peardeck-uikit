@@ -4,12 +4,12 @@
   "description": "> TODO: description",
   "author": "Pear Deck",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "directories": {
-    "lib": "lib"
+    "lib": "dist"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "jest": {
     "preset": "ts-jest/presets/js-with-babel",
@@ -24,7 +24,7 @@
     "registry": "https://registry.yarnpkg.com"
   },
   "scripts": {
-    "clean": "rimraf lib",
+    "clean": "rimraf dist",
     "build": "tsc",
     "watch": "tsc --watch",
     "lint": "eslint ./src --ext .ts,.tsx",

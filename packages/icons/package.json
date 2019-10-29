@@ -4,13 +4,13 @@
   "description": "> TODO: description",
   "author": "Pear Deck",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "directories": {
-    "lib": "lib",
+    "lib": "dist",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com"
@@ -25,7 +25,7 @@
     "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx}\"",
     "lint": "eslint ./src --ext .ts,.tsx",
     "lint:fix": "yarn run lint --fix",
-    "clean": "rimraf lib",
+    "clean": "rimraf dist",
     "test": "jest",
     "test:snapshot": "jest --updateSnapshot",
     "precommit": "lint-staged"
