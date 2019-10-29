@@ -3,10 +3,6 @@ import { storiesOf } from "@storybook/react";
 import styled from "styled-components";
 import * as allIcons from "./index";
 
-export default {
-  title: "Icons",
-};
-
 const ICONS = Object.entries(allIcons);
 
 const IconGrid = styled.div`
