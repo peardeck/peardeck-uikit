@@ -18,7 +18,7 @@ exports[`Divider m prop sets margin 1`] = `
   border: 0;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  margin: 8px;
+  margin: 4px;
   border-color: #777777;
 }
 

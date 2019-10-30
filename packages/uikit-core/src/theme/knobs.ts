@@ -123,7 +123,10 @@ export const themeLineHeightKnob = (label = "Line Height", initial = null) =>
  * A knob for selecting a color value from the theme-defined (named) colors
  * (For _any_ color, use the `color` knob provided by `@storybook/addon-knobs`)
  */
-export const themeColorKnob = (label = "Color", initial = null) =>
+export const themeColorKnob = (
+  label = "Color",
+  initial: null | string = null
+) =>
   nullToUndefined(
     select(label, createOptionsFromMap(theme.colors), initial, GROUP_ID_COLOR)
   );
@@ -303,7 +306,7 @@ export const spaceKnobs = () => ({
  */
 export const colorKnobs = () => ({
   color: themeColorKnob("Foreground Color"),
-  backgroundColor: themeColorKnob("BackgroundColor"),
+  backgroundColor: themeColorKnob("Background Color"),
   opacity: opacityKnob(),
 });
 
