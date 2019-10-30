@@ -1,6 +1,6 @@
 {
   "name": "@peardeck/eslint-config",
-  "version": "0.0.3-alpha.0",
+  "version": "0.0.1-alpha.0",
   "description": "A shared eslint configuration",
   "keywords": [
     "eslint",
@@ -30,6 +30,5 @@
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.4.0",
     "prettier": "^1.18.2"
-  },
-  "gitHead": "1cc3c9c46983ce508070ffa675ff3f1000adb695"
+  }
 }
