@@ -25,7 +25,12 @@ export const CallToAction = ({
       <Box paddingLeft={1} marginTop={2} marginBottom={1}>
         {children}
       </Box>
-      <Button variant="primary" marginTop={1}>
+      <Button
+        colorVariant="accent"
+        marginTop={1}
+        borderRadius={4}
+        buttonSize="large"
+      >
         {buttonContent}
       </Button>
     </Box>

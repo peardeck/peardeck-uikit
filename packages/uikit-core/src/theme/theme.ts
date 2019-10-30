@@ -15,61 +15,21 @@ const colors = {
   ...colorNames,
   background: colorNames.white,
   text: colorNames.black,
-  primary: "#29abe2",
-  secondary: "#D24949",
-  accent: "#f0a",
+  primary: "#3087b7",
+  secondary: "#698600",
+  accent: "#D24949",
   pear: "#c9de55",
   muted: colorNames.lightGray,
   border: colorNames.midGray,
 };
 
-const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
-
 export const theme = {
   mediaQueries: {},
   breakpoints: [48, 52, 64].map((value): string => `${value}rem`),
-  space,
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   colors,
-  // colorModes: {
-  //   dark: {
-  //     text: colorNames.white,
-  //     background: colorNames.black,
-  //     primary: "#0cf",
-  //     secondary: "#f0e",
-  //     accent: "#f0a",
-  //     pear: "#c9de55",
-  //     muted: colorNames.midGray,
-  //   },
-  //   cyan: {
-  //     text: "#023",
-  //     background: "#0ff",
-  //     primary: "#03c",
-  //     secondary: "#01a",
-  //     accent: "#f0a",
-  //     pear: "#c9de55",
-  //     muted: "#0ee",
-  //   },
-  //   gray: {
-  //     text: "#eef",
-  //     background: "#333336",
-  //     primary: "#09f",
-  //     secondary: "#0bf",
-  //     accent: "#f0a",
-  //     pear: "#c9c9c9",
-  //     muted: "#444448",
-  //   },
-  //   book: {
-  //     text: "#322",
-  //     background: "#fff9f9",
-  //     primary: "#c30",
-  //     secondary: "#400",
-  //     accent: "#f0a",
-  //     pear: "#c9de55",
-  //     muted: "#f9f6f6",
-  //   },
-  // },
-
   fonts: {
+    // headers:
     body: ["ProximaNovaSoft-Regular", "sans-serif"],
     monospace: [
       "Consolas",
@@ -79,9 +39,7 @@ export const theme = {
       "monospace",
     ],
   },
-
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
-
   fontWeights: {
     light: 300,
     normal: 400,
@@ -90,7 +48,6 @@ export const theme = {
     bold: 700,
     heavy: 800,
   },
-
   lineHeights: {
     condensedUltra: 1,
     condensed: 1.25,
@@ -99,50 +56,65 @@ export const theme = {
     body: 1.7,
     title: 1.25,
   },
-
   letterSpacings: [],
-
   sizes: [],
-
   borders: [0, `1px solid ${colorNames.midGray}`],
-
-  borderStyles: [],
-
+  borderStyles: {},
   borderWidths: [],
+  radii: [0, 4, 8, 16, 32, 64],
+  shadows: {
+    [-2]: "rgba(0,0,0,0.12) 0px 2px 4px inset",
+    [-1]: "rgba(0,0,0,0.12) 0px 1px 2px inset",
+    0: "none",
+    1: "0 1px 4px 0 rgba(0,0,0,0.27)",
+    2: "0 2px 8px 0 rgba(0,0,0,0.27)",
+    3: "0 4px 16px 0 rgba(0,0,0,0.27)",
+    4: "0 8px 32px 0 rgba(0,0,0,0.27)",
 
-  radii: [0, 4, 8, 16],
+    button: "0 1px 4px 0 rgba(0,0,0,0.27)",
+    buttonHover: "0 2px 8px 0 rgba(0,0,0,0.27)",
+    buttonActive: "rgba(0,0,0,0.12) 0px 0px 1px inset",
 
-  shadows: [
-    "none",
-    "0 1px 4px 0 rgba(0,0,0,0.27)",
-    "0 2px 8px 0 rgba(0,0,0,0.27)",
-    "0 4px 16px 0 rgba(0,0,0,0.27)",
-    "0 8px 32px 0 rgba(0,0,0,0.27)",
-  ],
+    // button: "0 2px 8px 0 rgba(0,0,0,0.27)",
+    // buttonHover: "0 2px 8px 0 rgba(0,0,0,0.27)",
+    // buttonActive: "",
+    // buttonFocus: "",
 
-  zIndices: [],
+    // 1: "0 1px 2px 0 rgba(0,0,0,0.4)",
+    // 2: "0 2px 4px 0 rgba(0,0,0,0.4)",
+    // 3: "0 4px 8px 0 rgba(0,0,0,0.4)",
+    // 4: "0 8px 16px 0 rgba(0,0,0,0.4)",
+    // formControl: "rgba(27, 31, 35, 0.075) 0px 1px 2px inset",
+    // formControlFocus: "rgba(3, 102, 214, 0.3) 0px 0px 0px 0.2em",
+    // glow: ``,
+  },
+  zIndices: [undefined, 0, 1, 2, 10, 100, 200, 10000],
 
-  buttons: {
+  buttonColors: {
     default: {
-      bg: "red",
+      color: "#000000",
+      backgroundColor: "#ffffff",
+      hoverBackgroundColor: "#f2f2f2",
+      borderColor: "#cccccc",
     },
-    //   // default: {
-    //   //   color: "primary",
-    //   //   // border: "1px solid #dce2e9",
-    //   //   // color: "#354242",
-    //   //   // backgroundColor: "#ffffff",
-    //   // },
-    //   // primary: {
-    //   //   // color: "#000000",
-    //   //   // backgroundColor: "#ff0000",
-    //   //   // "&:hover": {
-    //   //   //   backgroundColor: "#ff9999",
-    //   //   // },
-    //   // },
-    //   // secondary: {
-    //   //   // color: "#eeeeee",
-    //   //   // backgroundColor: "#0000aa",
-    //   // },
+    primary: {
+      color: "#ffffff",
+      backgroundColor: "#3087b7",
+      hoverBackgroundColor: "#2b78a3",
+      borderColor: "#2b78a3",
+    },
+    secondary: {
+      color: "#ffffff",
+      backgroundColor: "#698600",
+      hoverBackgroundColor: "#556d00",
+      borderColor: "#556d00",
+    },
+    accent: {
+      color: "#ffffff",
+      backgroundColor: "#d24949",
+      hoverBackgroundColor: "#ba2e2e",
+      borderColor: "#ba2e2e",
+    },
   },
 
   colorStyles: {

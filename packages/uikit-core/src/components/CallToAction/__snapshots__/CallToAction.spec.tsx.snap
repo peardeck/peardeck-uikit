@@ -16,9 +16,9 @@ exports[`CallToAction matches the snapshot 1`] = `
 }
 
 .c3 {
-  padding-left: 2px;
-  margin-top: 4px;
-  margin-bottom: 2px;
+  padding-left: 4px;
+  margin-top: 8px;
+  margin-bottom: 4px;
 }
 
 .c0 {
@@ -27,7 +27,7 @@ exports[`CallToAction matches the snapshot 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 4px;
+  padding: 8px;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.27);
   border-radius: 4px;
 }
@@ -35,8 +35,8 @@ exports[`CallToAction matches the snapshot 1`] = `
 .c5 {
   border-radius: 4px;
   border: 1px solid #777777;
-  margin-left: 4px;
-  padding: 2px;
+  margin-left: 8px;
+  padding: 4px;
   box-shadow: none;
   border-radius: 4px;
   border: 1px solid #777777;
@@ -46,16 +46,17 @@ exports[`CallToAction matches the snapshot 1`] = `
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  font-size: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 32px;
+  border-color: #ba2e2e;
   color: #ffffff;
-  background-color: #D24949;
-  font-size: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.27);
-  margin-top: 2px;
+  background-color: #d24949;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.27);
+  margin-top: 4px;
   font-family: inherit;
   font-weight: 700;
   line-height: 1.5;
@@ -71,12 +72,17 @@ exports[`CallToAction matches the snapshot 1`] = `
 }
 
 .c4:hover {
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.27);
   background-color: #ba2e2e;
 }
 
+.c4:active {
+  box-shadow: rgba(0,0,0,0.12) 0px 0px 1px inset;
+}
+
 .c2 {
-  padding-left: 2px;
-  margin-bottom: 4px;
+  padding-left: 4px;
+  margin-bottom: 8px;
   margin: 0;
 }
 
@@ -98,6 +104,7 @@ exports[`CallToAction matches the snapshot 1`] = `
     />
     <button
       className="c4"
+      color="#ffffff"
       fontFamily="inherit"
       fontWeight="bold"
     >
@@ -128,9 +135,9 @@ exports[`CallToAction renders with out an image 1`] = `
 }
 
 .c3 {
-  padding-left: 2px;
-  margin-top: 4px;
-  margin-bottom: 2px;
+  padding-left: 4px;
+  margin-top: 8px;
+  margin-bottom: 4px;
 }
 
 .c0 {
@@ -139,7 +146,7 @@ exports[`CallToAction renders with out an image 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 4px;
+  padding: 8px;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.27);
   border-radius: 4px;
 }
@@ -148,16 +155,17 @@ exports[`CallToAction renders with out an image 1`] = `
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  font-size: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 32px;
+  border-color: #ba2e2e;
   color: #ffffff;
-  background-color: #D24949;
-  font-size: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.27);
-  margin-top: 2px;
+  background-color: #d24949;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.27);
+  margin-top: 4px;
   font-family: inherit;
   font-weight: 700;
   line-height: 1.5;
@@ -173,12 +181,17 @@ exports[`CallToAction renders with out an image 1`] = `
 }
 
 .c4:hover {
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.27);
   background-color: #ba2e2e;
 }
 
+.c4:active {
+  box-shadow: rgba(0,0,0,0.12) 0px 0px 1px inset;
+}
+
 .c2 {
-  padding-left: 2px;
-  margin-bottom: 4px;
+  padding-left: 4px;
+  margin-bottom: 8px;
   margin: 0;
 }
 
@@ -200,6 +213,7 @@ exports[`CallToAction renders with out an image 1`] = `
     />
     <button
       className="c4"
+      color="#ffffff"
       fontFamily="inherit"
       fontWeight="bold"
     >

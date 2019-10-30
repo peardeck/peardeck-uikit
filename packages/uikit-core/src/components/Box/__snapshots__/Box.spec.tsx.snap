@@ -23,7 +23,7 @@ exports[`Box \`color\` prop sets color 1`] = `
 
 exports[`Box \`m\` prop sets margin 1`] = `
 .c0 {
-  margin: 4px;
+  margin: 8px;
 }
 
 <div
@@ -33,7 +33,7 @@ exports[`Box \`m\` prop sets margin 1`] = `
 
 exports[`Box \`p\` prop sets padding 1`] = `
 .c0 {
-  padding: 4px;
+  padding: 8px;
 }
 
 <div

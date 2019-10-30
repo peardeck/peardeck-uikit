@@ -189,12 +189,7 @@ export const themeShadowsKnob = (
   initial: number | null = null
 ) =>
   nullToUndefined(
-    select(
-      label,
-      createOptionsFromScale(theme.shadows),
-      initial,
-      GROUP_ID_BORDER
-    )
+    select(label, createOptionsFromMap(theme.shadows), initial, GROUP_ID_BORDER)
   );
 
 /**

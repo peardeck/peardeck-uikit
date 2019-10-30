@@ -8,20 +8,21 @@ import {
   IconCheckmark,
   IconClassroom,
 } from "@peardeck/uikit-icons";
-import { Button, ButtonSize, ButtonVariant } from "./Button";
+import { Button, ButtonSize, ButtonColorVariant } from "./Button";
 import { themeSpaceKnob } from "../../theme/knobs";
+import { theme } from "../../theme/theme";
 
 const disabledKnob = (initial = false) => boolean("Disabled", initial);
 
 const buttonSizeKnob = (initial: ButtonSize = "medium") =>
   select("Size", ["small", "medium", "large"], initial) as ButtonSize;
 
-const buttonVariantKnbo = (initial: ButtonVariant = "default") =>
+const buttonColorVariantKnob = (initial: ButtonColorVariant = "default") =>
   select(
-    "Variant",
-    ["default", "primary", "secondary"],
+    "Color Variant",
+    Object.keys(theme.buttonColors),
     initial
-  ) as ButtonVariant;
+  ) as ButtonColorVariant;
 
 const ICONS: { [key: string]: ElementType } = {
   IconAlphabetical,
@@ -44,7 +45,7 @@ export const Default = () => (
     buttonSize={buttonSizeKnob()}
     m={themeSpaceKnob("Margin")}
     p={themeSpaceKnob("Padding")}
-    variant={buttonVariantKnbo()}
+    colorVariant={buttonColorVariantKnob()}
   >
     {text("Label", "Hello!")}
   </Button>
@@ -59,7 +60,7 @@ export const WithIcon = () => {
       onClick={action("onClick")}
       disabled={disabledKnob()}
       buttonSize={buttonSizeKnob()}
-      variant={buttonVariantKnbo()}
+      colorVariant={buttonColorVariantKnob()}
     >
       <IconComponent /> {text("Label", "This button has an icon!")}
     </Button>
@@ -70,7 +71,7 @@ export const WithEmoji = () => (
     onClick={action("onClick")}
     disabled={disabledKnob()}
     buttonSize={buttonSizeKnob()}
-    variant={buttonVariantKnbo()}
+    colorVariant={buttonColorVariantKnob()}
   >
     <span role="img" aria-label="so cool">
       {text("Label", "😀 😎 👍 💯")}

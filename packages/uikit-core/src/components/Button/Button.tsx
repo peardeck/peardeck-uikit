@@ -13,12 +13,11 @@ import {
   typography,
   TypographyProps,
   variant,
+  system,
 } from "styled-system";
-import { themeGet } from "@styled-system/theme-get";
-import { darken } from "polished";
 import { theme, ThemedComponentProps } from "../../theme/theme";
 
-export type ButtonVariant = "default" | "primary" | "secondary";
+export type ButtonColorVariant = keyof typeof theme.buttonColors; // "default" | "primary" | "secondary";
 
 export type ButtonSize = "small" | "medium" | "large";
 
@@ -31,7 +30,7 @@ export type ButtonProps = BorderProps &
   TypographyProps & {
     disabled?: boolean;
     buttonSize?: ButtonSize;
-    variant?: ButtonVariant;
+    colorVariant?: ButtonColorVariant;
   };
 
 // TODO: fix icon color for darker backgrounds
@@ -43,7 +42,14 @@ export type ButtonProps = BorderProps &
  * In special cases where you'd like to use a <a> styled like a Button,
  * use <Button as='a'> and provide an href.
  */
-export const Button = styled.button<ButtonProps>`
+export const Button = styled.button.attrs<ButtonProps>(
+  ({ theme: currentTheme, colorVariant }) => ({
+    hoverBoxShadow: "buttonHover",
+    activeBoxShadow: "buttonActive",
+    boxShadow: "button",
+    ...currentTheme.buttonColors[colorVariant || "default"],
+  })
+)<ButtonProps>`
   cursor: ${({ disabled }): string => (disabled ? "not-allowed" : "pointer")};
   transition: all 0.2s ease;
 
@@ -54,30 +60,6 @@ export const Button = styled.button<ButtonProps>`
   :disabled {
     opacity: 0.3;
   }
-
-  /* By default calculate a darkened hover color -- but this can be overriden by the variant */
-  :hover {
-    background-color: ${(props): string =>
-      darken(0.1, themeGet(`colors.${props.variant}`, "#ffffff")(props))}}
-  }
-
-  ${variant({
-    prop: "variant",
-    variants: {
-      default: {
-        color: "text",
-        bg: "background",
-      },
-      primary: {
-        color: "white",
-        bg: "primary",
-      },
-      secondary: {
-        color: "white",
-        bg: "secondary",
-      },
-    },
-  })}
 
   ${variant({
     prop: "buttonSize",
@@ -100,6 +82,39 @@ export const Button = styled.button<ButtonProps>`
     },
   })}
 
+  :hover {
+    ${system({
+      hoverBackgroundColor: {
+        property: "backgroundColor",
+        scale: "colors",
+      },
+      hoverColor: {
+        property: "color",
+        scale: "colors",
+      },
+      hoverBoxShadow: {
+        property: "boxShadow",
+        scale: "shadows",
+      },
+    })}
+  }
+
+  :active {
+    ${system({
+      activeBgColor: {
+        property: "backgroundColor",
+        scale: "colors",
+      },
+      activeColor: {
+        property: "color",
+        scale: "colors",
+      },
+      activeBoxShadow: {
+        property: "boxShadow",
+        scale: "shadows",
+      },
+    })}
+  }
   ${layout}
   ${border}
   ${color}
@@ -109,7 +124,7 @@ export const Button = styled.button<ButtonProps>`
 `;
 
 Button.defaultProps = {
-  borderRadius: 3,
+  borderRadius: 1,
   boxShadow: 2,
   buttonSize: "medium",
   fontFamily: "inherit",
@@ -117,7 +132,7 @@ Button.defaultProps = {
   lineHeight: "default",
   textAlign: "center",
   theme,
-  variant: "default",
+  colorVariant: "default",
 };
 
 Button.displayName = "Button";

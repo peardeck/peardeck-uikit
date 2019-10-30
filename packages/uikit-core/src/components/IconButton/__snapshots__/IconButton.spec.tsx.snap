@@ -5,18 +5,18 @@ exports[`IconButton matches the snapshot 1`] = `
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  color: #354242;
-  background-color: #ffffff;
-  border-color: #ccc;
   font-size: 16px;
   padding-left: 16px;
   padding-right: 16px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   width: 2.5em;
   height: 2.5em;
   border-radius: 4px;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.27);
+  border-color: #cccccc;
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.27);
   font-family: inherit;
   font-weight: 700;
   line-height: 1.5;
@@ -34,12 +34,12 @@ exports[`IconButton matches the snapshot 1`] = `
 }
 
 .c0:hover {
-  background-color: #e6e6e6;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.27);
+  background-color: #f2f2f2;
 }
 
-.c0:hover {
-  background-color: #f2f2f2;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.27);
+.c0:active {
+  box-shadow: rgba(0,0,0,0.12) 0px 0px 1px inset;
 }
 
 .c0 > svg {
@@ -54,6 +54,7 @@ exports[`IconButton matches the snapshot 1`] = `
 
 <button
   className="c0"
+  color="#000000"
   fontFamily="inherit"
   fontSize={2}
   fontWeight="bold"
