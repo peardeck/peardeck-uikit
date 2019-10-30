@@ -1,6 +1,6 @@
 {
   "name": "@peardeck/uikit-storybook",
-  "version": "0.0.3-alpha.0",
+  "version": "0.0.1",
   "description": "> TODO: description",
   "author": "joekrill <joe@peardeck.com>",
   "license": "MIT",
@@ -26,8 +26,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
-    "@peardeck/uikit-core": "^0.0.3-alpha.0",
-    "@peardeck/uikit-icons": "^0.0.3-alpha.0",
+    "@peardeck/uikit-core": "^0.0.1",
+    "@peardeck/uikit-icons": "^0.0.1",
     "@storybook/addon-a11y": "^5.2.3",
     "@storybook/addon-actions": "^5.2.3",
     "@storybook/addon-docs": "^5.2.5",
@@ -53,6 +53,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "gitHead": "1cc3c9c46983ce508070ffa675ff3f1000adb695"
+  }
 }

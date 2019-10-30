@@ -1,6 +1,6 @@
 {
   "name": "@peardeck/uikit-flashcards",
-  "version": "0.0.3-alpha.0",
+  "version": "0.0.1",
   "description": "> TODO: description",
   "author": "Pear Deck",
   "license": "MIT",
@@ -44,14 +44,14 @@
     "styled-components": "^4.0.0"
   },
   "dependencies": {
-    "@peardeck/uikit-core": "^0.0.3-alpha.0",
-    "@peardeck/uikit-icons": "^0.0.3-alpha.0",
+    "@peardeck/uikit-core": "^0.0.1",
+    "@peardeck/uikit-icons": "^0.0.1",
     "styled-system": "^5.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
-    "@peardeck/eslint-config": "^0.0.3-alpha.0",
+    "@peardeck/eslint-config": "^0.0.1",
     "@storybook/addon-knobs": "^5.2.3",
     "@storybook/react": "^5.2.3",
     "@types/jest": "^24.0.15",
@@ -86,6 +86,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "gitHead": "1cc3c9c46983ce508070ffa675ff3f1000adb695"
+  }
 }
