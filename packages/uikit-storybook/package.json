@@ -5,6 +5,7 @@
   "author": "joekrill <joe@peardeck.com>",
   "license": "MIT",
   "main": "dist/core.js",
+  "private": true,
   "directories": {
     "lib": "dist",
     "test": "__tests__"
