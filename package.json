@@ -6,6 +6,9 @@
   "license": "UNLICENSED",
   "author": "Pear Deck",
   "private": true,
+  "engines": {
+    "node": "~12.4.0"
+  },
   "scripts": {
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx}\"",

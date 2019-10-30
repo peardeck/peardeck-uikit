@@ -36,7 +36,7 @@
     "test": "jest --verbose --coverage",
     "test:watch": "jest --watch --coverage",
     "test:snapshot": "jest --updateSnapshot",
-    "precommit": "lint-staged"
+    "precommit": "yarn run build && tsc && lint-staged && yarn run test"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
