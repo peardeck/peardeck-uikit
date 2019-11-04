@@ -9,7 +9,7 @@ interface FaceProps {
 
 const Face = styled(Box)<FaceProps>`
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 
 interface ContainerProps {

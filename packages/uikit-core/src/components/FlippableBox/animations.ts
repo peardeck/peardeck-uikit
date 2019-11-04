@@ -21,12 +21,14 @@ export const frontHide = keyframes`
 	50% {
 		height: 0;
 		width: 0;
+    visibility: collapse;
 	}
 
 	100% {
 		transform: rotateY(180deg);
 		height: 0;
 		width: 0;
+    visibility: collapse;
 	}
 `;
 
@@ -35,11 +37,13 @@ export const frontShow = keyframes`
 		transform: rotateY(180deg);
 		height: 0;
 		width: 0;
+    visibility: collapse;
 	}
 
 	49% {
 		height: 0;
 		width: 0;
+    visibility: collapse;
 	}
 
 	50% {
@@ -69,12 +73,14 @@ export const backHide = keyframes`
 	50% {
 		height: 0;
 		width: 0;
+    visibility: collapse;
 	}
 
 	100% {
 		transform: rotateY(-180deg);
 		height: 0;
 		width: 0;
+    visibility: collapse;
 	}
 `;
 
@@ -83,11 +89,13 @@ export const backShow = keyframes`
 		transform: rotateY(-180deg);
 		height: 0;
 		width: 0;
+    visibility: collapse;
 	}
 
 	49% {
 		height: 0;
 		width: 0;
+    visibility: collapse;
 	}
 
 	50% {

@@ -26,24 +26,22 @@ exports[`FlippableBox flipped it matches the snapshot 1`] = `
 
 .c2 {
   position: relative;
-  overflow: hidden;
   z-index: 2;
   -webkit-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
   transform: rotateY(0deg);
-  -webkit-animation-name: HjcxO;
-  animation-name: HjcxO;
+  -webkit-animation-name: kiLuUf;
+  animation-name: kiLuUf;
 }
 
 .c3 {
   position: relative;
-  overflow: hidden;
   z-index: 1;
   -webkit-transform: rotateY(-180deg);
   -ms-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
-  -webkit-animation-name: dBNvve;
-  animation-name: dBNvve;
+  -webkit-animation-name: jwfYOY;
+  animation-name: jwfYOY;
 }
 
 <div
@@ -92,24 +90,22 @@ exports[`FlippableBox it matches the snapshot 1`] = `
 
 .c2 {
   position: relative;
-  overflow: hidden;
   z-index: 2;
   -webkit-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
   transform: rotateY(0deg);
-  -webkit-animation-name: QsCeB;
-  animation-name: QsCeB;
+  -webkit-animation-name: kcLtBP;
+  animation-name: kcLtBP;
 }
 
 .c3 {
   position: relative;
-  overflow: hidden;
   z-index: 1;
   -webkit-transform: rotateY(-180deg);
   -ms-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
-  -webkit-animation-name: gdCIdc;
-  animation-name: gdCIdc;
+  -webkit-animation-name: dQgmfn;
+  animation-name: dQgmfn;
 }
 
 <div

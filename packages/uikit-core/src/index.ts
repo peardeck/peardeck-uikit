@@ -6,7 +6,16 @@ export { CallToAction } from "./components/CallToAction/CallToAction";
 export { Card } from "./components/Card/Card";
 export { Collapsible } from "./components/Collapsible/Collapsible";
 export { Divider } from "./components/Divider/Divider";
-export { Heading } from "./components/Heading/Heading";
+export { FlippableBox } from "./components/FlippableBox/FlippableBox";
+export {
+  Heading,
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4,
+  Heading5,
+  Heading6,
+} from "./components/Heading/Heading";
 export { IconButton } from "./components/IconButton/IconButton";
 export { Link } from "./components/Link/Link";
 export {
