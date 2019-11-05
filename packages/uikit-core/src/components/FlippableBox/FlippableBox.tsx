@@ -1,85 +1,146 @@
-import React, { useRef } from "react";
-import styled, { Keyframes, CSSObject } from "styled-components";
-import { Box } from "../Box/Box";
-import { frontShow, frontHide, backShow, backHide } from "./animations";
+import React from "react";
+import styled from "styled-components";
+import { Box, BoxProps } from "../Box/Box";
 
-interface FaceProps {
-  shown: boolean;
-  animate: boolean;
+export interface FlippableBoxContainerProps {
+  height: number;
+  width: number;
 }
 
-const Face = styled(Box)<FaceProps>`
-  position: relative;
-  /* overflow: hidden; */
-`;
-
-interface ContainerProps {
-  flipSpeed: number;
-}
-
-const FlippableBoxContainer = styled(Box)<ContainerProps>`
-  position: relative;
+const FlippableBoxContainer = styled(Box)<FlippableBoxContainerProps>`
   perspective: 1000px;
 
-  ${Face} {
-    animation-duration: ${({ flipSpeed }): number => flipSpeed}s;
-    animation-timing-function: linear;
-    transform-style: preserve-3d;
-    transition-property: transform;
-    animation-fill-mode: forwards;
+  @media print {
+    break-after: always;
   }
 `;
 
-const FrontFace = styled(Face)`
-  z-index: 2;
-  transform: rotateY(0deg);
-  animation-name: ${({ shown }): Keyframes => (shown ? frontShow : frontHide)};
+export interface FlipperProps {
+  /**
+   * Determines the speed of the flip animation.
+   */
+  flipSpeed?: number | string;
 
-  ${({ animate }): CSSObject =>
-    animate ? {} : { height: "100%", width: "100%", animationName: "none" }}
-`;
-
-const BackFace = styled(Face)`
-  z-index: 1;
-  transform: rotateY(-180deg);
-  animation-name: ${({ shown }): Keyframes => (shown ? backShow : backHide)};
-
-  ${({ animate }): CSSObject =>
-    animate
-      ? {}
-      : {
-          height: "0",
-          width: "0",
-          visibility: "collapse",
-          animationName: "none",
-        }}
-`;
-
-export interface FlippableBoxProps extends Partial<ContainerProps> {
-  front: React.ReactNode;
-  back: React.ReactNode;
+  /**
+   * True to display flipped (displaying the backside), otherwise
+   * the front will be displayed.
+   */
   flipped?: boolean;
+
+  /**
+   * When true, a "sliding" type of animation will be used.
+   */
+  slideAnimation?: boolean;
 }
 
+const Flipper = styled(Box)<FlipperProps>`
+  transition-duration: ${({ flipSpeed = "1s" }): string =>
+    typeof flipSpeed === "number" ? `${flipSpeed}s` : flipSpeed};
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  ${({ flipped, slideAnimation = false }): string =>
+    flipped && slideAnimation
+      ? `
+    transform-origin: center right;
+    transform: translateX(-100%) rotateY(180deg);`
+      : ""};
+
+  ${({ flipped, slideAnimation = false }): string =>
+    flipped && !slideAnimation ? "transform: rotateY(180deg);" : ""};
+
+  @media print {
+    transform-origin: unset;
+    transition-duration: unset;
+    transform: unset;
+    position: unset;
+    top: unset;
+    bottom: unset;
+    left: unset;
+    right: unset;
+  }
+`;
+
+const Face = styled(Box)`
+  backface-visibility: hidden;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @media print {
+    backface-visibility: unset;
+    overflow: unset;
+    position: unset;
+    top: unset;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px dotted;
+    border-bottom: 1px solid;
+  }
+`;
+
+const Front = styled(Face)`
+  z-index: 2;
+  transform: rotateY(0deg); /* for firefox 31 */
+
+  @media print {
+    transform: unset;
+  }
+`;
+
+const Back = styled(Face)`
+  z-index: 1;
+  transform: rotateY(180deg);
+
+  @media print {
+    transform: rotate(180deg);
+  }
+`;
+
+export type FlippableBoxProps = BoxProps &
+  FlippableBoxContainerProps &
+  FlipperProps & {
+    front: React.ReactNode;
+    back: React.ReactNode;
+
+    // TODO: Have to figure out how to do with this color
+    // property type mismatch
+    color?: string;
+  };
+
+/**
+ * A container that contains a `front` and `back` child that can be flipped.
+ * This implementation requires an explicit height and width be set. If
+ * more flexibility is needed for sizing, use `FlippableBoxResponsive`
+ */
 export const FlippableBox = ({
+  flipped = false,
   front,
   back,
-  flipped = false,
-  flipSpeed = 0.5,
-}: FlippableBoxProps): JSX.Element => {
-  // We don't want to animate the initial render of the element, so
-  // once the element is mounted we can then use that knowledge to decide
-  // whether we want to apply the keyframe animation.
-  const containerRef = useRef(null);
-
-  return (
-    <FlippableBoxContainer flipSpeed={flipSpeed} ref={containerRef}>
-      <FrontFace shown={!flipped} animate={!!containerRef.current}>
-        {front}
-      </FrontFace>
-      <BackFace shown={flipped} animate={!!containerRef.current}>
-        {back}
-      </BackFace>
-    </FlippableBoxContainer>
-  );
-};
+  slideAnimation = false,
+  flipSpeed = "0.5s",
+  height,
+  width,
+  ...rest
+}: FlippableBoxProps): JSX.Element => (
+  <FlippableBoxContainer height={height} width={width} {...rest}>
+    <Flipper
+      flipped={flipped}
+      slideAnimation={slideAnimation}
+      flipSpeed={flipSpeed}
+    >
+      <Front>{front}</Front>
+      <Back>{back}</Back>
+    </Flipper>
+  </FlippableBoxContainer>
+);

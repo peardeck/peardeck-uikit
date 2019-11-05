@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlippableBoxResponsive flipped it matches the snapshot 1`] = `
+.c0 {
+  position: relative;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.c0 .c1 {
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.c2 {
+  position: relative;
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-animation-name: kiLuUf;
+  animation-name: kiLuUf;
+  height: 100%;
+  width: 100%;
+  -webkit-animation-name: none;
+  animation-name: none;
+}
+
+.c3 {
+  position: relative;
+  z-index: 1;
+  -webkit-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-animation-name: jwfYOY;
+  animation-name: jwfYOY;
+  height: 0;
+  width: 0;
+  visibility: collapse;
+  -webkit-animation-name: none;
+  animation-name: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1 c2"
+  >
+    <div>
+      This is the front
+    </div>
+  </div>
+  <div
+    className="c1 c3"
+  >
+    <div>
+      This is the back
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FlippableBoxResponsive it matches the snapshot 1`] = `
+.c0 {
+  position: relative;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.c0 .c1 {
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.c2 {
+  position: relative;
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-animation-name: kcLtBP;
+  animation-name: kcLtBP;
+  height: 100%;
+  width: 100%;
+  -webkit-animation-name: none;
+  animation-name: none;
+}
+
+.c3 {
+  position: relative;
+  z-index: 1;
+  -webkit-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-animation-name: dQgmfn;
+  animation-name: dQgmfn;
+  height: 0;
+  width: 0;
+  visibility: collapse;
+  -webkit-animation-name: none;
+  animation-name: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1 c2"
+  >
+    <div>
+      This is the front
+    </div>
+  </div>
+  <div
+    className="c1 c3"
+  >
+    <div>
+      This is the back
+    </div>
+  </div>
+</div>
+`;

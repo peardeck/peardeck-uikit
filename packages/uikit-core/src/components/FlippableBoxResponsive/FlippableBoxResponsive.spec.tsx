@@ -1,13 +1,11 @@
 import { create } from "react-test-renderer";
 import React from "react";
-import { FlippableBox } from "./FlippableBox";
+import { FlippableBoxResponsive } from "./FlippableBoxResponsive";
 
-describe("FlippableBox", () => {
+describe("FlippableBoxResponsive", () => {
   test("it matches the snapshot", () => {
     const json = create(
-      <FlippableBox
-        height={300}
-        width={200}
+      <FlippableBoxResponsive
         front={<div>This is the front</div>}
         back={<div>This is the back</div>}
       />
@@ -18,9 +16,7 @@ describe("FlippableBox", () => {
   describe("flipped", () => {
     test("it matches the snapshot", () => {
       const json = create(
-        <FlippableBox
-          height={300}
-          width={200}
+        <FlippableBoxResponsive
           front={<div>This is the front</div>}
           back={<div>This is the back</div>}
           flipped

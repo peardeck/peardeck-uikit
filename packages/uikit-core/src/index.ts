@@ -8,6 +8,9 @@ export { Collapsible } from "./components/Collapsible/Collapsible";
 export { Divider } from "./components/Divider/Divider";
 export { FlippableBox } from "./components/FlippableBox/FlippableBox";
 export {
+  FlippableBoxResponsive,
+} from "./components/FlippableBoxResponsive/FlippableBoxResponsive";
+export {
   Heading,
   Heading1,
   Heading2,
