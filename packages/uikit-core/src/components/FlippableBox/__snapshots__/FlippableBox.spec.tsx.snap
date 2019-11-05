@@ -32,6 +32,10 @@ exports[`FlippableBox flipped it matches the snapshot 1`] = `
   transform: rotateY(0deg);
   -webkit-animation-name: kiLuUf;
   animation-name: kiLuUf;
+  height: 100%;
+  width: 100%;
+  -webkit-animation-name: none;
+  animation-name: none;
 }
 
 .c3 {
@@ -42,6 +46,11 @@ exports[`FlippableBox flipped it matches the snapshot 1`] = `
   transform: rotateY(-180deg);
   -webkit-animation-name: jwfYOY;
   animation-name: jwfYOY;
+  height: 0;
+  width: 0;
+  visibility: collapse;
+  -webkit-animation-name: none;
+  animation-name: none;
 }
 
 <div
@@ -96,6 +105,10 @@ exports[`FlippableBox it matches the snapshot 1`] = `
   transform: rotateY(0deg);
   -webkit-animation-name: kcLtBP;
   animation-name: kcLtBP;
+  height: 100%;
+  width: 100%;
+  -webkit-animation-name: none;
+  animation-name: none;
 }
 
 .c3 {
@@ -106,6 +119,11 @@ exports[`FlippableBox it matches the snapshot 1`] = `
   transform: rotateY(-180deg);
   -webkit-animation-name: dQgmfn;
   animation-name: dQgmfn;
+  height: 0;
+  width: 0;
+  visibility: collapse;
+  -webkit-animation-name: none;
+  animation-name: none;
 }
 
 <div

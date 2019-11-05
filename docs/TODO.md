@@ -1,5 +1,6 @@
 - Commits
 
+  - Semantic Release: https://github.com/atlassian/lerna-semantic-release
   - Use Commitizen for consistent commit messaging
   - Auto-generate changelogs
   -
