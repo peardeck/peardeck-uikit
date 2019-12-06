@@ -4,7 +4,7 @@ import { IconLoading } from "@peardeck/uikit-icons";
 import { rotate } from "../../animations/rotate";
 import { Box } from "../Box/Box";
 
-const RotatingLoader = styled(IconLoading)`
+export const RotatingIconLoading = styled(IconLoading)`
   animation: ${rotate} 2s linear infinite;
 `;
 
@@ -13,13 +13,17 @@ const LoadingIndicatorBox = styled(Box)`
   text-align: center;
 `;
 
-export type LoadingIndicatorProps = { children?: React.ReactNode };
+export type LoadingIndicatorProps = {
+  children?: React.ReactNode;
+  iconSize?: string;
+};
 
 export const LoadingIndicator = ({
+  iconSize = "4em",
   children,
 }: LoadingIndicatorProps): JSX.Element => (
   <LoadingIndicatorBox>
-    <RotatingLoader size="4em" />
+    <RotatingIconLoading size={iconSize} />
     {children && <Box>{children}</Box>}
   </LoadingIndicatorBox>
 );
