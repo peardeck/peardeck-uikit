@@ -8,7 +8,7 @@ Yarn is used for package management. The [workspaces](https://yarnpkg.com/lang/e
 
 ## [Lerna](https://lerna.js.org/)
 
-Lerna works on top of Yarn Workspaces to provide some useful utility commands and additional functionality. For example:
+Lerna works on top of Yarn Workspaces to provide some useful utility commands and additional functionality, particulary around publishing packages within the monorepo. For example:
 
 - Commands are run concurrently by default (while taking into account dependencies between packages)
 
@@ -22,7 +22,7 @@ Lerna works on top of Yarn Workspaces to provide some useful utility commands an
 
 ### [Husky](https://github.com/typicode/husky)
 
-"Git hooks made easy". Husky automatically creates git hooks so that we can do things like make sure linting and [prettier](#Prettier) are run automatically when doing a `git commit`.
+"Git hooks made easy". Husky automatically creates git hooks so that we can do things like make sure linting and [prettier](#Prettier) are run automatically when doing a `git commit`, as well as ensuring commit messages are correctly formatted (via commitlint)
 
 Normally, git hooks must be manually installed after cloning a repo, and can often be platform-specific. Husky takes care of these problems automatically.
 
@@ -37,3 +37,12 @@ Used to linters only on git staged files (in conjunction with a [Husky](#Husky) 
 ## [rimraf](https://www.npmjs.com/package/rimraf)
 
 Removes an entire directory and any files or directories contained within it (i.e. `rm -rf`). Used mostly by `clean` scripts to purge an entire build directory so a clean build can then be performed that won't have any unused files that may have been left over from a previous build.
+
+## [commitizen](https://github.com/commitizen/cz-cli)
+
+Provides prompts to generate well-formed commit messages that follow the conventional commits standard:
+https://www.conventionalcommits.org/en/v1.0.0/
+
+## [commitlint](https://github.com/conventional-changelog/commitlint)
+
+Ensures commit messages are in the correct, conventional commit format before allowing commits to proceed.
