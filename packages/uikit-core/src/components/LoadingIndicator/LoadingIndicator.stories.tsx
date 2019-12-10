@@ -1,25 +1,28 @@
 import React from "react";
-import { text } from "@storybook/addon-knobs";
 import { LoadingIndicator } from "./LoadingIndicator";
 import { Box } from "../Box/Box";
+import { Text } from "../Text/Text";
 
 export default {
   component: LoadingIndicator,
   title: "core|LoadingIndicator",
 };
 
-export const Default = () => (
-  <LoadingIndicator>
-    {text("Message", LoadingIndicator.defaultProps.children)}
-  </LoadingIndicator>
-);
+export const Default = () => <LoadingIndicator />;
 
 export const Sizing = () => (
-  <Box>
-    <LoadingIndicator iconSize="1em">1em</LoadingIndicator>
-    <LoadingIndicator iconSize="2em">2em</LoadingIndicator>
-    <LoadingIndicator iconSize="3em">3em</LoadingIndicator>
-    <LoadingIndicator iconSize="4em">4em</LoadingIndicator>
-    <LoadingIndicator iconSize="8em">8em</LoadingIndicator>
+  <Box display="flex">
+    {["1em", "2em", "4em", "8em"].map((size: string) => (
+      <Box
+        mr={3}
+        alignItems="center"
+        display="flex"
+        flexDirection="column"
+        key={size}
+      >
+        <Text mb={2}>{size}</Text>
+        <LoadingIndicator size={size} />
+      </Box>
+    ))}
   </Box>
 );

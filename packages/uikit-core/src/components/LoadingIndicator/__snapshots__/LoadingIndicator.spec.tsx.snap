@@ -1,124 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoadingIndicator allows children to be customized 1`] = `
-.c1 {
-  -webkit-animation: iVXCSc 2s linear infinite;
-  animation: iVXCSc 2s linear infinite;
-}
-
-.c0 {
-  display: inline-block;
-  text-align: center;
-}
-
-<div
-  className="c0"
->
-  <svg
-    aria-hidden="true"
-    className="c1"
-    focusable="false"
-    height="4em"
-    tabIndex={-1}
-    viewBox="0 0 48 48"
-    width="4em"
-  >
-    <defs />
-    <path
-      d="M24 43C13.5 43 5 34.5 5 24S13.5 5 24 5V0C10.8 0 0 10.8 0 24s10.8 24 24 24 24-10.8 24-24h-5c0 10.5-8.5 19-19 19z"
-      fill="#8D8B88"
-    />
-    <path
-      d="M24 0v5c10.5 0 19 8.5 19 19h5C48 10.8 37.2 0 24 0z"
-      fill="#C9DE55"
-    />
-  </svg>
-  <div
-    className=""
-  >
-    A custom message
-  </div>
-</div>
-`;
-
 exports[`LoadingIndicator it matches the snapshot 1`] = `
-.c1 {
+.c0 {
   -webkit-animation: iVXCSc 2s linear infinite;
   animation: iVXCSc 2s linear infinite;
 }
 
-.c0 {
-  display: inline-block;
-  text-align: center;
-}
-
-<div
+<svg
+  aria-hidden="true"
   className="c0"
+  focusable="false"
+  height="4em"
+  tabIndex={-1}
+  viewBox="0 0 48 48"
+  width="4em"
 >
-  <svg
-    aria-hidden="true"
-    className="c1"
-    focusable="false"
-    height="4em"
-    tabIndex={-1}
-    viewBox="0 0 48 48"
-    width="4em"
-  >
-    <defs />
-    <path
-      d="M24 43C13.5 43 5 34.5 5 24S13.5 5 24 5V0C10.8 0 0 10.8 0 24s10.8 24 24 24 24-10.8 24-24h-5c0 10.5-8.5 19-19 19z"
-      fill="#8D8B88"
-    />
-    <path
-      d="M24 0v5c10.5 0 19 8.5 19 19h5C48 10.8 37.2 0 24 0z"
-      fill="#C9DE55"
-    />
-  </svg>
-  <div
-    className=""
-  >
-    Loading...
-  </div>
-</div>
+  <defs />
+  <path
+    d="M24 43C13.5 43 5 34.5 5 24S13.5 5 24 5V0C10.8 0 0 10.8 0 24s10.8 24 24 24 24-10.8 24-24h-5c0 10.5-8.5 19-19 19z"
+    fill="#8D8B88"
+  />
+  <path
+    d="M24 0v5c10.5 0 19 8.5 19 19h5C48 10.8 37.2 0 24 0z"
+    fill="#C9DE55"
+  />
+</svg>
 `;
 
-exports[`LoadingIndicator respects iconSize 1`] = `
-.c1 {
+exports[`LoadingIndicator respects size 1`] = `
+.c0 {
   -webkit-animation: iVXCSc 2s linear infinite;
   animation: iVXCSc 2s linear infinite;
 }
 
-.c0 {
-  display: inline-block;
-  text-align: center;
-}
-
-<div
+<svg
+  aria-hidden="true"
   className="c0"
+  focusable="false"
+  height="1em"
+  tabIndex={-1}
+  viewBox="0 0 48 48"
+  width="1em"
 >
-  <svg
-    aria-hidden="true"
-    className="c1"
-    focusable="false"
-    height="1em"
-    tabIndex={-1}
-    viewBox="0 0 48 48"
-    width="1em"
-  >
-    <defs />
-    <path
-      d="M24 43C13.5 43 5 34.5 5 24S13.5 5 24 5V0C10.8 0 0 10.8 0 24s10.8 24 24 24 24-10.8 24-24h-5c0 10.5-8.5 19-19 19z"
-      fill="#8D8B88"
-    />
-    <path
-      d="M24 0v5c10.5 0 19 8.5 19 19h5C48 10.8 37.2 0 24 0z"
-      fill="#C9DE55"
-    />
-  </svg>
-  <div
-    className=""
-  >
-    Loading...
-  </div>
-</div>
+  <defs />
+  <path
+    d="M24 43C13.5 43 5 34.5 5 24S13.5 5 24 5V0C10.8 0 0 10.8 0 24s10.8 24 24 24 24-10.8 24-24h-5c0 10.5-8.5 19-19 19z"
+    fill="#8D8B88"
+  />
+  <path
+    d="M24 0v5c10.5 0 19 8.5 19 19h5C48 10.8 37.2 0 24 0z"
+    fill="#C9DE55"
+  />
+</svg>
 `;
