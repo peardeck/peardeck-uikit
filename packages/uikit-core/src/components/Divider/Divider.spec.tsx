@@ -22,8 +22,8 @@ describe("Divider", () => {
   });
 
   test("borderColor prop sets borderColor", () => {
-    const json = create(<Divider borderColor="blue" />).toJSON();
+    const json = create(<Divider borderColor="blue.3" />).toJSON();
     expect(json).toMatchSnapshot();
-    expect(json).toHaveStyleRule("border-color", theme.colors.blue);
+    expect(json).toHaveStyleRule("border-color", theme.colors.blue[3]);
   });
 });

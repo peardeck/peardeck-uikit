@@ -5,7 +5,7 @@ exports[`Divider borderColor prop sets borderColor 1`] = `
   border: 0;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-color: #0000aa;
+  border-color: #8ec4e1;
 }
 
 <hr
@@ -19,7 +19,7 @@ exports[`Divider m prop sets margin 1`] = `
   border-bottom-style: solid;
   border-bottom-width: 1px;
   margin: 8px;
-  border-color: #777777;
+  border-color: #6b6b6b;
 }
 
 <hr
@@ -32,7 +32,7 @@ exports[`Divider matches the snapshot 1`] = `
   border: 0;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-color: #777777;
+  border-color: #6b6b6b;
 }
 
 <hr
@@ -46,7 +46,7 @@ exports[`Divider width prop sets width 1`] = `
   border-bottom-style: solid;
   border-bottom-width: 1px;
   width: 50%;
-  border-color: #777777;
+  border-color: #6b6b6b;
 }
 
 <hr

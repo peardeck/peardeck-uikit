@@ -1,15 +1,8 @@
+import colorNames from "./colors";
+
 /**
  * https://styled-system.com/theme-specification
  */
-const colorNames = {
-  white: "#ffffff",
-  black: "#000000",
-  gray: "#eeeeee",
-  lightGray: "#fafafa",
-  midGray: "#777777",
-  blue: "#0000aa",
-  green: "#00aa00",
-};
 
 const colors = {
   ...colorNames,
@@ -19,8 +12,8 @@ const colors = {
   secondary: "#698600",
   accent: "#D24949",
   pear: "#c9de55",
-  muted: colorNames.lightGray,
-  border: colorNames.midGray,
+  muted: colorNames.gray[3],
+  border: colorNames.gray[5],
 };
 
 export const theme = {
@@ -58,10 +51,10 @@ export const theme = {
   },
   letterSpacings: [],
   sizes: [],
-  borders: [0, `1px solid ${colorNames.midGray}`],
+  borders: [0, `1px solid ${colors.border}`],
   borderStyles: {},
   borderWidths: [],
-  radii: [0, 4, 8, 16, 32, 64],
+  radii: [0, 3, 6, 12, 24, 48, "100%"],
   shadows: {
     [-2]: "rgba(0,0,0,0.12) 0px 2px 4px inset",
     [-1]: "rgba(0,0,0,0.12) 0px 1px 2px inset",
@@ -101,19 +94,19 @@ export const theme = {
       color: "#ffffff",
       backgroundColor: "#3087b7",
       hoverBackgroundColor: "#2b78a3",
-      borderColor: "#2b78a3",
+      borderColor: "#ffffff",
     },
     secondary: {
       color: "#ffffff",
       backgroundColor: "#698600",
       hoverBackgroundColor: "#556d00",
-      borderColor: "#556d00",
+      borderColor: "#ffffff",
     },
     accent: {
       color: "#ffffff",
       backgroundColor: "#d24949",
       hoverBackgroundColor: "#ba2e2e",
-      borderColor: "#ba2e2e",
+      borderColor: "#ffffff",
     },
   },
 

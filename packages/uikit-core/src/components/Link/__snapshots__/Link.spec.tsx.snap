@@ -4,7 +4,7 @@ exports[`Link matches the snapshot 1`] = `
 .c0 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  color: #0000aa;
+  color: #deeef6,#c3e0ef,#a9d2e8,#8ec4e1,#65aed7,#3087B7,#29739c,#225f81,#1b4b66,#102e3e;
 }
 
 <a

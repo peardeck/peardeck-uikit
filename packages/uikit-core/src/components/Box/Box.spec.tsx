@@ -36,14 +36,14 @@ describe("Box", () => {
   });
 
   test("`color` prop sets color", () => {
-    const json = create(<Box color="blue" />).toJSON();
+    const json = create(<Box color="blue.5" />).toJSON();
     expect(json).toMatchSnapshot();
-    expect(json).toHaveStyleRule("color", theme.colors.blue);
+    expect(json).toHaveStyleRule("color", theme.colors.blue[5]);
   });
 
   test("`bg` prop sets background color", () => {
-    const json = create(<Box bg="green" />).toJSON();
+    const json = create(<Box bg="green.9" />).toJSON();
     expect(json).toMatchSnapshot();
-    expect(json).toHaveStyleRule("background-color", theme.colors.green);
+    expect(json).toHaveStyleRule("background-color", theme.colors.green[9]);
   });
 });
