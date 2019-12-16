@@ -125,6 +125,7 @@ export const Button = styled.button.attrs<ButtonProps>(
 
 Button.defaultProps = {
   borderRadius: 3,
+  borderWidth: 2,
   boxShadow: 2,
   buttonSize: "medium",
   fontFamily: "inherit",

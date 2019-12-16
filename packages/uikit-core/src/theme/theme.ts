@@ -7,12 +7,12 @@ import colorNames from "./colors";
 const colors = {
   ...colorNames,
   background: colorNames.white,
-  text: colorNames.black,
+  text: colorNames.gray[7],
   primary: "#3087b7",
   secondary: "#698600",
   accent: "#D24949",
   pear: "#c9de55",
-  muted: colorNames.gray[3],
+  muted: colorNames.gray[4],
   border: colorNames.gray[5],
 };
 
