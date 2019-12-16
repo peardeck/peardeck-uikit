@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/peardeck/peardeck-uikit/compare/@peardeck/uikit-core@0.0.3...@peardeck/uikit-core@0.0.4) (2019-12-16)
+
+
+### Features
+
+* **theme:** adjust text color and button width ([3caf20e](https://github.com/peardeck/peardeck-uikit/commit/3caf20ecfefe22a3c18c06851251e1c3609aeeb0))
+* **uikit-core:** adds ProximaNova fonts ([872e721](https://github.com/peardeck/peardeck-uikit/commit/872e72185c65bbb06d72e08bc001147b5775d77f))
+
+
+
+
+
 ## [0.0.3](https://github.com/peardeck/peardeck-uikit/compare/@peardeck/uikit-core@0.0.2...@peardeck/uikit-core@0.0.3) (2019-12-12)
 
 **Note:** Version bump only for package @peardeck/uikit-core

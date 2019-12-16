@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/peardeck/peardeck-uikit/compare/@peardeck/uikit-storybook@0.0.3...@peardeck/uikit-storybook@0.0.4) (2019-12-16)
+
+
+### Features
+
+* **uikit-core:** adds ProximaNova fonts ([872e721](https://github.com/peardeck/peardeck-uikit/commit/872e72185c65bbb06d72e08bc001147b5775d77f))
+
+
+
+
+
 ## [0.0.3](https://github.com/peardeck/peardeck-uikit/compare/@peardeck/uikit-storybook@0.0.2...@peardeck/uikit-storybook@0.0.3) (2019-12-12)
 
 **Note:** Version bump only for package @peardeck/uikit-storybook
