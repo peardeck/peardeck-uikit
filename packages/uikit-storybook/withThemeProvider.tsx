@@ -1,7 +1,8 @@
 import React from "react";
 import { ThemeProvider } from "@peardeck/uikit-core";
 
-const withThemeProvider = (story: () => React.ReactNode): JSX.Element => (
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+const withThemeProvider = (story: () => React.ReactNode) => (
   <ThemeProvider>{story()}</ThemeProvider>
 );
 

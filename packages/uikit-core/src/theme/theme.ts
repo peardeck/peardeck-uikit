@@ -22,7 +22,6 @@ export const theme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   colors,
   fonts: {
-    // headers:
     body: ["ProximaNovaSoft-Regular", "sans-serif"],
     monospace: [
       "Consolas",
@@ -63,6 +62,8 @@ export const theme = {
     2: "0 2px 8px 0 rgba(0,0,0,0.27)",
     3: "0 4px 16px 0 rgba(0,0,0,0.27)",
     4: "0 8px 32px 0 rgba(0,0,0,0.27)",
+
+    header: "0 1px 4px 0 rgba(0,0,0,0.27)",
 
     button: "0 1px 4px 0 rgba(0,0,0,0.27)",
     buttonHover: "0 2px 8px 0 rgba(0,0,0,0.27)",
