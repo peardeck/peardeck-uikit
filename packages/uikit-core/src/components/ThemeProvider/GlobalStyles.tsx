@@ -1,6 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 import { theme as defaultTheme } from "../../theme/theme";
 
+// TODO: Figure out a better way to handle font specification
+// (the consuming app should probably have control over where they
+// are served/consumed from)
+
 export const GlobalStyles = createGlobalStyle`
   * { box-sizing: border-box; }
   body { margin: 0; }
@@ -8,26 +12,26 @@ export const GlobalStyles = createGlobalStyle`
 
   @font-face {
     font-family: 'ProximaNova-Regular';
-    src: url("https://static.peardeck.com/fonts/2C1904_5_0.eot");
-    src: url("https://static.peardeck.com/fonts/2C1904_2_0.eot?#iefix") format("embedded-opentype"),
-         url("https://static.peardeck.com/fonts/2C1904_2_0.woff") format("woff"),
-         url("https://static.peardeck.com/fonts/2C1904_2_0.ttf") format("truetype");
+    src: url("https://d3895o4k0th41t.cloudfront.net/fonts/2C1904_5_0.eot");
+    src: url("https://d3895o4k0th41t.cloudfront.net/fonts/2C1904_2_0.eot?#iefix") format("embedded-opentype"),
+         url("https://d3895o4k0th41t.cloudfront.net/fonts/2C1904_2_0.woff") format("woff"),
+         url("https://d3895o4k0th41t.cloudfront.net/fonts/2C1904_2_0.ttf") format("truetype");
   }
 
   @font-face {
     font-family: 'ProximaNovaSoft-Medium';
-    src: url("https://static.peardeck.com/fonts/2C1904_4_0.eot");
-    src: url("https://static.peardeck.com/fonts/2C1904_4_0.eot?#iefix") format("embedded-opentype"),
-         url("https://static.peardeck.com/fonts/2C1904_4_0.woff") format("woff"),
-         url("https://static.peardeck.com/fonts/2C1904_4_0.ttf") format("truetype");
+    src: url("https://d3895o4k0th41t.cloudfront.net/fonts/2C1904_4_0.eot");
+    src: url("https://d3895o4k0th41t.cloudfront.net/fonts/2C1904_4_0.eot?#iefix") format("embedded-opentype"),
+         url("https://d3895o4k0th41t.cloudfront.net/fonts/2C1904_4_0.woff") format("woff"),
+         url("https://d3895o4k0th41t.cloudfront.net/fonts/2C1904_4_0.ttf") format("truetype");
   }
 
   @font-face {
     font-family: 'ProximaNovaSoft-Semibold';
-    src: url("https://static.peardeck.com/fonts/2C1904_5_0.eot");
-    src: url("https://static.peardeck.com/fonts/2C1904_5_0.eot?#iefix") format("embedded-opentype"),
-         url("https://static.peardeck.com/fonts/2C1904_5_0.woff") format("woff"),
-         url("https://static.peardeck.com/fonts/2C1904_5_0.ttf") format("truetype");
+    src: url("https://d3895o4k0th41t.cloudfront.net/fonts/2C1904_5_0.eot");
+    src: url("https://d3895o4k0th41t.cloudfront.net/fonts/2C1904_5_0.eot?#iefix") format("embedded-opentype"),
+         url("https://d3895o4k0th41t.cloudfront.net/fonts/2C1904_5_0.woff") format("woff"),
+         url("https://d3895o4k0th41t.cloudfront.net/fonts/2C1904_5_0.ttf") format("truetype");
   }
 
   html, button, input, select, textarea {
