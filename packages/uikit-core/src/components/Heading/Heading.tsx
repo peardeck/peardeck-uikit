@@ -12,7 +12,9 @@ export type HeadingProps = TextProps;
 /**
  * The Heading component will render an html h1-6 tag without any default styling.
  */
-export const Heading1 = styled(Text).attrs({ as: "h1" })``;
+export const Heading1 = styled(Text).attrs({ as: "h1" })`
+  margin: 0;
+`;
 
 Heading1.displayName = "Heading1";
 
