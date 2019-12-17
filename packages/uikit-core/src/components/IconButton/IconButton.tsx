@@ -1,10 +1,10 @@
 // import React from "react";
 import styled from "styled-components";
-import { Button } from "../Button/Button";
+import { Button, ButtonProps } from "../Button/Button";
 
 // TODO fix the SVG fill color issue.
 
-// type StyledIconButtonProps = ButtonProps & {};
+export type IconButtonProps = ButtonProps;
 
 export const IconButton = styled(Button)`
   border-radius: 100%;

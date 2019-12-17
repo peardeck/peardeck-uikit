@@ -108,13 +108,8 @@ exports[`Flashcard flipped it matches the snapshot 1`] = `
   transform: rotateY(180deg);
 }
 
-.c9 {
-  margin: 0;
-}
-
 .c5 {
   padding-bottom: 8px;
-  margin: 0;
 }
 
 @media print {
@@ -236,7 +231,7 @@ exports[`Flashcard flipped it matches the snapshot 1`] = `
         width={300}
       >
         <h1
-          className="c9"
+          className=""
         >
           Claim
         </h1>
@@ -345,10 +340,6 @@ exports[`Flashcard it matches the snapshot 1`] = `
   -webkit-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
-}
-
-.c7 {
-  margin: 0;
 }
 
 @media print {
@@ -462,7 +453,7 @@ exports[`Flashcard it matches the snapshot 1`] = `
         width={100}
       >
         <h1
-          className="c7"
+          className=""
         >
           
         </h1>

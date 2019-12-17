@@ -31,6 +31,7 @@ export type ButtonProps = BorderProps &
     disabled?: boolean;
     buttonSize?: ButtonSize;
     colorVariant?: ButtonColorVariant;
+    textDecoration?: string;
   };
 
 // TODO: fix icon color for darker backgrounds
@@ -60,6 +61,10 @@ export const Button = styled.button.attrs<ButtonProps>(
   :disabled {
     opacity: 0.3;
   }
+
+  ${system({
+    textDecoration: true,
+  })}
 
   ${variant({
     prop: "buttonSize",
@@ -132,6 +137,7 @@ Button.defaultProps = {
   fontWeight: "bold",
   lineHeight: "default",
   textAlign: "center",
+  textDecoration: "none",
   theme,
   colorVariant: "default",
 };

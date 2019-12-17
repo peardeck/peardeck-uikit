@@ -1,84 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Heading Heading1 matches the snapshot 1`] = `
-.c0 {
-  margin: 0;
-}
-
 <h1
-  className="c0"
+  className=""
 >
   Heading 1
 </h1>
 `;
 
 exports[`Heading Heading2 matches the snapshot 1`] = `
-.c0 {
-  margin: 0;
-}
-
 <h2
-  className="c0"
+  className=""
 >
   Heading 2
 </h2>
 `;
 
 exports[`Heading Heading3 matches the snapshot 1`] = `
-.c0 {
-  margin: 0;
-}
-
 <h3
-  className="c0"
+  className=""
 >
   Heading 3
 </h3>
 `;
 
 exports[`Heading Heading4 matches the snapshot 1`] = `
-.c0 {
-  margin: 0;
-}
-
 <h4
-  className="c0"
+  className=""
 >
   Heading 4
 </h4>
 `;
 
 exports[`Heading Heading5 matches the snapshot 1`] = `
-.c0 {
-  margin: 0;
-}
-
 <h5
-  className="c0"
+  className=""
 >
   Heading 5
 </h5>
 `;
 
 exports[`Heading Heading6 matches the snapshot 1`] = `
-.c0 {
-  margin: 0;
-}
-
 <h6
-  className="c0"
+  className=""
 >
   Heading 6
 </h6>
 `;
 
 exports[`Heading matches the snapshot 1`] = `
-.c0 {
-  margin: 0;
-}
-
 <h1
-  className="c0"
+  className=""
 >
   Default Heading
 </h1>

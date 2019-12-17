@@ -5,6 +5,8 @@ exports[`IconButton matches the snapshot 1`] = `
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 16px;
   padding-left: 16px;
   padding-right: 16px;
@@ -60,5 +62,6 @@ exports[`IconButton matches the snapshot 1`] = `
   fontSize={2}
   fontWeight="bold"
   size="2.5em"
+  textDecoration="none"
 />
 `;

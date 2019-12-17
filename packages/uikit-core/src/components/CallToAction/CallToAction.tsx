@@ -4,7 +4,7 @@ import { Card, CardProps } from "../Card/Card";
 import { Button } from "../Button/Button";
 import { Heading2 } from "../Heading/Heading";
 
-type CallToActionPropTypes = CardProps & {
+export type CallToActionProps = CardProps & {
   children?: ReactNode;
   title: ReactNode;
   image?: ReactNode;
@@ -16,7 +16,7 @@ export const CallToAction = ({
   title,
   image,
   buttonContent,
-}: CallToActionPropTypes): JSX.Element => (
+}: CallToActionProps): JSX.Element => (
   <Card p={2} display="inline-flex">
     <Box display="inline-flex" flexDirection="column" alignItems="flex-start">
       <Heading2 paddingLeft={1} marginBottom={2}>
