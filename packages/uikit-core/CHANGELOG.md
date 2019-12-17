@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.5](https://github.com/peardeck/peardeck-uikit/compare/@peardeck/uikit-core@0.0.4...@peardeck/uikit-core@0.0.5) (2019-12-17)
+
+
+### Bug Fixes
+
+* **button:** remove text underline when button used as link ([1394b29](https://github.com/peardeck/peardeck-uikit/commit/1394b29a676c26b8260dbda42cb94499c452b9f2))
+* **fonts:** adjust font URLs ([ac99b5f](https://github.com/peardeck/peardeck-uikit/commit/ac99b5f7925899d89a253afdb4a1978a78d955d2))
+
+
+### Features
+
+* **button:** add default 'type' attribute to button ([defce44](https://github.com/peardeck/peardeck-uikit/commit/defce44cbacf3878203d931841e25ecfc1514a50))
+* **heading:** adjust how default margin is set so it can be overriden ([38be1f7](https://github.com/peardeck/peardeck-uikit/commit/38be1f74563f3a463f8b2858565ffac4dd3cebc6))
+
+
+
+
+
 ## [0.0.4](https://github.com/peardeck/peardeck-uikit/compare/@peardeck/uikit-core@0.0.3...@peardeck/uikit-core@0.0.4) (2019-12-16)
 
 
