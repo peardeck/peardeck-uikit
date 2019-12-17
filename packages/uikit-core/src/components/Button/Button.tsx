@@ -133,13 +133,14 @@ Button.defaultProps = {
   borderWidth: 2,
   boxShadow: 2,
   buttonSize: "medium",
+  colorVariant: "default",
   fontFamily: "inherit",
   fontWeight: "bold",
   lineHeight: "default",
   textAlign: "center",
   textDecoration: "none",
   theme,
-  colorVariant: "default",
+  type: "button",
 };
 
 Button.displayName = "Button";

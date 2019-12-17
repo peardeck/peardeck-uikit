@@ -63,5 +63,6 @@ exports[`IconButton matches the snapshot 1`] = `
   fontWeight="bold"
   size="2.5em"
   textDecoration="none"
+  type="button"
 />
 `;

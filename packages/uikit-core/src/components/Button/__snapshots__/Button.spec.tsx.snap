@@ -47,5 +47,6 @@ exports[`Button matches the snapshot 1`] = `
   fontFamily="inherit"
   fontWeight="bold"
   textDecoration="none"
+  type="button"
 />
 `;
