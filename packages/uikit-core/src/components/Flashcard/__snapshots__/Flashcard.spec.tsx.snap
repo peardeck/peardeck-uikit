@@ -113,8 +113,8 @@ exports[`Flashcard flipped it matches the snapshot 1`] = `
 }
 
 .c5 {
-  padding-bottom: 8px;
   margin: 0;
+  padding-bottom: 8px;
 }
 
 @media print {

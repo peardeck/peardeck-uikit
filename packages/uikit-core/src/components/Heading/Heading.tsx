@@ -1,29 +1,45 @@
 import styled from "styled-components";
-import { Text, TextProps } from "../Text/Text";
-import { theme } from "../../theme/theme";
+import {
+  color,
+  ColorProps,
+  display,
+  DisplayProps,
+  space,
+  SpaceProps,
+  typography,
+  TypographyProps,
+} from "styled-system";
+import { theme, ThemedComponentProps } from "../../theme/theme";
 
 // TODO: How to supply a default margin but allow it to be overriden correctly?
 // If we set a default `m={0}`, then the margin can't be overriden using
 // a different property, i.e. `my={2}`, because the `m=` prop will always
 // take precedence.
 
-export type HeadingProps = TextProps;
-
+export type HeadingProps = ThemedComponentProps &
+  TypographyProps &
+  ColorProps &
+  DisplayProps &
+  SpaceProps;
 /**
  * The Heading component will render an html h1-6 tag without any default styling.
  */
-export const Heading1 = styled(Text).attrs({ as: "h1" })`
+export const Heading = styled.h1<HeadingProps>`
   margin: 0;
+  ${color}
+  ${display}
+  ${space}
+  ${typography}
 `;
 
-Heading1.displayName = "Heading1";
+Heading.displayName = "Heading";
 
-Heading1.defaultProps = {
+Heading.defaultProps = {
   theme,
 };
 
-// Alias `Heading` to `Heading1`
-export const Heading = Heading1;
+export const Heading1 = styled(Heading)``;
+Heading1.displayName = "Heading1";
 
 export const Heading2 = styled(Heading).attrs({ as: "h2" })``;
 Heading2.displayName = "Heading2";

@@ -19,16 +19,23 @@ export default {
 
 export const Default = () => {
   const content = text("Content", "Lorem ipsum dolor sit amet");
+  const components = [
+    Heading1 as typeof Heading,
+    Heading2 as typeof Heading,
+    Heading3 as typeof Heading,
+    Heading4 as typeof Heading,
+    Heading5 as typeof Heading,
+    Heading6 as typeof Heading,
+  ] as Array<typeof Heading>;
+
   return (
     <>
-      {[Heading1, Heading2, Heading3, Heading4, Heading5, Heading6].map(
-        Component => (
-          <Box p={1} key={Component.displayName}>
-            <Text opacity={0.7}>{Component.displayName}</Text>
-            <Component>{content}</Component>
-          </Box>
-        )
-      )}
+      {components.map(Component => (
+        <Box p={1} key={Component.displayName}>
+          <Text opacity={0.7}>{Component.displayName}</Text>
+          <Component>{content}</Component>
+        </Box>
+      ))}
     </>
   );
 };
