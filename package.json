@@ -7,7 +7,7 @@
   "author": "Pear Deck",
   "private": true,
   "engines": {
-    "node": "~12.4.0"
+    "node": "~12.14.0"
   },
   "scripts": {
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx}\"",
