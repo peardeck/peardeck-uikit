@@ -23,7 +23,6 @@
   "scripts": {
     "build": "build-storybook -c . -o dist",
     "watch": "start-storybook -c .",
-    "test": "echo \"Error: run tests from root\" && exit 1",
     "precommit": "lint-staged"
   },
   "devDependencies": {

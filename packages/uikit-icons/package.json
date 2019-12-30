@@ -31,7 +31,6 @@
     "lint": "eslint ./src --ext .ts,.tsx",
     "lint:fix": "yarn run lint --fix",
     "clean": "rimraf dist",
-    "test": "jest",
     "test:snapshot": "jest --updateSnapshot",
     "precommit": "lint-staged"
   },
