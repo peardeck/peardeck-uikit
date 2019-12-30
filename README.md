@@ -1,5 +1,7 @@
 # Pear Deck UI Kit
 
+![](https://github.com/peardeck/peardeck-uikit/workflows/CI/badge.svg?branch=master)
+
 A React component library for Pear Deck. This aims to be a set of reusable components, design resources, and guidelines for creating a consistent experience and feel for Pear Deck products.
 
 # Usage

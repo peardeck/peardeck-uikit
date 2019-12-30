@@ -1,6 +1,10 @@
-name: Node CI
+name: CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   build:
@@ -24,3 +28,13 @@ jobs:
           yarn test
         env:
           CI: true
+      - name: Update Storybook
+        if: success() && github.ref == 'refs/heads/master'
+        run: |
+          cd packages/uikit-storybook/dist
+          git init
+          git add .
+          git config user.name "${{ github.event.pusher.name }}"
+          git config user.email "${{ github.event.pusher.email }}"
+          git commit -m "docs(storybook): update gh-pages with latest storybook"
+          git push --force --quiet "https://${{ secrets.GHPAGES_PUBLISH_TOKEN }}@github.com/${{ github.repository	}}" master:gh-pages

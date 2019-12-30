@@ -17,6 +17,7 @@
     "start": "lerna run --parallel watch",
     "test": "lerna run test",
     "storybook": "yarn run build && lerna run watch --scope @peardeck/uikit-storybook",
+    "storybook:build": "yarn run build && lerna run build --scope @peardeck/uikit-storybook",
     "publish": "lerna publish",
     "commit": "git-cz"
   },
