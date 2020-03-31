@@ -105,3 +105,4 @@ Related reading:
 
 - [How we built a component library that people actually enjoy using](https://medium.com/styled-components/how-to-build-a-great-component-library-a40d974a412d)
 - [Everything I Know About Style Guides, Design Systems, and Component Libraries](https://leerob.io/blog/style-guides-component-libraries-design-systems/)
+- [Making hundreds of developers more efficient by creating a Frontend Platform team](https://product.hubspot.com/blog/frontend-platform)
