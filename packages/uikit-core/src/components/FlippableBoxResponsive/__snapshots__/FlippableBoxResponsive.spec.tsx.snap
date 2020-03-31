@@ -9,7 +9,7 @@ exports[`FlippableBoxResponsive flipped it matches the snapshot 1`] = `
   perspective: 1000px;
 }
 
-.c0 .c1 {
+.c0 .sc-AxirZ {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
   -webkit-animation-timing-function: linear;
@@ -24,28 +24,28 @@ exports[`FlippableBoxResponsive flipped it matches the snapshot 1`] = `
   animation-fill-mode: forwards;
 }
 
-.c2 {
+.c1 {
   position: relative;
   z-index: 2;
   -webkit-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
   transform: rotateY(0deg);
-  -webkit-animation-name: kiLuUf;
-  animation-name: kiLuUf;
+  -webkit-animation-name: kvSYFG;
+  animation-name: kvSYFG;
   height: 100%;
   width: 100%;
   -webkit-animation-name: none;
   animation-name: none;
 }
 
-.c3 {
+.c2 {
   position: relative;
   z-index: 1;
   -webkit-transform: rotateY(-180deg);
   -ms-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
-  -webkit-animation-name: jwfYOY;
-  animation-name: jwfYOY;
+  -webkit-animation-name: bjQFEz;
+  animation-name: bjQFEz;
   height: 0;
   width: 0;
   visibility: collapse;
@@ -54,17 +54,17 @@ exports[`FlippableBoxResponsive flipped it matches the snapshot 1`] = `
 }
 
 <div
-  className="c0"
+  className="sc-AxjAm c0"
 >
   <div
-    className="c1 c2"
+    className="sc-AxjAm sc-AxirZ c1"
   >
     <div>
       This is the front
     </div>
   </div>
   <div
-    className="c1 c3"
+    className="sc-AxjAm sc-AxirZ c2"
   >
     <div>
       This is the back
@@ -82,7 +82,7 @@ exports[`FlippableBoxResponsive it matches the snapshot 1`] = `
   perspective: 1000px;
 }
 
-.c0 .c1 {
+.c0 .sc-AxirZ {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
   -webkit-animation-timing-function: linear;
@@ -97,28 +97,28 @@ exports[`FlippableBoxResponsive it matches the snapshot 1`] = `
   animation-fill-mode: forwards;
 }
 
-.c2 {
+.c1 {
   position: relative;
   z-index: 2;
   -webkit-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
   transform: rotateY(0deg);
-  -webkit-animation-name: kcLtBP;
-  animation-name: kcLtBP;
+  -webkit-animation-name: iWmnfy;
+  animation-name: iWmnfy;
   height: 100%;
   width: 100%;
   -webkit-animation-name: none;
   animation-name: none;
 }
 
-.c3 {
+.c2 {
   position: relative;
   z-index: 1;
   -webkit-transform: rotateY(-180deg);
   -ms-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
-  -webkit-animation-name: dQgmfn;
-  animation-name: dQgmfn;
+  -webkit-animation-name: cToBvn;
+  animation-name: cToBvn;
   height: 0;
   width: 0;
   visibility: collapse;
@@ -127,17 +127,17 @@ exports[`FlippableBoxResponsive it matches the snapshot 1`] = `
 }
 
 <div
-  className="c0"
+  className="sc-AxjAm c0"
 >
   <div
-    className="c1 c2"
+    className="sc-AxjAm sc-AxirZ c1"
   >
     <div>
       This is the front
     </div>
   </div>
   <div
-    className="c1 c3"
+    className="sc-AxjAm sc-AxirZ c2"
   >
     <div>
       This is the back

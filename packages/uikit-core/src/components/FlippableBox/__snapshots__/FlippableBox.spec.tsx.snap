@@ -132,22 +132,22 @@ exports[`FlippableBox flipped it matches the snapshot 1`] = `
 }
 
 <div
-  className="c0"
+  className="sc-AxjAm c0"
   height={300}
   width={200}
 >
   <div
-    className="c1"
+    className="sc-AxjAm c1"
   >
     <div
-      className="c2"
+      className="sc-AxjAm sc-AxhCb c2"
     >
       <div>
         This is the front
       </div>
     </div>
     <div
-      className="c3"
+      className="sc-AxjAm sc-AxhCb c3"
     >
       <div>
         This is the back
@@ -286,22 +286,22 @@ exports[`FlippableBox it matches the snapshot 1`] = `
 }
 
 <div
-  className="c0"
+  className="sc-AxjAm c0"
   height={300}
   width={200}
 >
   <div
-    className="c1"
+    className="sc-AxjAm c1"
   >
     <div
-      className="c2"
+      className="sc-AxjAm sc-AxhCb c2"
     >
       <div>
         This is the front
       </div>
     </div>
     <div
-      className="c3"
+      className="sc-AxjAm sc-AxhCb c3"
     >
       <div>
         This is the back

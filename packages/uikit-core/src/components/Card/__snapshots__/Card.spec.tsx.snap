@@ -9,7 +9,7 @@ exports[`Card handles depth=2 1`] = `
 }
 
 <div
-  className="c0"
+  className="sc-AxjAm c0"
 />
 `;
 
@@ -22,7 +22,7 @@ exports[`Card renders a drop shadow by default 1`] = `
 }
 
 <div
-  className="c0"
+  className="sc-AxjAm c0"
 />
 `;
 
@@ -37,6 +37,6 @@ exports[`Card renders a standard border when depth is 0 1`] = `
 }
 
 <div
-  className="c0"
+  className="sc-AxjAm c0"
 />
 `;

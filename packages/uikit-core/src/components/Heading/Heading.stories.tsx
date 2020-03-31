@@ -30,7 +30,7 @@ export const Default = () => {
 
   return (
     <>
-      {components.map(Component => (
+      {components.map((Component) => (
         <Box p={1} key={Component.displayName}>
           <Text opacity={0.7}>{Component.displayName}</Text>
           <Component>{content}</Component>

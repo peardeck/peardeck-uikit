@@ -98,7 +98,7 @@ exports[`CallToAction matches the snapshot 1`] = `
     display="inline-flex"
   >
     <h2
-      className="c2"
+      className="sc-AxhCb c2"
     >
       Call To Action!
     </h2>
@@ -212,7 +212,7 @@ exports[`CallToAction renders with out an image 1`] = `
     display="inline-flex"
   >
     <h2
-      className="c2"
+      className="sc-AxhCb c2"
     >
       Call To Action!
     </h2>

@@ -56,7 +56,7 @@ exports[`IconButton matches the snapshot 1`] = `
 }
 
 <button
-  className="c0"
+  className="sc-AxjAm c0"
   color="#000000"
   fontFamily="inherit"
   fontSize={2}

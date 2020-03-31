@@ -108,13 +108,13 @@ exports[`Flashcard flipped it matches the snapshot 1`] = `
   transform: rotateY(180deg);
 }
 
-.c9 {
-  margin: 0;
-}
-
 .c5 {
   margin: 0;
   padding-bottom: 8px;
+}
+
+.c9 {
+  margin: 0;
 }
 
 @media print {
@@ -201,7 +201,7 @@ exports[`Flashcard flipped it matches the snapshot 1`] = `
     className="c1"
   >
     <div
-      className="c2"
+      className="sc-AxgMl c2"
     >
       <div
         className="c3"
@@ -214,7 +214,7 @@ exports[`Flashcard flipped it matches the snapshot 1`] = `
           overflow="auto"
         >
           <h1
-            className="c5"
+            className="sc-AxmLO c5"
           >
             What you are trying to prove, your thesis
           </h1>
@@ -227,7 +227,7 @@ exports[`Flashcard flipped it matches the snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c7"
+      className="sc-AxgMl c7"
     >
       <div
         className="c8"
@@ -236,7 +236,7 @@ exports[`Flashcard flipped it matches the snapshot 1`] = `
         width={300}
       >
         <h1
-          className="c9"
+          className="sc-AxmLO c9"
         >
           Claim
         </h1>
@@ -435,7 +435,7 @@ exports[`Flashcard it matches the snapshot 1`] = `
     className="c1"
   >
     <div
-      className="c2"
+      className="sc-AxgMl c2"
     >
       <div
         className="c3"
@@ -453,7 +453,7 @@ exports[`Flashcard it matches the snapshot 1`] = `
       </div>
     </div>
     <div
-      className="c5"
+      className="sc-AxgMl c5"
     >
       <div
         className="c6"
@@ -462,7 +462,7 @@ exports[`Flashcard it matches the snapshot 1`] = `
         width={100}
       >
         <h1
-          className="c7"
+          className="sc-AxmLO c7"
         >
           
         </h1>

@@ -32,7 +32,7 @@ export const Default = () => (
 
 export const FontSizes = () => (
   <>
-    {[0, 1, 2, 3, 4, 5, 6].map(size => (
+    {[0, 1, 2, 3, 4, 5, 6].map((size) => (
       <Box key={size} m={2}>
         <Text fontSize={size}>Lorem Ipsum {size}</Text>
       </Box>
@@ -42,7 +42,7 @@ export const FontSizes = () => (
 
 export const TextAlignment = () => (
   <>
-    {["left", "center", "right"].map(align => (
+    {["left", "center", "right"].map((align) => (
       <Box key={align} m={2} bg="yellow" maxWidth="50%">
         <Text as="div" textAlign={align as "left" | "center" | "right"}>
           Lorem Ipsum {align}
@@ -54,7 +54,7 @@ export const TextAlignment = () => (
 
 export const Color = () => (
   <>
-    {["blue", "green", "red", "yellow", "primary", "secondary"].map(color => (
+    {["blue", "green", "red", "yellow", "primary", "secondary"].map((color) => (
       <Box key={color} m={2}>
         <Text color={color}>Lorem Ipsum {color}</Text>
       </Box>

@@ -2,8 +2,8 @@
 
 exports[`LoadingIndicator it matches the snapshot 1`] = `
 .c0 {
-  -webkit-animation: iVXCSc 2s linear infinite;
-  animation: iVXCSc 2s linear infinite;
+  -webkit-animation: bKPVWD 2s linear infinite;
+  animation: bKPVWD 2s linear infinite;
 }
 
 <svg
@@ -29,8 +29,8 @@ exports[`LoadingIndicator it matches the snapshot 1`] = `
 
 exports[`LoadingIndicator respects size 1`] = `
 .c0 {
-  -webkit-animation: iVXCSc 2s linear infinite;
-  animation: iVXCSc 2s linear infinite;
+  -webkit-animation: bKPVWD 2s linear infinite;
+  animation: bKPVWD 2s linear infinite;
 }
 
 <svg

@@ -5,7 +5,7 @@
     "outDir": "./dist",
     "lib": ["es6", "dom"],
     "paths": {
-      "*": ["node_modules/*"]
+      "*": ["node_modules/*", "@types/*"]
     }
   },
   "include": ["./src"],

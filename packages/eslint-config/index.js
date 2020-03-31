@@ -25,7 +25,7 @@ module.exports = {
     // IMPORTANT: When adding new rules here, please include a comment indicating
     // the reason for the exception.
 
-    // Default ident is 4, we use 2
+    // Default indent is 4, we use 2
     // note you must disable the base rule as it can report incorrect errors
     // NOTE: this is causing problems so it's disabled for now. It seems to work
     // fine without though?
@@ -38,6 +38,19 @@ module.exports = {
     // This would make creating higher-order components and composition very
     // difficult, and we are mostly guarded since we're using TypeScript anyway.
     "react/jsx-props-no-spreading": "off",
+
+    // Need this so that "ts" and "tsx" are included in the `ignorePackages` hash.
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "never",
+        mjs: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+      },
+    ],
 
     // We prefer named exports, but allow default exports.
     "import/prefer-default-export": "off",
@@ -90,6 +103,9 @@ module.exports = {
 
         // This is unnecessary and overkill for specs and stories
         "@typescript-eslint/explicit-function-return-type": "off",
+
+        // When testing we can use empty callbacks, so no need to check here.
+        "@typescript-eslint/no-empty-function": "off",
       },
     },
   ],
