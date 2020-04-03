@@ -7,7 +7,7 @@ import colorNames from "./colors";
 const colors = {
   ...colorNames,
   background: colorNames.white,
-  text: colorNames.gray[7],
+  text: "#547272",
   primary: "#3087b7",
   secondary: "#698600",
   accent: "#D24949",
@@ -18,11 +18,12 @@ const colors = {
 
 export const theme = {
   mediaQueries: {},
-  breakpoints: [48, 52, 64].map((value): string => `${value}rem`),
+  breakpoints: [450, 700, 900],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   colors,
   fonts: {
     body: ["ProximaNovaSoft-Regular", "sans-serif"],
+    heading: ["ProximaNovaSoft-SemiBold", "sans-serif"],
     monospace: [
       "Consolas",
       '"Liberation Mono"',

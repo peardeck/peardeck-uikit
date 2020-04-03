@@ -1,4 +1,5 @@
 import { number, select } from "@storybook/addon-knobs";
+import { Scale } from "styled-system";
 import { theme } from "./theme";
 
 /**
@@ -44,16 +45,6 @@ export const createOptionsFromArray = (values: (string | number)[]) =>
 
 /**
  * Creates options for a `select` knob that also includes a "not specified"
- * value, with the option labels matching the array _indexes_.
- * @param values An array of values
- */
-export const createOptionsFromScale = (values: (string | number)[]) =>
-  values.reduce((options, _, index) => ({ ...options, [index]: index }), {
-    "not specified": null,
-  });
-
-/**
- * Creates options for a `select` knob that also includes a "not specified"
  * value, with the option labels generated using the keys of the map
  * @param map A map of values
  */
@@ -62,6 +53,32 @@ export const createOptionsFromMap = (map: { [key: string]: any }) =>
   Object.keys(map).reduce((options, key) => ({ ...options, [key]: key }), {
     "not specified": null,
   });
+
+// Flattens a potentially nested scale to a single level separating keys by `.`
+const flattenScale = (scale: Scale, prefix = ""): { [K: string]: string } =>
+  Object.keys(scale).reduce((acc, key) => {
+    const value = (scale as { [K: string]: Scale })[key];
+    if (typeof value === "object") {
+      return {
+        ...acc,
+        ...flattenScale(value, `${prefix}.${key}`),
+      };
+    }
+    return {
+      ...acc,
+      [`${prefix}.${key}`.replace(/^\./, "")]: value,
+    };
+  }, {});
+
+/**
+ * Creates options for a `select` knob that also includes a "not specified"
+ * value, with the option labels matching the array _indexes_.
+ * @param values An array of values
+ */
+export const createOptionsFromScale = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  values: (string | number)[] | { [key: string]: any }
+) => createOptionsFromMap(flattenScale(values));
 
 /* *************************************
  * Predefined knobs
@@ -125,10 +142,10 @@ export const themeLineHeightKnob = (label = "Line Height", initial = null) =>
  */
 export const themeColorKnob = (
   label = "Color",
-  initial: null | string = null
+  initial: string | null = null
 ) =>
   nullToUndefined(
-    select(label, createOptionsFromMap(theme.colors), initial, GROUP_ID_COLOR)
+    select(label, createOptionsFromScale(theme.colors), initial, GROUP_ID_COLOR)
   );
 
 /**
