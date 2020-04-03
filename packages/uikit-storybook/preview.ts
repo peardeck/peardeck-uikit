@@ -1,7 +1,6 @@
-import { addDecorator, addParameters, configure } from "@storybook/react";
+import { addDecorator, addParameters } from "@storybook/react";
 import { withA11y } from "@storybook/addon-a11y";
 import { withKnobs } from "@storybook/addon-knobs";
-import { create } from "@storybook/theming";
 import { StoryContext } from "@storybook/addons";
 import withThemeProvider from "./withThemeProvider";
 
@@ -53,32 +52,5 @@ addParameters({
       // (the order in which they were imported)
       return 0;
     },
-    theme: create({
-      base: "light",
-      brandTitle: "Peardeck UI Kit",
-      brandUrl: "https://peardeck.github.io/peardeck-uikit/",
-      // brandImage: 'TODO: create a cool icon!',
-    }),
   },
 });
-
-configure(() => {
-  const guides = require.context("./guide/", true, /\.stories\.(js|mdx|tsx)$/);
-  const guideStories = guides.keys().map((fname) => guides(fname));
-
-  const components = require.context(
-    "../",
-    true,
-    /.*\/dist\/(.*\.)?stories\.(js|mdx|tsx)$/
-  );
-
-  return [
-    ...guideStories,
-    ...components
-      .keys()
-      .map((fname) => components(fname))
-      // Ignore stories with no default export, because these are still using
-      // the old "storiesOf" definitions
-      .filter((exp) => !!exp.default),
-  ];
-}, module);
