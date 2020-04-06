@@ -40,13 +40,14 @@ export const Inline = () => (
 
 export const Responsive = () => (
   <Box
-    width={[1, 1 / 2, 1 / 4]}
+    width={[1, 3 / 4, 1 / 2]}
     bg={["#ffff00", "#ff0000", "#00aa00"]}
     color="black"
-    p={2}
+    p={1}
   >
-    This example shows how to use breakpoints. The box will change based on the
-    following breakpoints:
+    This example shows how to use breakpoints. Based on the breakpoints
+    specified in our theme, the background color and width of this box will
+    change as the window size changes:
     <table
       style={{
         padding: "1em",
@@ -65,22 +66,22 @@ export const Responsive = () => (
       </thead>
       <tbody>
         <tr>
-          <td>&gt;= {theme.breakpoints[0]}</td>
-          <td>iPhone</td>
-          <td>100%</td>
-          <td>Yellow</td>
+          <td>&gt;= {theme.breakpoints[2]}px</td>
+          <td>Desktop</td>
+          <td>50%</td>
+          <td>Green</td>
         </tr>
         <tr>
-          <td>&gt;= {theme.breakpoints[1]}</td>
+          <td>&gt;= {theme.breakpoints[1]}px</td>
           <td>iPad</td>
-          <td>50%</td>
+          <td>75%</td>
           <td>Red</td>
         </tr>
         <tr>
-          <td>&gt;= {theme.breakpoints[2]}</td>
-          <td>Desktop</td>
-          <td>25%</td>
-          <td>Green</td>
+          <td>&gt;= {theme.breakpoints[0]}px</td>
+          <td>iPhone</td>
+          <td>100%</td>
+          <td>Yellow</td>
         </tr>
       </tbody>
     </table>

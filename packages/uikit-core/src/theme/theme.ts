@@ -7,18 +7,32 @@ import colorNames from "./colors";
 const colors = {
   ...colorNames,
   background: colorNames.white,
-  text: "#547272",
-  primary: "#3087b7",
-  secondary: "#698600",
-  accent: "#D24949",
+  text: "#354242",
+  primary: "#d24949",
+  secondary: "#3087b7",
+  accent: "#698600",
   pear: "#c9de55",
-  muted: colorNames.gray[4],
+  muted: "#9B9B9B",
   border: colorNames.gray[5],
+  link: {
+    default: "#3087B7",
+    hover: "#25698f",
+    visited: "#3087B7",
+    active: "#29abe2",
+    focus: "#3087B7",
+  },
 };
+
+const fontSizes = [16, 20, 24, 32, 48, 64, 72];
+fontSizes[-1] = 14;
+fontSizes[-2] = 11;
+fontSizes[-3] = 8;
 
 export const theme = {
   mediaQueries: {},
-  breakpoints: [450, 700, 900],
+
+  // For some reason breakpoints don't work with numeric values?
+  breakpoints: [450, 700, 900].map((size) => `${size}px`),
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   colors,
   fonts: {
@@ -32,7 +46,7 @@ export const theme = {
       "monospace",
     ],
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
+  fontSizes,
   fontWeights: {
     light: 300,
     normal: 400,
@@ -45,7 +59,6 @@ export const theme = {
     condensedUltra: 1,
     condensed: 1.25,
     default: 1.5,
-
     body: 1.7,
     title: 1.25,
   },
@@ -86,6 +99,12 @@ export const theme = {
   zIndices: [undefined, 0, 1, 2, 10, 100, 200, 10000],
 
   buttonColors: {
+    none: {
+      color: "text",
+      backgroundColor: "transparent",
+      hoverBackgroundColor: "transparent",
+      borderColor: "transparent",
+    },
     default: {
       color: "#000000",
       backgroundColor: "#ffffff",
@@ -94,21 +113,57 @@ export const theme = {
     },
     primary: {
       color: "#ffffff",
-      backgroundColor: "#3087b7",
-      hoverBackgroundColor: "#2b78a3",
+      backgroundColor: "primary",
+      hoverBackgroundColor: "#ba2e2e",
       borderColor: "#ffffff",
+    },
+    primaryOutline: {
+      color: "primary",
+      backgroundColor: "#ffffff",
+      hoverBackgroundColor: "#eeeeee",
+      borderColor: "#d24949",
+      borderWidth: 2,
     },
     secondary: {
       color: "#ffffff",
-      backgroundColor: "#698600",
-      hoverBackgroundColor: "#556d00",
+      backgroundColor: "secondary",
+      hoverBackgroundColor: "#2b78a3",
       borderColor: "#ffffff",
+    },
+    secondaryOutline: {
+      color: "secondary",
+      backgroundColor: "#ffffff",
+      hoverBackgroundColor: "#eeeeee",
+      borderColor: "#3087b7",
+      borderWidth: 2,
     },
     accent: {
       color: "#ffffff",
-      backgroundColor: "#d24949",
-      hoverBackgroundColor: "#ba2e2e",
+      backgroundColor: "accent",
+      hoverBackgroundColor: "#556d00",
       borderColor: "#ffffff",
+    },
+    accentOutline: {
+      color: "accent",
+      backgroundColor: "#ffffff",
+      hoverBackgroundColor: "#eeeeee",
+      borderColor: "#698600",
+      borderWidth: 2,
+    },
+  },
+
+  buttonStyles: {
+    default: {
+      borderRadius: 2,
+      borderWidth: 1,
+      boxShadow: 1,
+      fontWeight: "bold",
+    },
+    callToAction: {
+      borderRadius: 4,
+      borderWidth: 2,
+      boxShadow: 1,
+      fontWeight: "bold",
     },
   },
 
@@ -139,6 +194,11 @@ export const theme = {
 };
 
 export type Theme = typeof theme;
+
+declare module "styled-components" {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface DefaultTheme extends Theme {}
+}
 
 export interface ThemedComponentProps {
   theme?: Theme;

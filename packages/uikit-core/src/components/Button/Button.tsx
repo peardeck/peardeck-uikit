@@ -17,9 +17,19 @@ import {
 } from "styled-system";
 import { theme, ThemedComponentProps } from "../../theme/theme";
 
-export type ButtonColorVariant = keyof typeof theme.buttonColors; // "default" | "primary" | "secondary";
+export const SIZE_VARIANTS = [
+  "xxsmall",
+  "xsmall",
+  "small",
+  "medium",
+  "large",
+  "xlarge",
+] as const;
 
-export type ButtonSize = "small" | "medium" | "large";
+export type ButtonColorVariant = keyof typeof theme.buttonColors;
+export type ButtonStyleVariant = keyof typeof theme.buttonStyles;
+
+export type ButtonSizeVariant = typeof SIZE_VARIANTS[number];
 
 export type ButtonProps = BorderProps &
   ColorProps &
@@ -29,8 +39,9 @@ export type ButtonProps = BorderProps &
   ThemedComponentProps &
   TypographyProps & {
     disabled?: boolean;
-    buttonSize?: ButtonSize;
+    sizeVariant?: ButtonSizeVariant;
     colorVariant?: ButtonColorVariant;
+    styleVariant?: ButtonStyleVariant;
     textDecoration?: string;
   };
 
@@ -40,14 +51,15 @@ export type ButtonProps = BorderProps &
  * Button is used for actions, like in forms. Use \`Link\` components when
  * navigating a page or changing the URL.
  *
- * In special cases where you'd like to use a <a> styled like a Button,
+ * In special cases where you'd like to use an anchor element styled like a Button,
  * use <Button as='a'> and provide an href.
  */
 export const Button = styled.button.attrs<ButtonProps>(
-  ({ theme: currentTheme, colorVariant }) => ({
+  ({ theme: currentTheme, colorVariant, styleVariant }) => ({
     hoverBoxShadow: "buttonHover",
     activeBoxShadow: "buttonActive",
     boxShadow: "button",
+    ...currentTheme.buttonStyles[styleVariant || "default"],
     ...currentTheme.buttonColors[colorVariant || "default"],
   })
 )<ButtonProps>`
@@ -67,25 +79,49 @@ export const Button = styled.button.attrs<ButtonProps>(
   })}
 
   ${variant({
-    prop: "buttonSize",
+    prop: "sizeVariant",
     variants: {
+      xxsmall: {
+        fontSize: -3,
+        px: 1,
+        py: 1,
+      },
+      xsmall: {
+        fontSize: -2,
+        px: 2,
+        py: 1,
+      },
       small: {
-        fontSize: 0,
+        fontSize: -1,
         px: 2,
         py: 1,
       },
       medium: {
-        fontSize: 2,
+        fontSize: 0,
         px: 3,
-        py: 2,
+        py: 1,
       },
       large: {
-        fontSize: 4,
+        fontSize: 1,
+        px: 4,
+        py: 2,
+      },
+      xlarge: {
+        fontSize: 2,
         px: 4,
         py: 3,
       },
     },
   })}
+
+  > svg {
+    ${system({
+      color: {
+        property: "fill",
+        scale: "colors",
+      },
+    })}
+  }
 
   :hover {
     ${system({
@@ -120,6 +156,7 @@ export const Button = styled.button.attrs<ButtonProps>(
       },
     })}
   }
+
   ${layout}
   ${border}
   ${color}
@@ -129,13 +166,10 @@ export const Button = styled.button.attrs<ButtonProps>(
 `;
 
 Button.defaultProps = {
-  borderRadius: 3,
-  borderWidth: 2,
-  boxShadow: 2,
-  buttonSize: "medium",
   colorVariant: "default",
+  sizeVariant: "medium",
+  styleVariant: "default",
   fontFamily: "inherit",
-  fontWeight: "bold",
   lineHeight: "default",
   textAlign: "center",
   textDecoration: "none",

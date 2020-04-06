@@ -29,7 +29,7 @@ export const CallToAction = ({
         colorVariant="accent"
         marginTop={1}
         borderRadius={4}
-        buttonSize="large"
+        sizeVariant="large"
       >
         {buttonContent}
       </Button>

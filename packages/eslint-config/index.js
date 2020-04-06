@@ -92,6 +92,7 @@ module.exports = {
         "*.test.ts?(x)",
         "*.stories.ts?(x)",
         "stories.ts?(x)",
+        "*.knobs.ts?(x)",
         "knobs.ts?(x)",
         "**/stories/**/*",
         "**/story/**/*",

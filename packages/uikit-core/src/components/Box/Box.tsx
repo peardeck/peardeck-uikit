@@ -29,10 +29,6 @@ export type BoxProps = ThemedComponentProps &
   PositionProps &
   ZIndexProps;
 
-/**
- * The Box component serves as a wrapper component for most layout related needs.
- * Use the Box component to control width, margin, padding, and color.
- */
 export const Box = styled.div<BoxProps>`
   ${border}
   ${boxShadow}
@@ -45,3 +41,5 @@ export const Box = styled.div<BoxProps>`
 `;
 
 Box.defaultProps = { theme };
+
+Box.displayName = "Box";

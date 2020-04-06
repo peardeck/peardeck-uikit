@@ -1,5 +1,5 @@
 import React, { ElementType } from "react";
-import { select, text, boolean } from "@storybook/addon-knobs";
+import { select, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 import {
   IconAlphabetical,
@@ -8,21 +8,20 @@ import {
   IconCheckmark,
   IconClassroom,
 } from "@peardeck/uikit-icons";
-import { Button, ButtonSize, ButtonColorVariant } from "./Button";
-import { themeSpaceKnob } from "../../theme/knobs";
+import {
+  Button,
+  ButtonColorVariant,
+  ButtonStyleVariant,
+  SIZE_VARIANTS,
+} from "./Button";
+import { Box } from "../Box";
 import { theme } from "../../theme/theme";
-
-const disabledKnob = (initial = false) => boolean("Disabled", initial);
-
-const buttonSizeKnob = (initial: ButtonSize = "medium") =>
-  select("Size", ["small", "medium", "large"], initial) as ButtonSize;
-
-const buttonColorVariantKnob = (initial: ButtonColorVariant = "default") =>
-  select(
-    "Color Variant",
-    Object.keys(theme.buttonColors),
-    initial
-  ) as ButtonColorVariant;
+import {
+  disabledKnob,
+  buttonSizeVariantKnob,
+  buttonColorVariantKnob,
+  buttonStyleVariantKnob,
+} from "./Button.knobs";
 
 const ICONS: { [key: string]: ElementType } = {
   IconAlphabetical,
@@ -39,16 +38,71 @@ export default {
 };
 
 export const Default = () => (
-  <Button
-    onClick={action("onClick")}
-    disabled={disabledKnob()}
-    buttonSize={buttonSizeKnob()}
-    m={themeSpaceKnob("Margin")}
-    p={themeSpaceKnob("Padding")}
-    colorVariant={buttonColorVariantKnob()}
-  >
-    {text("Label", "Hello!")}
-  </Button>
+  <Box p={2}>
+    <Button
+      colorVariant={buttonColorVariantKnob()}
+      disabled={disabledKnob()}
+      onClick={action("onClick")}
+      sizeVariant={buttonSizeVariantKnob()}
+      styleVariant={buttonStyleVariantKnob()}
+    >
+      {text("Label", "Hello!")}
+    </Button>
+  </Box>
+);
+
+export const SizeVariants = () => (
+  <>
+    {SIZE_VARIANTS.map((size) => (
+      <Box key={size} p={2}>
+        <Button
+          colorVariant={buttonColorVariantKnob()}
+          disabled={disabledKnob()}
+          onClick={action("onClick")}
+          sizeVariant={size}
+          styleVariant={buttonStyleVariantKnob()}
+        >
+          {size}
+        </Button>
+      </Box>
+    ))}
+  </>
+);
+
+export const ColorVariants = () => (
+  <>
+    {Object.keys(theme.buttonColors).map((color) => (
+      <Box key={color} p={2}>
+        <Button
+          colorVariant={color as ButtonColorVariant}
+          disabled={disabledKnob()}
+          onClick={action("onClick")}
+          sizeVariant={buttonSizeVariantKnob()}
+          styleVariant={buttonStyleVariantKnob()}
+        >
+          {color}
+        </Button>
+      </Box>
+    ))}
+  </>
+);
+
+export const StyleVariants = () => (
+  <>
+    {Object.keys(theme.buttonStyles).map((style) => (
+      <Box key={style} p={2}>
+        <Button
+          colorVariant={buttonColorVariantKnob()}
+          disabled={disabledKnob()}
+          onClick={action("onClick")}
+          sizeVariant={buttonSizeVariantKnob()}
+          styleVariant={style as ButtonStyleVariant}
+        >
+          {style}
+        </Button>
+      </Box>
+    ))}
+  </>
 );
 
 export const WithIcon = () => {
@@ -56,25 +110,47 @@ export const WithIcon = () => {
   const IconComponent = ICONS[iconKey];
 
   return (
-    <Button
-      onClick={action("onClick")}
-      disabled={disabledKnob()}
-      buttonSize={buttonSizeKnob()}
-      colorVariant={buttonColorVariantKnob()}
-    >
-      <IconComponent /> {text("Label", "This button has an icon!")}
-    </Button>
+    <Box p={2}>
+      <Button
+        colorVariant={buttonColorVariantKnob()}
+        disabled={disabledKnob()}
+        onClick={action("onClick")}
+        sizeVariant={buttonSizeVariantKnob()}
+        styleVariant={buttonStyleVariantKnob()}
+      >
+        <IconComponent /> {text("Label", "This button has an icon!")}
+      </Button>
+    </Box>
   );
 };
+
 export const WithEmoji = () => (
-  <Button
-    onClick={action("onClick")}
-    disabled={disabledKnob()}
-    buttonSize={buttonSizeKnob()}
-    colorVariant={buttonColorVariantKnob()}
-  >
-    <span role="img" aria-label="so cool">
-      {text("Label", "😀 😎 👍 💯")}
-    </span>
-  </Button>
+  <Box p={2}>
+    <Button
+      colorVariant={buttonColorVariantKnob()}
+      disabled={disabledKnob()}
+      onClick={action("onClick")}
+      sizeVariant={buttonSizeVariantKnob()}
+      styleVariant={buttonStyleVariantKnob()}
+    >
+      <span role="img" aria-label="so cool">
+        {text("Label", "😀 😎 👍 💯")}
+      </span>
+    </Button>
+  </Box>
+);
+
+export const AsLink = () => (
+  <Box p={2}>
+    <Button
+      as="a"
+      colorVariant={buttonColorVariantKnob()}
+      disabled={disabledKnob()}
+      onClick={action("onClick")}
+      sizeVariant={buttonSizeVariantKnob()}
+      styleVariant={buttonStyleVariantKnob()}
+    >
+      This is a a link styled as a button.
+    </Button>
+  </Box>
 );
