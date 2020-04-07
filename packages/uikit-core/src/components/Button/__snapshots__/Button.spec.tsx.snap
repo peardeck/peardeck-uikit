@@ -10,18 +10,18 @@ exports[`Button matches the snapshot 1`] = `
   font-size: 16px;
   padding-left: 16px;
   padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-radius: 12px;
-  border-width: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 6px;
+  border-width: 1px;
   border-color: #cccccc;
   color: #000000;
   background-color: #ffffff;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.27);
   font-family: inherit;
-  font-weight: 700;
   line-height: 1.5;
   text-align: center;
+  font-weight: 700;
 }
 
 .c0 > * {
@@ -30,6 +30,10 @@ exports[`Button matches the snapshot 1`] = `
 
 .c0:disabled {
   opacity: 0.3;
+}
+
+.c0 > svg {
+  fill: #000000;
 }
 
 .c0:hover {

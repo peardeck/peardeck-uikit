@@ -24,7 +24,7 @@ export const ThemeColors = () => (
     href={hrefKnob("https://google.com")}
     color={themeColorKnob()}
   >
-    {labelKnob("I'm colored based on the theme")}
+    {labelKnob("Colored based on the theme scale")}
   </Link>
 );
 

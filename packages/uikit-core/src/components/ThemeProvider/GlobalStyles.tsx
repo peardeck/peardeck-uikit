@@ -40,4 +40,24 @@ export const GlobalStyles = createGlobalStyle`
     font-style: normal;
     color: ${({ theme = defaultTheme }): string => theme.colors.text};
   }
+
+  a {
+    color: ${({ theme = defaultTheme }): string => theme.colors.link.default};
+  }
+
+  a:hover {
+    color: ${({ theme = defaultTheme }): string => theme.colors.link.hover};
+  }
+
+  a:visited {
+    color: ${({ theme = defaultTheme }): string => theme.colors.link.visited};
+  }
+
+  a:active {
+    color: ${({ theme = defaultTheme }): string => theme.colors.link.active};
+  }
+
+  a:focus {
+    color: ${({ theme = defaultTheme }): string => theme.colors.link.focus};
+  }
 `;
