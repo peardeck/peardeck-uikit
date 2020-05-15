@@ -63,7 +63,7 @@ const stories = storiesOf("Icons|Components", module);
 ICONS.forEach(([iconName, Icon]) => {
   stories.add(iconName, () => (
     <IconSet>
-      {ICON_SIZES.map(size => (
+      {ICON_SIZES.map((size) => (
         <IconSetItem key="size">
           <Icon size={size} />
           <IconDescription>{size}</IconDescription>

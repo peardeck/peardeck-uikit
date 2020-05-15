@@ -56,9 +56,11 @@ export type ButtonProps = BorderProps &
  */
 export const Button = styled.button.attrs<ButtonProps>(
   ({ theme: currentTheme, colorVariant, styleVariant }) => ({
-    hoverBoxShadow: "buttonHover",
-    activeBoxShadow: "buttonActive",
-    boxShadow: "button",
+    ...{
+      hoverBoxShadow: "buttonHover",
+      activeBoxShadow: "buttonActive",
+      boxShadow: "button",
+    },
     ...currentTheme.buttonStyles[styleVariant || "default"],
     ...currentTheme.buttonColors[colorVariant || "default"],
   })
