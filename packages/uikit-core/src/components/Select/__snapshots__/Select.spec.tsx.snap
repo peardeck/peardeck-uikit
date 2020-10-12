@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select allows non-theme \`fontSize\` values 1`] = `
+.c0 {
+  padding: 4px;
+  font-size: 200px;
+}
+
+<select
+  className="c0"
+  fontSize="200px"
+/>
+`;
+
+exports[`Select handles \`fontSize\` values from theme 1`] = `
+.c0 {
+  padding: 4px;
+  font-size: 24px;
+}
+
+<select
+  className="c0"
+  fontSize={2}
+/>
+`;
+
+exports[`Select handles \`fontStyle\` values 1`] = `
+.c0 {
+  padding: 4px;
+  font-style: italic;
+}
+
+<select
+  className="c0"
+  fontStyle="italic"
+/>
+`;
+
+exports[`Select handles \`fontWeight\` values from theme 1`] = `
+.c0 {
+  padding: 4px;
+  font-weight: 400;
+}
+
+<select
+  className="c0"
+  fontWeight="normal"
+/>
+`;
+
+exports[`Select handles \`lineHeight\` values from theme 1`] = `
+.c0 {
+  padding: 4px;
+  line-height: 1;
+}
+
+<select
+  className="c0"
+/>
+`;
+
+exports[`Select respects fontFamily="monospace" 1`] = `
+.c0 {
+  padding: 4px;
+  font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+}
+
+<select
+  className="c0"
+  fontFamily="monospace"
+/>
+`;

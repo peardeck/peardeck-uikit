@@ -13,6 +13,7 @@ export * from "./components/Heading";
 export * from "./components/IconButton";
 export * from "./components/Link";
 export * from "./components/LoadingIndicator";
+export * from "./components/Select";
 export * from "./components/Text";
 export * from "./components/ThemeProvider";
 
