@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.7](https://github.com/peardeck/peardeck-uikit/compare/@peardeck/uikit-core@0.0.6...@peardeck/uikit-core@0.0.7) (2020-10-12)
+
+
+### Features
+
+* **core:** adds `Select` component ([3281468](https://github.com/peardeck/peardeck-uikit/commit/32814688e472bcb0ba7b1ebbf40c40cc121c73a1))
+
+
+
+
+
 ## [0.0.6](https://github.com/peardeck/peardeck-uikit/compare/@peardeck/uikit-core@0.0.5...@peardeck/uikit-core@0.0.6) (2019-12-18)
 
 

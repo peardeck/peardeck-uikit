@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.7](https://github.com/peardeck/peardeck-uikit/compare/@peardeck/uikit-storybook@0.0.6...@peardeck/uikit-storybook@0.0.7) (2020-10-12)
+
+**Note:** Version bump only for package @peardeck/uikit-storybook
+
+
+
+
+
 ## [0.0.6](https://github.com/peardeck/peardeck-uikit/compare/@peardeck/uikit-storybook@0.0.5...@peardeck/uikit-storybook@0.0.6) (2019-12-18)
 
 **Note:** Version bump only for package @peardeck/uikit-storybook
