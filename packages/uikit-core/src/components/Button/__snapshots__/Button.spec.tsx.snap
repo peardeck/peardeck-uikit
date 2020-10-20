@@ -38,11 +38,13 @@ exports[`Button matches the snapshot 1`] = `
 
 .c0:hover {
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.27);
+  color: #000000;
   background-color: #f2f2f2;
 }
 
 .c0:active {
   box-shadow: rgba(0,0,0,0.12) 0px 0px 1px inset;
+  color: #000000;
 }
 
 <button

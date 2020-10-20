@@ -80,11 +80,13 @@ exports[`CallToAction matches the snapshot 1`] = `
 
 .c4:hover {
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.27);
+  color: #ffffff;
   background-color: #556d00;
 }
 
 .c4:active {
   box-shadow: rgba(0,0,0,0.12) 0px 0px 1px inset;
+  color: #ffffff;
 }
 
 .c2 {
@@ -198,11 +200,13 @@ exports[`CallToAction renders with out an image 1`] = `
 
 .c4:hover {
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.27);
+  color: #ffffff;
   background-color: #556d00;
 }
 
 .c4:active {
   box-shadow: rgba(0,0,0,0.12) 0px 0px 1px inset;
+  color: #ffffff;
 }
 
 .c2 {

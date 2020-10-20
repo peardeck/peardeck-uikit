@@ -131,6 +131,10 @@ export const Button = styled.button.attrs<ButtonProps>(
         property: "backgroundColor",
         scale: "colors",
       },
+      color: {
+        property: "color",
+        scale: "colors",
+      },
       hoverColor: {
         property: "color",
         scale: "colors",
@@ -146,6 +150,10 @@ export const Button = styled.button.attrs<ButtonProps>(
     ${system({
       activeBgColor: {
         property: "backgroundColor",
+        scale: "colors",
+      },
+      color: {
+        property: "color",
         scale: "colors",
       },
       activeColor: {
