@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.8](https://github.com/peardeck/peardeck-uikit/compare/@peardeck/uikit-core@0.0.6...@peardeck/uikit-core@0.0.8) (2020-10-20)
+
+
+### Bug Fixes
+
+* **button:** ensures hover/active color correct when Button used as "a" ([173301a](https://github.com/peardeck/peardeck-uikit/commit/173301aabdfc23b366e545c2f6be0fe876e2b61b))
+
+
+### Features
+
+* increment version ([939bf26](https://github.com/peardeck/peardeck-uikit/commit/939bf26356033e38a2f29b9379845d3d605c3da6))
+* **core:** adds `Select` component ([3281468](https://github.com/peardeck/peardeck-uikit/commit/32814688e472bcb0ba7b1ebbf40c40cc121c73a1))
+
+
+
+
+
 ## [0.0.7](https://github.com/peardeck/peardeck-uikit/compare/@peardeck/uikit-core@0.0.6...@peardeck/uikit-core@0.0.7) (2020-10-12)
 
 
